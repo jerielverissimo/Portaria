@@ -55,7 +55,7 @@
             this.lblMembro.AutoSize = true;
             this.lblMembro.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMembro.ForeColor = System.Drawing.Color.White;
-            this.lblMembro.Location = new System.Drawing.Point(347, 240);
+            this.lblMembro.Location = new System.Drawing.Point(346, 240);
             this.lblMembro.Name = "lblMembro";
             this.lblMembro.Size = new System.Drawing.Size(76, 22);
             this.lblMembro.TabIndex = 2;
@@ -75,7 +75,7 @@
             // ptbVisitantes
             // 
             this.ptbVisitantes.Image = global::Portaria.Properties.Resources.ic_people_white_36dp;
-            this.ptbVisitantes.Location = new System.Drawing.Point(212, 156);
+            this.ptbVisitantes.Location = new System.Drawing.Point(212, 155);
             this.ptbVisitantes.Name = "ptbVisitantes";
             this.ptbVisitantes.Size = new System.Drawing.Size(72, 72);
             this.ptbVisitantes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -86,7 +86,7 @@
             // ptbMember
             // 
             this.ptbMember.Image = global::Portaria.Properties.Resources.ic_person_white_36dp;
-            this.ptbMember.Location = new System.Drawing.Point(349, 156);
+            this.ptbMember.Location = new System.Drawing.Point(350, 155);
             this.ptbMember.Name = "ptbMember";
             this.ptbMember.Size = new System.Drawing.Size(72, 72);
             this.ptbMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -135,10 +135,11 @@
             // lblPront
             // 
             this.lblPront.AutoSize = true;
-            this.lblPront.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPront.Location = new System.Drawing.Point(79, 105);
+            this.lblPront.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPront.ForeColor = System.Drawing.Color.DimGray;
+            this.lblPront.Location = new System.Drawing.Point(68, 94);
             this.lblPront.Name = "lblPront";
-            this.lblPront.Size = new System.Drawing.Size(93, 22);
+            this.lblPront.Size = new System.Drawing.Size(115, 26);
             this.lblPront.TabIndex = 1;
             this.lblPront.Text = "Prontuário";
             // 
@@ -169,7 +170,7 @@
             // ptbADM
             // 
             this.ptbADM.Image = global::Portaria.Properties.Resources.ic_people_white_36dp;
-            this.ptbADM.Location = new System.Drawing.Point(75, 156);
+            this.ptbADM.Location = new System.Drawing.Point(75, 155);
             this.ptbADM.Name = "ptbADM";
             this.ptbADM.Size = new System.Drawing.Size(72, 72);
             this.ptbADM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

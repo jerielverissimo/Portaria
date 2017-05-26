@@ -59,10 +59,20 @@ namespace Portaria.VIEW
             switch (login)
             {
                 case true:
+                    lblMembro.Text = ptbMember.Top.ToString();
 
-                    if (panLoginMember.Width >= 250) {
+                    if (ptbMember.Top <= 118)
+                    {
                         TmLoginMembro.Enabled = false;
                         login = false;
+                    } else
+                    {
+                        ptbMember.Top -= 2;
+
+                    }
+
+                    if (panLoginMember.Width >= 250) {
+                        
                     }
                     else
                     {
@@ -71,10 +81,20 @@ namespace Portaria.VIEW
                     }
                     break;
                 case false:
-                    if (panLoginMember.Width <= 0)
+
+                    if (ptbMember.Top >= 155)
                     {
                         TmLoginMembro.Enabled = false;
                         login = true;
+                    }
+                    else
+                    {
+                        ptbMember.Top += 2;
+
+                    }
+                    if (panLoginMember.Width <= 0)
+                    {
+                        
                     }
                     else
                     {
@@ -90,6 +110,7 @@ namespace Portaria.VIEW
             switch (login)
             {
                 case true:
+
 
                     if (ptbVisitantes.Left == 350)
                     {
@@ -127,12 +148,12 @@ namespace Portaria.VIEW
                 ptbVisitantes.Visible = false;
                 lblADM.Visible = false;
                 lblVisitantes.Visible = false;
-           
+                lblLogin.Visible = false;
                 TmLoginMembro.Enabled = true;
             } else
             {
                 TmLoginMembro.Enabled = true;
-
+                lblLogin.Visible = true;
                 ptbADM.Visible = true;
                 ptbVisitantes.Visible = true;
                 lblADM.Visible = true;
