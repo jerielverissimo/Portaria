@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\PALETT\Colors.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -67,7 +68,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VIEW\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -84,6 +89,16 @@
   <ItemGroup>
     <Folder Include="BLL\" />
     <Folder Include="DALL\" />
+    <Folder Include="VIEW\FONT\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\window-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\ic_person_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\ic_people_white_36dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
