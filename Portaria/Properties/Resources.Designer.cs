@@ -63,6 +63,36 @@ namespace Portaria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account_circle {
+            get {
+                object obj = ResourceManager.GetObject("account-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap account_star {
+            get {
+                object obj = ResourceManager.GetObject("account-star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_account_circle_white_36dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_account_circle_white_36dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_people_white_36dp {
             get {
                 object obj = ResourceManager.GetObject("ic_people_white_36dp", resourceCulture);
@@ -76,6 +106,16 @@ namespace Portaria.Properties {
         internal static System.Drawing.Bitmap ic_person_white_36dp {
             get {
                 object obj = ResourceManager.GetObject("ic_person_white_36dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_person_white_36dp1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_person_white_36dp1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
