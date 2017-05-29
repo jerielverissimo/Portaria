@@ -13,7 +13,30 @@ namespace Portaria.VIEW.PALETT
         private Color azulBackground = ColorTranslator.FromHtml("#5952FF");
         private Color azulHighLight = ColorTranslator.FromHtml("#716df2");
 
-        public Color AzulBackground { get => azulBackground; set => azulBackground = value; }
-        public Color AzulHighLight { get => azulHighLight; set => azulHighLight = value; }
+        public Color AzulBackground
+        {
+            get
+            {
+                return azulBackground;
+            }
+
+            set
+            {
+                azulBackground = value;
+            }
+        }
+
+        public Color AzulHighLight
+        {
+            get
+            {
+                return azulHighLight;
+            }
+
+            set
+            {
+                azulHighLight = value;
+            }
+        }
     }
 }
