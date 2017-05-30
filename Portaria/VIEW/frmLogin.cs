@@ -195,7 +195,11 @@ namespace Portaria.VIEW
 
         private void lblEntrarMembro_Click(object sender, EventArgs e)
         {
-           
+            frmMembros frm = new frmMembros();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void fadeOutEffect_Tick(object sender, EventArgs e)
