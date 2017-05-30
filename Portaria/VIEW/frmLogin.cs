@@ -99,7 +99,10 @@ namespace Portaria.VIEW
 
         private void ptbVisitantes_Click(object sender, EventArgs e)
         {
-            tmLoginVisitantes.Enabled = true;
+            
+            FormPrincipal form1 = new FormPrincipal();
+            form1.ShowDialog();
+            
         }
 
         private void tmLoginADM_Tick(object sender, EventArgs e)
