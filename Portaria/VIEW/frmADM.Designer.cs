@@ -62,6 +62,9 @@
             this.panTitleBar.Name = "panTitleBar";
             this.panTitleBar.Size = new System.Drawing.Size(927, 40);
             this.panTitleBar.TabIndex = 1;
+            this.panTitleBar.DoubleClick += new System.EventHandler(this.panTitleBar_DoubleClick);
+            this.panTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseDown);
+            this.panTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseMove);
             // 
             // label1
             // 
@@ -74,6 +77,9 @@
             this.label1.Size = new System.Drawing.Size(150, 26);
             this.label1.TabIndex = 1;
             this.label1.Text = "Administrador";
+            this.label1.DoubleClick += new System.EventHandler(this.panTitleBar_DoubleClick);
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseMove);
             // 
             // ptbWindowMini
             // 
@@ -90,7 +96,7 @@
             // ptbMaxRestore
             // 
             this.ptbMaxRestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbMaxRestore.Image = global::Portaria.Properties.Resources.window_maximize;
+            this.ptbMaxRestore.Image = global::Portaria.Properties.Resources.window_restore;
             this.ptbMaxRestore.Location = new System.Drawing.Point(861, 8);
             this.ptbMaxRestore.Name = "ptbMaxRestore";
             this.ptbMaxRestore.Size = new System.Drawing.Size(24, 24);
