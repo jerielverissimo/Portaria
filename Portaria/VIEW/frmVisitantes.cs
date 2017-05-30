@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Portaria
 {
-    public partial class FormPrincipal : Form
+    public partial class frmVisitantes : Form
     {
-        public FormPrincipal()
+        public frmVisitantes()
         {
             InitializeComponent();
         }

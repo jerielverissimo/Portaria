@@ -35,6 +35,7 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.panLogin = new System.Windows.Forms.Panel();
             this.panLoginADM = new System.Windows.Forms.Panel();
+            this.lblEntrar = new System.Windows.Forms.Label();
             this.mskSenha = new System.Windows.Forms.MaskedTextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSIAPE = new System.Windows.Forms.TextBox();
@@ -43,11 +44,9 @@
             this.ptbMember = new System.Windows.Forms.PictureBox();
             this.ptbADM = new System.Windows.Forms.PictureBox();
             this.ptbVisitantes = new System.Windows.Forms.PictureBox();
-            this.lblEntrar = new System.Windows.Forms.Label();
             this.tmLoginADM = new System.Windows.Forms.Timer(this.components);
-            this.tmLoginVisitantes = new System.Windows.Forms.Timer(this.components);
             this.tmLoginMembro = new System.Windows.Forms.Timer(this.components);
-            this.panLoginVisitantes = new System.Windows.Forms.Panel();
+            this.panLoginMember = new System.Windows.Forms.Panel();
             this.panLogin.SuspendLayout();
             this.panLoginADM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCloseWindow)).BeginInit();
@@ -62,7 +61,7 @@
             this.lblMembro.AutoSize = true;
             this.lblMembro.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMembro.ForeColor = System.Drawing.Color.White;
-            this.lblMembro.Location = new System.Drawing.Point(584, 350);
+            this.lblMembro.Location = new System.Drawing.Point(588, 350);
             this.lblMembro.Name = "lblMembro";
             this.lblMembro.Size = new System.Drawing.Size(76, 22);
             this.lblMembro.TabIndex = 2;
@@ -106,8 +105,8 @@
             // 
             // panLogin
             // 
+            this.panLogin.Controls.Add(this.panLoginMember);
             this.panLogin.Controls.Add(this.panLoginADM);
-            this.panLogin.Controls.Add(this.panLoginVisitantes);
             this.panLogin.Controls.Add(this.pctCloseWindow);
             this.panLogin.Controls.Add(this.lblMembro);
             this.panLogin.Controls.Add(this.ptbMember);
@@ -137,6 +136,19 @@
             this.panLoginADM.Name = "panLoginADM";
             this.panLoginADM.Size = new System.Drawing.Size(900, 0);
             this.panLoginADM.TabIndex = 9;
+            // 
+            // lblEntrar
+            // 
+            this.lblEntrar.AutoSize = true;
+            this.lblEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblEntrar.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntrar.ForeColor = System.Drawing.Color.White;
+            this.lblEntrar.Location = new System.Drawing.Point(411, 183);
+            this.lblEntrar.Name = "lblEntrar";
+            this.lblEntrar.Padding = new System.Windows.Forms.Padding(10);
+            this.lblEntrar.Size = new System.Drawing.Size(78, 42);
+            this.lblEntrar.TabIndex = 4;
+            this.lblEntrar.Text = "Entrar";
             // 
             // mskSenha
             // 
@@ -197,7 +209,7 @@
             // 
             this.ptbMember.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ptbMember.Image = global::Portaria.Properties.Resources.ic_person_white_36dp;
-            this.ptbMember.Location = new System.Drawing.Point(586, 250);
+            this.ptbMember.Location = new System.Drawing.Point(590, 250);
             this.ptbMember.Name = "ptbMember";
             this.ptbMember.Size = new System.Drawing.Size(72, 72);
             this.ptbMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -237,41 +249,24 @@
             this.ptbVisitantes.MouseEnter += new System.EventHandler(this.ptbVisitantes_MouseEnter);
             this.ptbVisitantes.MouseLeave += new System.EventHandler(this.ptbVisitantes_MouseLeave);
             // 
-            // lblEntrar
-            // 
-            this.lblEntrar.AutoSize = true;
-            this.lblEntrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblEntrar.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntrar.ForeColor = System.Drawing.Color.White;
-            this.lblEntrar.Location = new System.Drawing.Point(411, 183);
-            this.lblEntrar.Name = "lblEntrar";
-            this.lblEntrar.Padding = new System.Windows.Forms.Padding(10);
-            this.lblEntrar.Size = new System.Drawing.Size(78, 42);
-            this.lblEntrar.TabIndex = 4;
-            this.lblEntrar.Text = "Entrar";
-            // 
             // tmLoginADM
             // 
             this.tmLoginADM.Interval = 1;
             this.tmLoginADM.Tick += new System.EventHandler(this.tmLoginADM_Tick);
             // 
-            // tmLoginVisitantes
-            // 
-            this.tmLoginVisitantes.Interval = 1;
-            this.tmLoginVisitantes.Tick += new System.EventHandler(this.tmLoginVisitantes_Tick);
-            // 
             // tmLoginMembro
             // 
             this.tmLoginMembro.Interval = 1;
+            this.tmLoginMembro.Tick += new System.EventHandler(this.tmLoginMembro_Tick);
             // 
-            // panLoginVisitantes
+            // panLoginMember
             // 
-            this.panLoginVisitantes.BackColor = System.Drawing.Color.White;
-            this.panLoginVisitantes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panLoginVisitantes.Location = new System.Drawing.Point(0, 550);
-            this.panLoginVisitantes.Name = "panLoginVisitantes";
-            this.panLoginVisitantes.Size = new System.Drawing.Size(900, 0);
-            this.panLoginVisitantes.TabIndex = 10;
+            this.panLoginMember.BackColor = System.Drawing.Color.White;
+            this.panLoginMember.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panLoginMember.Location = new System.Drawing.Point(0, 550);
+            this.panLoginMember.Name = "panLoginMember";
+            this.panLoginMember.Size = new System.Drawing.Size(900, 0);
+            this.panLoginMember.TabIndex = 10;
             // 
             // frmLogin
             // 
@@ -315,8 +310,7 @@
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblEntrar;
         private System.Windows.Forms.Timer tmLoginADM;
-        private System.Windows.Forms.Timer tmLoginVisitantes;
         private System.Windows.Forms.Timer tmLoginMembro;
-        private System.Windows.Forms.Panel panLoginVisitantes;
+        private System.Windows.Forms.Panel panLoginMember;
     }
 }

@@ -20,7 +20,7 @@ namespace Portaria.VIEW
         // Var
 
         int window_X = 0, window_Y = 0; // variáveis para usar no arrastar form.
-        bool loginAdm = true, loginVisitantes = true, loginMembros = true;
+        bool loginAdm = true, loginMembros = true;
 
 
 
@@ -60,6 +60,11 @@ namespace Portaria.VIEW
         private void ptbMember_Click(object sender, EventArgs e)
         {
 
+            ptbADM.Visible = false;
+            ptbVisitantes.Visible = false;
+            lblADM.Visible = false;
+            lblVisitantes.Visible = false;
+            tmLoginMembro.Enabled = true;
 
         }
 
@@ -100,9 +105,59 @@ namespace Portaria.VIEW
         private void ptbVisitantes_Click(object sender, EventArgs e)
         {
             
-            FormPrincipal form1 = new FormPrincipal();
-            form1.ShowDialog();
+            frmVisitantes frm = new frmVisitantes();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog();
             
+        }
+
+        private void tmLoginMembro_Tick(object sender, EventArgs e)
+        {
+            switch (loginMembros)
+            {
+                case true:
+
+                    if (panLoginMember.Height < 250)
+                    {
+                        panLoginMember.Height += 25;
+
+                        if (ptbMember.Top > 150) ptbMember.Top -= 25;
+                        if (lblMembro.Top > 250) lblMembro.Top -= 25;
+
+                        if (ptbMember.Left > 410) ptbMember.Left -= 20;
+                        if (lblMembro.Left > 410) lblMembro.Left -= 20;
+
+                    } else
+                    {
+                        tmLoginMembro.Enabled = false;
+                        loginMembros = false;
+                    }
+                    break;
+                case false:
+
+                    if (panLoginMember.Height > 0)
+                    {
+                        panLoginMember.Height -= 25;
+
+                        if (ptbMember.Top < 250) ptbMember.Top += 25;
+                        if (lblMembro.Top < 350) lblMembro.Top += 25;
+
+                        if (ptbMember.Left < 590) ptbMember.Left += 20;
+                        if (lblMembro.Left < 588) lblMembro.Left += 20;
+
+                    }
+                    else
+                    {
+                        tmLoginMembro.Enabled = false;
+                        loginMembros = true;
+
+                        ptbADM.Visible = true;
+                        ptbVisitantes.Visible = true;
+                        lblADM.Visible = true;
+                        lblVisitantes.Visible = true;
+                    }
+                    break;
+            }
         }
 
         private void tmLoginADM_Tick(object sender, EventArgs e)
@@ -158,62 +213,7 @@ namespace Portaria.VIEW
             }
         }
 
-        private void tmLoginVisitantes_Tick(object sender, EventArgs e)
-        {
-            switch (loginVisitantes)
-            {
-                case true:
-
-                    ptbMember.Visible = false;
-                    ptbADM.Visible = false;
-                    lblMembro.Visible = false;
-                    lblADM.Visible = false;
-
-                    if (panLoginVisitantes.Height < 250)
-                    {
-                        panLoginVisitantes.Height += 25;
-                        if (ptbVisitantes.Top > 150)
-                            ptbVisitantes.Top -= 25;
-
-                        if (lblVisitantes.Top > 250)
-                            lblVisitantes.Top -= 25;
-
-
-
-                    }
-                    else
-                    {
-                        loginVisitantes = false;
-                        tmLoginVisitantes.Enabled = false;
-                    }
-                    break;
-                case false:
-                    if (panLoginVisitantes.Height > 0)
-                    {
-                        panLoginVisitantes.Height -= 25;
-                        if (ptbVisitantes.Top < 250)
-                            ptbVisitantes.Top += 25;
-
-                        if (lblVisitantes.Top < 350)
-                            lblVisitantes.Top += 25;
-
-
-                    }
-                    else
-                    {
-                        loginVisitantes = true;
-                        tmLoginVisitantes.Enabled = false;
-
-
-                        ptbMember.Visible = true;
-                        ptbADM.Visible = true;
-                        lblMembro.Visible = true;
-                        lblADM.Visible = true;
-                    }
-                    break;
-            }
-        }
-
+      
         private void ptbADM_MouseLeave(object sender, EventArgs e)
         {
             ptbADM.BackColor = cor.AzulBackground;

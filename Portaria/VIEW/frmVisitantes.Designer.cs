@@ -1,6 +1,6 @@
 ﻿namespace Portaria
 {
-    partial class FormPrincipal
+    partial class frmVisitantes
     {
         /// <summary>
         /// Variável de designer necessária.
