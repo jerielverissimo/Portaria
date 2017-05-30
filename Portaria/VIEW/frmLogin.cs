@@ -33,7 +33,8 @@ namespace Portaria.VIEW
         private void frmLogin_Load(object sender, EventArgs e)
         {
             this.BackColor = cor.AzulBackground;
-            lblEntrar.BackColor = cor.AzulBackground;
+            lblEntrarADM.BackColor = cor.AzulBackground;
+            lblEntrarMembro.BackColor = cor.AzulBackground;
 
             mskSenha.UseSystemPasswordChar = true; // mascara a senha com pontos
             
@@ -59,7 +60,7 @@ namespace Portaria.VIEW
         }
         private void ptbMember_Click(object sender, EventArgs e)
         {
-
+            panLoginMember.BringToFront();
             ptbADM.Visible = false;
             ptbVisitantes.Visible = false;
             lblADM.Visible = false;
@@ -99,6 +100,7 @@ namespace Portaria.VIEW
 
         private void ptbADM_Click(object sender, EventArgs e)
         {
+            panLoginADM.BringToFront();
             tmLoginADM.Enabled = true;
         }
 
@@ -158,6 +160,26 @@ namespace Portaria.VIEW
                     }
                     break;
             }
+        }
+
+        private void lblEntrarMembro_MouseEnter(object sender, EventArgs e)
+        {
+            lblEntrarMembro.BackColor = cor.AzulHighLight;
+        }
+
+        private void lblEntrarMembro_MouseLeave(object sender, EventArgs e)
+        {
+            lblEntrarMembro.BackColor = cor.AzulBackground;
+        }
+
+        private void lblEntrarADM_MouseEnter(object sender, EventArgs e)
+        {
+            lblEntrarADM.BackColor = cor.AzulHighLight;
+        }
+
+        private void lblEntrarADM_MouseLeave(object sender, EventArgs e)
+        {
+            lblEntrarADM.BackColor = cor.AzulBackground;
         }
 
         private void tmLoginADM_Tick(object sender, EventArgs e)
