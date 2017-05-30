@@ -109,8 +109,9 @@ namespace Portaria.VIEW
             
             frmVisitantes frm = new frmVisitantes();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             frm.ShowDialog();
-            
+            this.Close();
         }
 
         private void tmLoginMembro_Tick(object sender, EventArgs e)
@@ -180,6 +181,16 @@ namespace Portaria.VIEW
         private void lblEntrarADM_MouseLeave(object sender, EventArgs e)
         {
             lblEntrarADM.BackColor = cor.AzulBackground;
+        }
+
+        private void lblEntrarADM_Click(object sender, EventArgs e)
+        {
+            frmADM frm = new frmADM();
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+
         }
 
         private void tmLoginADM_Tick(object sender, EventArgs e)

@@ -165,6 +165,7 @@
             this.lblEntrarADM.Size = new System.Drawing.Size(78, 42);
             this.lblEntrarADM.TabIndex = 4;
             this.lblEntrarADM.Text = "Entrar";
+            this.lblEntrarADM.Click += new System.EventHandler(this.lblEntrarADM_Click);
             this.lblEntrarADM.MouseEnter += new System.EventHandler(this.lblEntrarADM_MouseEnter);
             this.lblEntrarADM.MouseLeave += new System.EventHandler(this.lblEntrarADM_MouseLeave);
             // 
