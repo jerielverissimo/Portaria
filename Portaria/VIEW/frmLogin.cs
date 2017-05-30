@@ -107,11 +107,10 @@ namespace Portaria.VIEW
         private void ptbVisitantes_Click(object sender, EventArgs e)
         {
             
-            frmVisitantes frm = new frmVisitantes();
-            frm.StartPosition = FormStartPosition.CenterScreen;
-            this.Hide();
-            frm.ShowDialog();
-            this.Close();
+            
+            fadeOutEffect.Enabled = true;
+
+            
         }
 
         private void tmLoginMembro_Tick(object sender, EventArgs e)
@@ -192,6 +191,24 @@ namespace Portaria.VIEW
             frm.ShowDialog();
             this.Close();
 
+        }
+
+        private void lblEntrarMembro_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void fadeOutEffect_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity >= 0.1) this.Opacity -= 0.025;
+            else {
+                frmVisitantes frm = new frmVisitantes();
+                frm.StartPosition = FormStartPosition.CenterScreen;
+                fadeOutEffect.Enabled = false;
+                this.Hide();
+                frm.ShowDialog();
+                this.Close();
+            }
         }
 
         private void tmLoginADM_Tick(object sender, EventArgs e)

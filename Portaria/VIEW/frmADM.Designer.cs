@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panADM = new System.Windows.Forms.Panel();
             this.panTitleBar = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.ptbWindowMini = new System.Windows.Forms.PictureBox();
             this.ptbMaxRestore = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.ptbWindowClose = new System.Windows.Forms.PictureBox();
+            this.fadeInEffectADM = new System.Windows.Forms.Timer(this.components);
             this.panADM.SuspendLayout();
             this.panTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).BeginInit();
@@ -66,21 +68,6 @@
             this.panTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseDown);
             this.panTitleBar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseMove);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(388, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 26);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Administrador";
-            this.label1.DoubleClick += new System.EventHandler(this.panTitleBar_DoubleClick);
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseDown);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseMove);
-            // 
             // ptbWindowMini
             // 
             this.ptbWindowMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -105,6 +92,21 @@
             this.ptbMaxRestore.TabStop = false;
             this.ptbMaxRestore.Click += new System.EventHandler(this.ptbMaxRestore_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(388, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Administrador";
+            this.label1.DoubleClick += new System.EventHandler(this.panTitleBar_DoubleClick);
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panTitleBar_MouseMove);
+            // 
             // ptbWindowClose
             // 
             this.ptbWindowClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,6 +119,11 @@
             this.ptbWindowClose.TabStop = false;
             this.ptbWindowClose.Click += new System.EventHandler(this.ptbWindowClose_Click);
             // 
+            // fadeInEffectADM
+            // 
+            this.fadeInEffectADM.Interval = 1;
+            this.fadeInEffectADM.Tick += new System.EventHandler(this.fadeEffectADM_Tick);
+            // 
             // frmADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,6 +134,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmADM";
             this.Text = "frmADM";
+            this.Load += new System.EventHandler(this.frmADM_Load);
             this.panADM.ResumeLayout(false);
             this.panTitleBar.ResumeLayout(false);
             this.panTitleBar.PerformLayout();
@@ -145,5 +153,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox ptbMaxRestore;
         private System.Windows.Forms.PictureBox ptbWindowMini;
+        private System.Windows.Forms.Timer fadeInEffectADM;
     }
 }

@@ -35,6 +35,9 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.panLogin = new System.Windows.Forms.Panel();
             this.panLoginMember = new System.Windows.Forms.Panel();
+            this.txtProntuario = new System.Windows.Forms.TextBox();
+            this.lblEntrarMembro = new System.Windows.Forms.Label();
+            this.lblProntuario = new System.Windows.Forms.Label();
             this.panLoginADM = new System.Windows.Forms.Panel();
             this.lblEntrarADM = new System.Windows.Forms.Label();
             this.mskSenha = new System.Windows.Forms.MaskedTextBox();
@@ -47,9 +50,7 @@
             this.ptbVisitantes = new System.Windows.Forms.PictureBox();
             this.tmLoginADM = new System.Windows.Forms.Timer(this.components);
             this.tmLoginMembro = new System.Windows.Forms.Timer(this.components);
-            this.lblProntuario = new System.Windows.Forms.Label();
-            this.lblEntrarMembro = new System.Windows.Forms.Label();
-            this.txtProntuario = new System.Windows.Forms.TextBox();
+            this.fadeOutEffect = new System.Windows.Forms.Timer(this.components);
             this.panLogin.SuspendLayout();
             this.panLoginMember.SuspendLayout();
             this.panLoginADM.SuspendLayout();
@@ -63,11 +64,11 @@
             // 
             this.lblMembro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMembro.AutoSize = true;
-            this.lblMembro.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMembro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMembro.ForeColor = System.Drawing.Color.White;
             this.lblMembro.Location = new System.Drawing.Point(590, 350);
             this.lblMembro.Name = "lblMembro";
-            this.lblMembro.Size = new System.Drawing.Size(76, 22);
+            this.lblMembro.Size = new System.Drawing.Size(67, 20);
             this.lblMembro.TabIndex = 2;
             this.lblMembro.Text = "Membro";
             // 
@@ -75,11 +76,11 @@
             // 
             this.lblADM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblADM.AutoSize = true;
-            this.lblADM.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblADM.ForeColor = System.Drawing.Color.White;
             this.lblADM.Location = new System.Drawing.Point(428, 350);
             this.lblADM.Name = "lblADM";
-            this.lblADM.Size = new System.Drawing.Size(47, 22);
+            this.lblADM.Size = new System.Drawing.Size(45, 20);
             this.lblADM.TabIndex = 4;
             this.lblADM.Text = "ADM";
             // 
@@ -87,11 +88,11 @@
             // 
             this.lblVisitantes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblVisitantes.AutoSize = true;
-            this.lblVisitantes.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVisitantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVisitantes.ForeColor = System.Drawing.Color.White;
             this.lblVisitantes.Location = new System.Drawing.Point(229, 350);
             this.lblVisitantes.Name = "lblVisitantes";
-            this.lblVisitantes.Size = new System.Drawing.Size(84, 22);
+            this.lblVisitantes.Size = new System.Drawing.Size(79, 20);
             this.lblVisitantes.TabIndex = 7;
             this.lblVisitantes.Text = "Visitantes";
             // 
@@ -99,11 +100,11 @@
             // 
             this.lblLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Font = new System.Drawing.Font("Noto Sans UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogin.ForeColor = System.Drawing.Color.White;
             this.lblLogin.Location = new System.Drawing.Point(396, 55);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(108, 43);
+            this.lblLogin.Size = new System.Drawing.Size(101, 37);
             this.lblLogin.TabIndex = 8;
             this.lblLogin.Text = "Login";
             // 
@@ -139,6 +140,40 @@
             this.panLoginMember.Size = new System.Drawing.Size(900, 0);
             this.panLoginMember.TabIndex = 10;
             // 
+            // txtProntuario
+            // 
+            this.txtProntuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProntuario.Location = new System.Drawing.Point(355, 106);
+            this.txtProntuario.Name = "txtProntuario";
+            this.txtProntuario.Size = new System.Drawing.Size(191, 26);
+            this.txtProntuario.TabIndex = 3;
+            // 
+            // lblEntrarMembro
+            // 
+            this.lblEntrarMembro.AutoSize = true;
+            this.lblEntrarMembro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblEntrarMembro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntrarMembro.ForeColor = System.Drawing.Color.White;
+            this.lblEntrarMembro.Location = new System.Drawing.Point(411, 175);
+            this.lblEntrarMembro.Name = "lblEntrarMembro";
+            this.lblEntrarMembro.Padding = new System.Windows.Forms.Padding(10);
+            this.lblEntrarMembro.Size = new System.Drawing.Size(73, 40);
+            this.lblEntrarMembro.TabIndex = 2;
+            this.lblEntrarMembro.Text = "Entrar";
+            this.lblEntrarMembro.Click += new System.EventHandler(this.lblEntrarMembro_Click);
+            this.lblEntrarMembro.MouseEnter += new System.EventHandler(this.lblEntrarMembro_MouseEnter);
+            this.lblEntrarMembro.MouseLeave += new System.EventHandler(this.lblEntrarMembro_MouseLeave);
+            // 
+            // lblProntuario
+            // 
+            this.lblProntuario.AutoSize = true;
+            this.lblProntuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProntuario.Location = new System.Drawing.Point(396, 53);
+            this.lblProntuario.Name = "lblProntuario";
+            this.lblProntuario.Size = new System.Drawing.Size(96, 24);
+            this.lblProntuario.TabIndex = 0;
+            this.lblProntuario.Text = "Prontuário";
+            // 
             // panLoginADM
             // 
             this.panLoginADM.BackColor = System.Drawing.Color.White;
@@ -157,12 +192,12 @@
             // 
             this.lblEntrarADM.AutoSize = true;
             this.lblEntrarADM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblEntrarADM.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntrarADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEntrarADM.ForeColor = System.Drawing.Color.White;
             this.lblEntrarADM.Location = new System.Drawing.Point(411, 183);
             this.lblEntrarADM.Name = "lblEntrarADM";
             this.lblEntrarADM.Padding = new System.Windows.Forms.Padding(10);
-            this.lblEntrarADM.Size = new System.Drawing.Size(78, 42);
+            this.lblEntrarADM.Size = new System.Drawing.Size(73, 40);
             this.lblEntrarADM.TabIndex = 4;
             this.lblEntrarADM.Text = "Entrar";
             this.lblEntrarADM.Click += new System.EventHandler(this.lblEntrarADM_Click);
@@ -172,43 +207,43 @@
             // mskSenha
             // 
             this.mskSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskSenha.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskSenha.Location = new System.Drawing.Point(327, 121);
             this.mskSenha.Name = "mskSenha";
             this.mskSenha.PromptChar = ' ';
-            this.mskSenha.Size = new System.Drawing.Size(247, 29);
+            this.mskSenha.Size = new System.Drawing.Size(247, 26);
             this.mskSenha.TabIndex = 3;
             // 
             // lblSenha
             // 
             this.lblSenha.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSenha.AutoSize = true;
-            this.lblSenha.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.Black;
             this.lblSenha.Location = new System.Drawing.Point(422, 88);
             this.lblSenha.Name = "lblSenha";
-            this.lblSenha.Size = new System.Drawing.Size(57, 22);
+            this.lblSenha.Size = new System.Drawing.Size(56, 20);
             this.lblSenha.TabIndex = 2;
             this.lblSenha.Text = "Senha";
             // 
             // txtSIAPE
             // 
             this.txtSIAPE.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSIAPE.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSIAPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSIAPE.Location = new System.Drawing.Point(327, 51);
             this.txtSIAPE.Name = "txtSIAPE";
-            this.txtSIAPE.Size = new System.Drawing.Size(247, 29);
+            this.txtSIAPE.Size = new System.Drawing.Size(247, 26);
             this.txtSIAPE.TabIndex = 1;
             // 
             // lblSiape
             // 
             this.lblSiape.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSiape.AutoSize = true;
-            this.lblSiape.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSiape.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSiape.ForeColor = System.Drawing.Color.Black;
             this.lblSiape.Location = new System.Drawing.Point(424, 17);
             this.lblSiape.Name = "lblSiape";
-            this.lblSiape.Size = new System.Drawing.Size(53, 22);
+            this.lblSiape.Size = new System.Drawing.Size(57, 20);
             this.lblSiape.TabIndex = 0;
             this.lblSiape.Text = "SIAPE";
             // 
@@ -278,38 +313,10 @@
             this.tmLoginMembro.Interval = 1;
             this.tmLoginMembro.Tick += new System.EventHandler(this.tmLoginMembro_Tick);
             // 
-            // lblProntuario
+            // fadeOutEffect
             // 
-            this.lblProntuario.AutoSize = true;
-            this.lblProntuario.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProntuario.Location = new System.Drawing.Point(396, 53);
-            this.lblProntuario.Name = "lblProntuario";
-            this.lblProntuario.Size = new System.Drawing.Size(108, 26);
-            this.lblProntuario.TabIndex = 0;
-            this.lblProntuario.Text = "Prontuário";
-            // 
-            // lblEntrarMembro
-            // 
-            this.lblEntrarMembro.AutoSize = true;
-            this.lblEntrarMembro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblEntrarMembro.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEntrarMembro.ForeColor = System.Drawing.Color.White;
-            this.lblEntrarMembro.Location = new System.Drawing.Point(411, 175);
-            this.lblEntrarMembro.Name = "lblEntrarMembro";
-            this.lblEntrarMembro.Padding = new System.Windows.Forms.Padding(10);
-            this.lblEntrarMembro.Size = new System.Drawing.Size(78, 42);
-            this.lblEntrarMembro.TabIndex = 2;
-            this.lblEntrarMembro.Text = "Entrar";
-            this.lblEntrarMembro.MouseEnter += new System.EventHandler(this.lblEntrarMembro_MouseEnter);
-            this.lblEntrarMembro.MouseLeave += new System.EventHandler(this.lblEntrarMembro_MouseLeave);
-            // 
-            // txtProntuario
-            // 
-            this.txtProntuario.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProntuario.Location = new System.Drawing.Point(355, 106);
-            this.txtProntuario.Name = "txtProntuario";
-            this.txtProntuario.Size = new System.Drawing.Size(191, 29);
-            this.txtProntuario.TabIndex = 3;
+            this.fadeOutEffect.Interval = 50;
+            this.fadeOutEffect.Tick += new System.EventHandler(this.fadeOutEffect_Tick);
             // 
             // frmLogin
             // 
@@ -360,5 +367,6 @@
         private System.Windows.Forms.TextBox txtProntuario;
         private System.Windows.Forms.Label lblEntrarMembro;
         private System.Windows.Forms.Label lblProntuario;
+        private System.Windows.Forms.Timer fadeOutEffect;
     }
 }

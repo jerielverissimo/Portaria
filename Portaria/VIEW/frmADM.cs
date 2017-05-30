@@ -13,6 +13,11 @@ namespace Portaria.VIEW
     public partial class frmADM : Form
     {
 
+
+        // OBJ
+
+        PALETT.Colors color = new PALETT.Colors();
+
         // var 
 
         int window_X = 0, window_Y = 0;
@@ -43,6 +48,12 @@ namespace Portaria.VIEW
         public frmADM()
         {
             InitializeComponent();
+        }
+        private void frmADM_Load(object sender, EventArgs e)
+        {
+            panTitleBar.BackColor = color.AzulBackground;
+            this.Opacity = 0.1;
+            fadeInEffectADM.Enabled = true;
         }
 
         // Eventos
@@ -77,6 +88,17 @@ namespace Portaria.VIEW
         private void panTitleBar_DoubleClick(object sender, EventArgs e)
         {
             Maximiza_Restaura_Tela();
+        }
+
+        private void fadeEffectADM_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity <= 1.0)
+            {
+                this.Opacity += 0.025;
+            }else
+            {
+                fadeInEffectADM.Enabled = false;
+            }
         }
 
         private void ptbMaxRestore_Click(object sender, EventArgs e)
