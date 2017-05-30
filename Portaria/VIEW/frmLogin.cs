@@ -187,6 +187,7 @@ namespace Portaria.VIEW
         {
             frmADM frm = new frmADM();
             frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.WindowState = FormWindowState.Maximized;
             this.Hide();
             frm.ShowDialog();
             this.Close();
