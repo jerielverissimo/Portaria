@@ -130,5 +130,26 @@
   <ItemGroup>
     <None Include="VIEW\IMG\ICONS\window-minimize.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\glassdoor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\ic_group_white_36dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\account-convert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\account-network.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\account-switch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\google-circles-communities.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

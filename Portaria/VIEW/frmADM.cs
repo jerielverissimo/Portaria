@@ -51,7 +51,10 @@ namespace Portaria.VIEW
         }
         private void frmADM_Load(object sender, EventArgs e)
         {
-            panTitleBar.BackColor = color.AzulBackground;
+            panTitleBar.BackColor = color.AzulTitleBar;
+            panActionBar.BackColor = color.AzulActionBar;
+            panSideBar.BackColor = color.AzulSideBar;
+
             this.Opacity = 0.1;
             fadeInEffectADM.Enabled = true;
         }
