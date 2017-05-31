@@ -177,5 +177,10 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="VIEW\IMG\ICONS\ic_menu_white_18dp.png" />
+    <Content Include="VIEW\IMG\ICONS\ic_menu_white_24dp.png" />
+    <Content Include="VIEW\IMG\ICONS\menu.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

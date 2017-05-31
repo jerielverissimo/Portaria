@@ -30,15 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panADM = new System.Windows.Forms.Panel();
+            this.panSideBar = new System.Windows.Forms.Panel();
+            this.llblPortarias = new System.Windows.Forms.Label();
+            this.lblAssociacao = new System.Windows.Forms.Label();
+            this.lblMembros = new System.Windows.Forms.Label();
+            this.panActionBar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panTitleBar = new System.Windows.Forms.Panel();
             this.ptbWindowMini = new System.Windows.Forms.PictureBox();
             this.ptbMaxRestore = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ptbWindowClose = new System.Windows.Forms.PictureBox();
             this.fadeInEffectADM = new System.Windows.Forms.Timer(this.components);
-            this.panActionBar = new System.Windows.Forms.Panel();
-            this.panSideBar = new System.Windows.Forms.Panel();
             this.panADM.SuspendLayout();
+            this.panSideBar.SuspendLayout();
+            this.panActionBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMaxRestore)).BeginInit();
@@ -56,6 +63,80 @@
             this.panADM.Name = "panADM";
             this.panADM.Size = new System.Drawing.Size(927, 541);
             this.panADM.TabIndex = 1;
+            // 
+            // panSideBar
+            // 
+            this.panSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panSideBar.Controls.Add(this.llblPortarias);
+            this.panSideBar.Controls.Add(this.lblAssociacao);
+            this.panSideBar.Controls.Add(this.lblMembros);
+            this.panSideBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panSideBar.Location = new System.Drawing.Point(0, 110);
+            this.panSideBar.Name = "panSideBar";
+            this.panSideBar.Size = new System.Drawing.Size(250, 431);
+            this.panSideBar.TabIndex = 0;
+            // 
+            // llblPortarias
+            // 
+            this.llblPortarias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.llblPortarias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.llblPortarias.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblPortarias.ForeColor = System.Drawing.Color.White;
+            this.llblPortarias.Location = new System.Drawing.Point(0, 112);
+            this.llblPortarias.Name = "llblPortarias";
+            this.llblPortarias.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.llblPortarias.Size = new System.Drawing.Size(250, 56);
+            this.llblPortarias.TabIndex = 5;
+            this.llblPortarias.Text = "Portarias";
+            this.llblPortarias.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblAssociacao
+            // 
+            this.lblAssociacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblAssociacao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblAssociacao.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssociacao.ForeColor = System.Drawing.Color.White;
+            this.lblAssociacao.Location = new System.Drawing.Point(0, 56);
+            this.lblAssociacao.Name = "lblAssociacao";
+            this.lblAssociacao.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.lblAssociacao.Size = new System.Drawing.Size(250, 56);
+            this.lblAssociacao.TabIndex = 4;
+            this.lblAssociacao.Text = "Associações";
+            this.lblAssociacao.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblMembros
+            // 
+            this.lblMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblMembros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblMembros.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMembros.ForeColor = System.Drawing.Color.White;
+            this.lblMembros.Location = new System.Drawing.Point(0, 0);
+            this.lblMembros.Name = "lblMembros";
+            this.lblMembros.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
+            this.lblMembros.Size = new System.Drawing.Size(250, 56);
+            this.lblMembros.TabIndex = 3;
+            this.lblMembros.Text = "Membros";
+            this.lblMembros.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // panActionBar
+            // 
+            this.panActionBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panActionBar.Controls.Add(this.pictureBox1);
+            this.panActionBar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panActionBar.Location = new System.Drawing.Point(0, 40);
+            this.panActionBar.Name = "panActionBar";
+            this.panActionBar.Size = new System.Drawing.Size(927, 70);
+            this.panActionBar.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Portaria.Properties.Resources.menu;
+            this.pictureBox1.Location = new System.Drawing.Point(32, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panTitleBar
             // 
@@ -129,24 +210,6 @@
             this.fadeInEffectADM.Interval = 1;
             this.fadeInEffectADM.Tick += new System.EventHandler(this.fadeEffectADM_Tick);
             // 
-            // panActionBar
-            // 
-            this.panActionBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panActionBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panActionBar.Location = new System.Drawing.Point(0, 40);
-            this.panActionBar.Name = "panActionBar";
-            this.panActionBar.Size = new System.Drawing.Size(927, 75);
-            this.panActionBar.TabIndex = 2;
-            // 
-            // panSideBar
-            // 
-            this.panSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panSideBar.Location = new System.Drawing.Point(0, 115);
-            this.panSideBar.Name = "panSideBar";
-            this.panSideBar.Size = new System.Drawing.Size(200, 426);
-            this.panSideBar.TabIndex = 0;
-            // 
             // frmADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +222,10 @@
             this.Text = "frmADM";
             this.Load += new System.EventHandler(this.frmADM_Load);
             this.panADM.ResumeLayout(false);
+            this.panSideBar.ResumeLayout(false);
+            this.panActionBar.ResumeLayout(false);
+            this.panActionBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panTitleBar.ResumeLayout(false);
             this.panTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).EndInit();
@@ -179,5 +246,9 @@
         private System.Windows.Forms.Timer fadeInEffectADM;
         private System.Windows.Forms.Panel panActionBar;
         private System.Windows.Forms.Panel panSideBar;
+        private System.Windows.Forms.Label lblMembros;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label llblPortarias;
+        private System.Windows.Forms.Label lblAssociacao;
     }
 }
