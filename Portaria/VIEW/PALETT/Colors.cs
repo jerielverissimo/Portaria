@@ -13,8 +13,8 @@ namespace Portaria.VIEW.PALETT
         private Color azulBackground = ColorTranslator.FromHtml("#5952FF");
         private Color azulHighLight = ColorTranslator.FromHtml("#716df2");
         private Color azulTitleBar = ColorTranslator.FromHtml("#1e88e5");
-        private Color azulActionBar = ColorTranslator.FromHtml("#64b5f6");
-        private Color azulSideBar = ColorTranslator.FromHtml("#90caf9");
+        private Color azulActionBar = ColorTranslator.FromHtml("#2196f3");
+        private Color azulSideBar = ColorTranslator.FromHtml("#42a5f5");
 
         public Color AzulBackground
         {

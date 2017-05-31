@@ -54,8 +54,6 @@ namespace Portaria.VIEW
             panTitleBar.BackColor = color.AzulTitleBar;
             panActionBar.BackColor = color.AzulActionBar;
             panSideBar.BackColor = color.AzulSideBar;
-            lblMembros.BackColor = color.AzulSideBar;
-
             this.Opacity = 0.1;
             fadeInEffectADM.Enabled = true;
         }

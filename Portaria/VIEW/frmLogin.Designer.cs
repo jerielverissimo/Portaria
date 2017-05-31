@@ -315,7 +315,7 @@
             // 
             // fadeOutEffect
             // 
-            this.fadeOutEffect.Interval = 25;
+            this.fadeOutEffect.Interval = 50;
             this.fadeOutEffect.Tick += new System.EventHandler(this.fadeOutEffect_Tick);
             // 
             // frmLogin
