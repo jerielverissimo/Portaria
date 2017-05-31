@@ -36,8 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ptbWindowClose = new System.Windows.Forms.PictureBox();
             this.fadeInEffectADM = new System.Windows.Forms.Timer(this.components);
-            this.panActionBar = new System.Windows.Forms.Panel();
-            this.panSideBar = new System.Windows.Forms.Panel();
             this.panADM.SuspendLayout();
             this.panTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).BeginInit();
@@ -47,9 +45,6 @@
             // 
             // panADM
             // 
-            this.panADM.BackColor = System.Drawing.Color.White;
-            this.panADM.Controls.Add(this.panSideBar);
-            this.panADM.Controls.Add(this.panActionBar);
             this.panADM.Controls.Add(this.panTitleBar);
             this.panADM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panADM.Location = new System.Drawing.Point(0, 0);
@@ -129,24 +124,6 @@
             this.fadeInEffectADM.Interval = 1;
             this.fadeInEffectADM.Tick += new System.EventHandler(this.fadeEffectADM_Tick);
             // 
-            // panActionBar
-            // 
-            this.panActionBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panActionBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panActionBar.Location = new System.Drawing.Point(0, 40);
-            this.panActionBar.Name = "panActionBar";
-            this.panActionBar.Size = new System.Drawing.Size(927, 75);
-            this.panActionBar.TabIndex = 2;
-            // 
-            // panSideBar
-            // 
-            this.panSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.panSideBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panSideBar.Location = new System.Drawing.Point(0, 115);
-            this.panSideBar.Name = "panSideBar";
-            this.panSideBar.Size = new System.Drawing.Size(200, 426);
-            this.panSideBar.TabIndex = 0;
-            // 
             // frmADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +154,5 @@
         private System.Windows.Forms.PictureBox ptbMaxRestore;
         private System.Windows.Forms.PictureBox ptbWindowMini;
         private System.Windows.Forms.Timer fadeInEffectADM;
-        private System.Windows.Forms.Panel panActionBar;
-        private System.Windows.Forms.Panel panSideBar;
     }
 }
