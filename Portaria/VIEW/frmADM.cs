@@ -54,6 +54,8 @@ namespace Portaria.VIEW
             panTitleBar.BackColor = color.AzulTitleBar;
             panActionBar.BackColor = color.AzulActionBar;
             panSideBar.BackColor = color.AzulSideBar;
+            lblAddEsp.BackColor = color.AzulBackground;
+            lblCadUser.BackColor = color.AzulBackground;
 
             this.Opacity = 0.1;
             fadeInEffectADM.Enabled = true;
@@ -101,6 +103,49 @@ namespace Portaria.VIEW
             }else
             {
                 fadeInEffectADM.Enabled = false;
+            }
+        }
+
+        private void rdbTipoServ_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbTipoServ.Checked)
+            {
+                lblSIAPE.Visible = true;
+                mskSIAPE.Visible = true;
+                ckbADM.Visible = true;
+            } else
+            {
+                lblSIAPE.Visible = false;
+                mskSIAPE.Visible = false;
+               
+            }
+        }
+
+        private void rdbTipoAlluno_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbTipoAlluno.Checked)
+            {
+                lblProntUsr.Visible = true;
+                mskProntAlun.Visible = true;
+                ckbADM.Visible = true;
+            }
+            else
+            {
+                lblProntUsr.Visible = false;
+                mskProntAlun.Visible = false;
+                
+            }
+        }
+
+        private void rdbTipoExt_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbTipoExt.Checked)
+            {
+                ckbADM.Visible = false;
+                lblProntUsr.Visible = false;
+                mskProntAlun.Visible = false;
+                lblSIAPE.Visible = false;
+                mskSIAPE.Visible = false;
             }
         }
 
