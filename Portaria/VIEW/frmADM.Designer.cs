@@ -30,9 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panADM = new System.Windows.Forms.Panel();
+            this.panPopPup = new System.Windows.Forms.Panel();
+            this.lblSair = new System.Windows.Forms.Label();
             this.panUsers = new System.Windows.Forms.Panel();
             this.panNotify = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbCerto = new System.Windows.Forms.PictureBox();
             this.lblNotify = new System.Windows.Forms.Label();
             this.mskSIAPE = new System.Windows.Forms.MaskedTextBox();
             this.lblSIAPE = new System.Windows.Forms.Label();
@@ -76,10 +78,12 @@
             this.fadeInEffectADM = new System.Windows.Forms.Timer(this.components);
             this.tmSlideEfxMenu = new System.Windows.Forms.Timer(this.components);
             this.tmBounceEfxNotify = new System.Windows.Forms.Timer(this.components);
+            this.panAssociacao = new System.Windows.Forms.Panel();
             this.panADM.SuspendLayout();
+            this.panPopPup.SuspendLayout();
             this.panUsers.SuspendLayout();
             this.panNotify.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).BeginInit();
             this.gboxTipoUsr.SuspendLayout();
             this.panSideBar.SuspendLayout();
             this.panActionBar.SuspendLayout();
@@ -94,6 +98,8 @@
             // panADM
             // 
             this.panADM.BackColor = System.Drawing.Color.White;
+            this.panADM.Controls.Add(this.panAssociacao);
+            this.panADM.Controls.Add(this.panPopPup);
             this.panADM.Controls.Add(this.panUsers);
             this.panADM.Controls.Add(this.panSideBar);
             this.panADM.Controls.Add(this.panActionBar);
@@ -103,6 +109,34 @@
             this.panADM.Name = "panADM";
             this.panADM.Size = new System.Drawing.Size(1000, 600);
             this.panADM.TabIndex = 1;
+            // 
+            // panPopPup
+            // 
+            this.panPopPup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panPopPup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panPopPup.Controls.Add(this.lblSair);
+            this.panPopPup.Location = new System.Drawing.Point(875, 97);
+            this.panPopPup.Name = "panPopPup";
+            this.panPopPup.Size = new System.Drawing.Size(125, 64);
+            this.panPopPup.TabIndex = 4;
+            this.panPopPup.Visible = false;
+            this.panPopPup.Click += new System.EventHandler(this.panPopPup_Click);
+            this.panPopPup.MouseEnter += new System.EventHandler(this.panPopPup_MouseEnter);
+            this.panPopPup.MouseLeave += new System.EventHandler(this.panPopPup_MouseLeave);
+            // 
+            // lblSair
+            // 
+            this.lblSair.AutoSize = true;
+            this.lblSair.Font = new System.Drawing.Font("Noto Sans UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSair.ForeColor = System.Drawing.Color.White;
+            this.lblSair.Location = new System.Drawing.Point(37, 14);
+            this.lblSair.Name = "lblSair";
+            this.lblSair.Size = new System.Drawing.Size(53, 28);
+            this.lblSair.TabIndex = 0;
+            this.lblSair.Text = "Sair";
+            this.lblSair.Click += new System.EventHandler(this.panPopPup_Click);
+            this.lblSair.MouseEnter += new System.EventHandler(this.panPopPup_MouseEnter);
+            this.lblSair.MouseLeave += new System.EventHandler(this.panPopPup_MouseLeave);
             // 
             // panUsers
             // 
@@ -139,23 +173,23 @@
             // panNotify
             // 
             this.panNotify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panNotify.Controls.Add(this.pictureBox1);
+            this.panNotify.Controls.Add(this.ptbCerto);
             this.panNotify.Controls.Add(this.lblNotify);
             this.panNotify.Location = new System.Drawing.Point(450, 0);
             this.panNotify.Name = "panNotify";
             this.panNotify.Size = new System.Drawing.Size(0, 40);
             this.panNotify.TabIndex = 22;
             // 
-            // pictureBox1
+            // ptbCerto
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.pictureBox1.Image = global::Portaria.Properties.Resources.check_gray;
-            this.pictureBox1.Location = new System.Drawing.Point(-78, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.ptbCerto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbCerto.Image = global::Portaria.Properties.Resources.check_gray;
+            this.ptbCerto.Location = new System.Drawing.Point(-78, 2);
+            this.ptbCerto.Name = "ptbCerto";
+            this.ptbCerto.Size = new System.Drawing.Size(36, 36);
+            this.ptbCerto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbCerto.TabIndex = 1;
+            this.ptbCerto.TabStop = false;
             // 
             // lblNotify
             // 
@@ -199,7 +233,7 @@
             this.lblCadUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.lblCadUser.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadUser.ForeColor = System.Drawing.Color.White;
-            this.lblCadUser.Location = new System.Drawing.Point(783, 434);
+            this.lblCadUser.Location = new System.Drawing.Point(783, 428);
             this.lblCadUser.Name = "lblCadUser";
             this.lblCadUser.Padding = new System.Windows.Forms.Padding(10);
             this.lblCadUser.Size = new System.Drawing.Size(105, 42);
@@ -535,18 +569,19 @@
             this.lblSession.AutoSize = true;
             this.lblSession.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSession.ForeColor = System.Drawing.Color.White;
-            this.lblSession.Location = new System.Drawing.Point(920, 12);
+            this.lblSession.Location = new System.Drawing.Point(901, 12);
             this.lblSession.Name = "lblSession";
             this.lblSession.Padding = new System.Windows.Forms.Padding(10);
             this.lblSession.Size = new System.Drawing.Size(68, 42);
             this.lblSession.TabIndex = 3;
             this.lblSession.Text = "ADM";
+            this.lblSession.Click += new System.EventHandler(this.lblSession_Click);
             // 
             // ptbUser
             // 
             this.ptbUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ptbUser.Image = global::Portaria.Properties.Resources.ic_account_circle_white_24dp;
-            this.ptbUser.Location = new System.Drawing.Point(866, 9);
+            this.ptbUser.Location = new System.Drawing.Point(837, 9);
             this.ptbUser.Name = "ptbUser";
             this.ptbUser.Size = new System.Drawing.Size(48, 48);
             this.ptbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -654,7 +689,16 @@
             // 
             // tmBounceEfxNotify
             // 
+            this.tmBounceEfxNotify.Interval = 1;
             this.tmBounceEfxNotify.Tick += new System.EventHandler(this.tmBounceEfxNotify_Tick);
+            // 
+            // panAssociacao
+            // 
+            this.panAssociacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panAssociacao.Location = new System.Drawing.Point(75, 105);
+            this.panAssociacao.Name = "panAssociacao";
+            this.panAssociacao.Size = new System.Drawing.Size(925, 495);
+            this.panAssociacao.TabIndex = 23;
             // 
             // frmADM
             // 
@@ -667,12 +711,15 @@
             this.Name = "frmADM";
             this.Text = "frmADM";
             this.Load += new System.EventHandler(this.frmADM_Load);
+            this.SizeChanged += new System.EventHandler(this.frmADM_SizeChanged);
             this.panADM.ResumeLayout(false);
+            this.panPopPup.ResumeLayout(false);
+            this.panPopPup.PerformLayout();
             this.panUsers.ResumeLayout(false);
             this.panUsers.PerformLayout();
             this.panNotify.ResumeLayout(false);
             this.panNotify.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).EndInit();
             this.gboxTipoUsr.ResumeLayout(false);
             this.gboxTipoUsr.PerformLayout();
             this.panSideBar.ResumeLayout(false);
@@ -735,8 +782,11 @@
         private System.Windows.Forms.PictureBox ptbUser;
         private System.Windows.Forms.Label lblSession;
         private System.Windows.Forms.Panel panNotify;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ptbCerto;
         private System.Windows.Forms.Label lblNotify;
         private System.Windows.Forms.Timer tmBounceEfxNotify;
+        private System.Windows.Forms.Panel panPopPup;
+        private System.Windows.Forms.Label lblSair;
+        private System.Windows.Forms.Panel panAssociacao;
     }
 }

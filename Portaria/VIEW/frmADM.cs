@@ -18,11 +18,13 @@ namespace Portaria.VIEW
 
         PALETT.Colors color = new PALETT.Colors();
 
-        // var 
+        // Var 
+
+        const float PORCENEFX = 0.2f;
 
         int window_X = 0, window_Y = 0; // Variáveis usadas para mover form com o mouse
         double pan_X = 0;
-
+        float posPanNotify = 0, largPanNotify = 0, tamPanNotify = 0, origemPanNotify = 0;
         bool menuAberto = false, notifyAtivada = false; // variáveis para controle das animações
 
         // methods
@@ -61,8 +63,15 @@ namespace Portaria.VIEW
             lblAddEsp.BackColor = color.AzulBackground;
             lblCadUser.BackColor = color.AzulBackground;
             panNotify.BackColor = color.VerdeNotify;
+            panPopPup.BackColor = color.AzulActionBar;
 
             panNotify.Left = (panUsers.Width / 2) - panNotify.Width;
+
+            
+
+            posPanNotify = panADM.ClientSize.Width / 2;
+            largPanNotify = panADM.ClientSize.Width  * PORCENEFX;
+            posPanNotify = (panADM.ClientSize.Width / 2) * PORCENEFX;
 
             this.Opacity = 0.1;
             fadeInEffectADM.Enabled = true;
@@ -242,6 +251,52 @@ namespace Portaria.VIEW
             tmBounceEfxNotify.Enabled = true;
         }
 
+        private void frmADM_SizeChanged(object sender, EventArgs e)
+        {
+            posPanNotify = 0;
+            largPanNotify = 0;
+            tamPanNotify = 0;
+            origemPanNotify = 0;
+
+            panNotify.Left = (panADM.ClientSize.Width - panNotify.ClientSize.Width) / 2;
+            origemPanNotify = panADM.ClientSize.Width / 2;
+            largPanNotify = panADM.ClientSize.Width * PORCENEFX;
+            posPanNotify = (panADM.ClientSize.Width / 2) * PORCENEFX;
+
+            if (notifyAtivada == true)
+            {
+               panNotify.Left = 0;
+               panNotify.Width = panADM.ClientSize.Width;
+            }
+        }
+
+        private void lblSession_Click(object sender, EventArgs e)
+        {
+            panPopPup.BringToFront();
+            if (!panPopPup.Visible) panPopPup.Visible = true;
+            else panPopPup.Visible = false;
+        }
+
+        private void panPopPup_MouseEnter(object sender, EventArgs e)
+        {
+            panPopPup.BackColor = color.AzulSideBar;
+            lblSair.BackColor = color.AzulSideBar;
+        }
+
+        private void panPopPup_MouseLeave(object sender, EventArgs e)
+        {
+            panPopPup.BackColor = color.AzulActionBar;
+            lblSair.BackColor = color.AzulActionBar;
+        }
+
+        private void panPopPup_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmLogin frm = new frmLogin();
+            frm.ShowDialog();
+            this.Close();
+        }
+
         private void panUsers_SizeChanged(object sender, EventArgs e)
         {
             pan_X = panUsers.Width * 0.2;
@@ -259,41 +314,36 @@ namespace Portaria.VIEW
 
         private void tmBounceEfxNotify_Tick(object sender, EventArgs e)
         {
+            panNotify.Width = Convert.ToInt32(tamPanNotify);
+            panNotify.Left = Convert.ToInt32(origemPanNotify);
+
             switch (notifyAtivada)
             {
-                case true:
-
-                    panNotify.Width -= 100;
-                    panNotify.Left += 50;
-
-                    if (panNotify.ClientSize.Width == panUsers.ClientSize.Width && panNotify.Left == 0)
-                    {
-                        panNotify.Dock = DockStyle.None;
-                        notifyAtivada = false;
-                        tmBounceEfxNotify.Enabled = false;
-                        lblTitleForm.Text = "Desativou";
-
-                        lblNotify.Text = panNotify.Width.ToString();
-                    }
-                    
-
-                    break;
-
                 case false:
 
+                    tamPanNotify += largPanNotify;
+                    origemPanNotify -= posPanNotify;
 
-                    panNotify.Width += 100;
-                    panNotify.Left -= 50;
-                    lblNotify.Text = panNotify.Width.ToString();
-
-                    if (panNotify.Width == 0 && panNotify.Left == panUsers.ClientSize.Width / 2)
+                    if (panNotify.Width == panADM.ClientSize.Width && panNotify.Left == 0)
                     {
                         panNotify.Dock = DockStyle.Top;
                         notifyAtivada = true;
                         tmBounceEfxNotify.Enabled = false;
-                        lblTitleForm.Text = "Ativou";
                     }
-                    
+
+                    break;
+
+                case true:
+                    panNotify.Dock = DockStyle.None;
+                    tamPanNotify -= largPanNotify;
+                    origemPanNotify += posPanNotify;
+
+                    if (panNotify.Width == 0 && panNotify.Left == panADM.ClientSize.Width / 2)
+                    {
+                        notifyAtivada = false;
+                        tmBounceEfxNotify.Enabled = false;
+                    }
+
                     break;
             }
         }
