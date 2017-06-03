@@ -113,6 +113,26 @@ namespace Portaria.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap check {
+            get {
+                object obj = ResourceManager.GetObject("check", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap check_gray {
+            get {
+                object obj = ResourceManager.GetObject("check-gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap glassdoor {
             get {
                 object obj = ResourceManager.GetObject("glassdoor", resourceCulture);
@@ -126,6 +146,16 @@ namespace Portaria.Properties {
         internal static System.Drawing.Bitmap google_circles_communities {
             get {
                 object obj = ResourceManager.GetObject("google-circles-communities", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_account_circle_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_account_circle_white_24dp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -151,5 +151,14 @@
   <ItemGroup>
     <None Include="VIEW\IMG\ICONS\google-circles-communities.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\ic_account_circle_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIEW\IMG\ICONS\check-gray.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

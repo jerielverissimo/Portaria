@@ -20,7 +20,10 @@ namespace Portaria.VIEW
 
         // var 
 
-        int window_X = 0, window_Y = 0;
+        int window_X = 0, window_Y = 0; // Variáveis usadas para mover form com o mouse
+        double pan_X = 0;
+
+        bool menuAberto = false, notifyAtivada = false; // variáveis para controle das animações
 
         // methods
 
@@ -49,6 +52,7 @@ namespace Portaria.VIEW
         {
             InitializeComponent();
         }
+
         private void frmADM_Load(object sender, EventArgs e)
         {
             panTitleBar.BackColor = color.AzulTitleBar;
@@ -56,6 +60,9 @@ namespace Portaria.VIEW
             panSideBar.BackColor = color.AzulSideBar;
             lblAddEsp.BackColor = color.AzulBackground;
             lblCadUser.BackColor = color.AzulBackground;
+            panNotify.BackColor = color.VerdeNotify;
+
+            panNotify.Left = (panUsers.Width / 2) - panNotify.Width;
 
             this.Opacity = 0.1;
             fadeInEffectADM.Enabled = true;
@@ -112,12 +119,16 @@ namespace Portaria.VIEW
             {
                 lblSIAPE.Visible = true;
                 mskSIAPE.Visible = true;
+                lblSenhaADM.Visible = true;
                 ckbADM.Visible = true;
+                txtSenhaADM.Visible = true;
             } else
             {
                 lblSIAPE.Visible = false;
                 mskSIAPE.Visible = false;
-               
+                lblSenhaADM.Visible = false;
+                ckbADM.Visible = false;
+                txtSenhaADM.Visible = false;
             }
         }
 
@@ -127,7 +138,8 @@ namespace Portaria.VIEW
             {
                 lblProntUsr.Visible = true;
                 mskProntAlun.Visible = true;
-                ckbADM.Visible = true;
+                ckbADM.Visible = false;
+                txtSenhaADM.Visible = false;
             }
             else
             {
@@ -146,6 +158,143 @@ namespace Portaria.VIEW
                 mskProntAlun.Visible = false;
                 lblSIAPE.Visible = false;
                 mskSIAPE.Visible = false;
+                ckbADM.Visible = false;
+                txtSenhaADM.Visible = false;
+            }
+        }
+
+        private void ptbSideMenu_Click(object sender, EventArgs e)
+        {
+            tmSlideEfxMenu.Enabled = true;
+        }
+
+        private void tmSlideEfxMenu_Tick(object sender, EventArgs e)
+        {
+            switch (menuAberto)
+            {
+                case true:
+
+
+                    panSideBar.Width -= 25;
+                    lblUsuarios.Text = "";
+                    lblAssociacoes.Text = "";
+                    lblPortarias.Text = "";
+                    
+                    if (panSideBar.Width <= 75)
+                    {
+                        
+                        menuAberto = false;
+                        tmSlideEfxMenu.Enabled = false;
+                    }
+
+                    
+
+                    break;
+                case false:
+
+                    panSideBar.Width += 25;
+
+                    if (panSideBar.Width >= 250)
+                    {
+                        lblUsuarios.Text = "Usuários";
+                        lblAssociacoes.Text = "Associações";
+                        lblPortarias.Text = "Portarias";
+                        menuAberto = true;
+                        tmSlideEfxMenu.Enabled = false;
+                    }
+
+                    break;
+            }
+        }
+
+        private void lblUsuarios_MouseEnter(object sender, EventArgs e)
+        {
+            lblUsuarios.BackColor = color.AzulSideBarHighlight;
+        }
+
+        private void lblUsuarios_MouseLeave(object sender, EventArgs e)
+        {
+            lblUsuarios.BackColor = color.AzulSideBar;
+        }
+
+        private void lblAssociacoes_MouseEnter(object sender, EventArgs e)
+        {
+            lblAssociacoes.BackColor = color.AzulSideBarHighlight;
+        }
+
+        private void lblAssociacoes_MouseLeave(object sender, EventArgs e)
+        {
+            lblAssociacoes.BackColor = color.AzulSideBar;
+        }
+
+        private void lblPortarias_MouseEnter(object sender, EventArgs e)
+        {
+            lblPortarias.BackColor = color.AzulSideBarHighlight;
+        }
+
+        private void lblPortarias_MouseLeave(object sender, EventArgs e)
+        {
+            lblPortarias.BackColor = color.AzulSideBar;
+        }
+
+        private void lblCadUser_Click(object sender, EventArgs e)
+        {
+            tmBounceEfxNotify.Enabled = true;
+        }
+
+        private void panUsers_SizeChanged(object sender, EventArgs e)
+        {
+            pan_X = panUsers.Width * 0.2;
+        }
+
+        private void lblCadUser_MouseEnter(object sender, EventArgs e)
+        {
+            lblCadUser.BackColor = color.AzulHighLight;
+        }
+
+        private void lblCadUser_MouseLeave(object sender, EventArgs e)
+        {
+            lblCadUser.BackColor = color.AzulBackground;
+        }
+
+        private void tmBounceEfxNotify_Tick(object sender, EventArgs e)
+        {
+            switch (notifyAtivada)
+            {
+                case true:
+
+                    panNotify.Width -= 100;
+                    panNotify.Left += 50;
+
+                    if (panNotify.ClientSize.Width == panUsers.ClientSize.Width && panNotify.Left == 0)
+                    {
+                        panNotify.Dock = DockStyle.None;
+                        notifyAtivada = false;
+                        tmBounceEfxNotify.Enabled = false;
+                        lblTitleForm.Text = "Desativou";
+
+                        lblNotify.Text = panNotify.Width.ToString();
+                    }
+                    
+
+                    break;
+
+                case false:
+
+
+                    panNotify.Width += 100;
+                    panNotify.Left -= 50;
+                    lblNotify.Text = panNotify.Width.ToString();
+
+                    if (panNotify.Width == 0 && panNotify.Left == panUsers.ClientSize.Width / 2)
+                    {
+                        panNotify.Dock = DockStyle.Top;
+                        notifyAtivada = true;
+                        tmBounceEfxNotify.Enabled = false;
+                        lblTitleForm.Text = "Ativou";
+                    }
+                    
+                    break;
             }
         }
 
