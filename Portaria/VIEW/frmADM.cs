@@ -112,16 +112,12 @@ namespace Portaria.VIEW
             {
                 lblSIAPE.Visible = true;
                 mskSIAPE.Visible = true;
-                lblSenhaADM.Visible = true;
-                txtSenhaADM.Visible = true;
                 ckbADM.Visible = true;
             } else
             {
                 lblSIAPE.Visible = false;
                 mskSIAPE.Visible = false;
-                lblSenhaADM.Visible = false;
-                txtSenhaADM.Visible = false;
-                ckbADM.Visible = false;
+               
             }
         }
 
@@ -131,7 +127,7 @@ namespace Portaria.VIEW
             {
                 lblProntUsr.Visible = true;
                 mskProntAlun.Visible = true;
-                
+                ckbADM.Visible = true;
             }
             else
             {
@@ -150,8 +146,6 @@ namespace Portaria.VIEW
                 mskProntAlun.Visible = false;
                 lblSIAPE.Visible = false;
                 mskSIAPE.Visible = false;
-                lblSenhaADM.Visible = false;
-                txtSenhaADM.Visible = false;
             }
         }
 
