@@ -35,16 +35,23 @@ namespace Portaria.VIEW
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
-                this.StartPosition = FormStartPosition.CenterScreen;
                 this.WindowState = FormWindowState.Normal;
+                this.CenterToScreen();
                 ptbMaxRestore.Image = Properties.Resources.window_maximize;
+                if (menuAberto) tmSlideEfxMenu.Enabled = true;
+                ptbSideMenu.Visible = false;
+                lblTitleForm.Left = 23;
+
             }
             else
 
             if (this.WindowState == FormWindowState.Normal)
             {
                 this.WindowState = FormWindowState.Maximized;
+                
                 ptbMaxRestore.Image = Properties.Resources.window_restore;
+                ptbSideMenu.Visible = true;
+                lblTitleForm.Left = 70;
             }
         }
 
@@ -188,7 +195,8 @@ namespace Portaria.VIEW
                     lblUsuarios.Text = "";
                     lblAssociacoes.Text = "";
                     lblPortarias.Text = "";
-                    
+                    lblVinculaMem.Text = "";
+
                     if (panSideBar.Width <= 75)
                     {
                         
@@ -208,6 +216,7 @@ namespace Portaria.VIEW
                         lblUsuarios.Text = "Usuários";
                         lblAssociacoes.Text = "Associações";
                         lblPortarias.Text = "Portarias";
+                        lblVinculaMem.Text = "Membros";
                         menuAberto = true;
                         tmSlideEfxMenu.Enabled = false;
                     }
@@ -295,6 +304,46 @@ namespace Portaria.VIEW
             frmLogin frm = new frmLogin();
             frm.ShowDialog();
             this.Close();
+        }
+
+        private void lblUsuarios_Click(object sender, EventArgs e)
+        {
+            lblTitleForm.Text = "Cadastro de Usuário";
+            panUsers.BringToFront();
+        }
+
+        private void lblAssociacoes_Click(object sender, EventArgs e)
+        {
+            lblTitleForm.Text = "Cadastro de Associação";
+            panAssociacao.BringToFront();
+        }
+
+        private void lblPortarias_Click(object sender, EventArgs e)
+        {
+            lblTitleForm.Text = "Cadastro de Portaria";
+            panPortarias.BringToFront();
+        }
+
+        private void lblAddMem_Click(object sender, EventArgs e)
+        {
+            lblTitleForm.Text = "Vincular Membros";
+            panVinculaMem.BringToFront();
+        }
+
+        private void lblCadAsso_Click(object sender, EventArgs e)
+        {
+           
+           
+        }
+
+        private void lblAddMem_MouseEnter(object sender, EventArgs e)
+        {
+            lblVinculaMem.BackColor = color.AzulSideBarHighlight;
+        }
+
+        private void lblAddMem_MouseLeave(object sender, EventArgs e)
+        {
+            lblVinculaMem.BackColor = color.AzulSideBar;
         }
 
         private void panUsers_SizeChanged(object sender, EventArgs e)

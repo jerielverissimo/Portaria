@@ -30,6 +30,36 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panADM = new System.Windows.Forms.Panel();
+            this.panVinculaMem = new System.Windows.Forms.Panel();
+            this.panPortarias = new System.Windows.Forms.Panel();
+            this.lblRelPort = new System.Windows.Forms.Label();
+            this.lstPortRelacio = new System.Windows.Forms.ListBox();
+            this.lblPortRelacio = new System.Windows.Forms.Label();
+            this.txtAssunto = new System.Windows.Forms.TextBox();
+            this.txtCabecalho = new System.Windows.Forms.TextBox();
+            this.txtResumo = new System.Windows.Forms.TextBox();
+            this.txtNumPort = new System.Windows.Forms.TextBox();
+            this.cboxStatus = new System.Windows.Forms.ComboBox();
+            this.lblCabe = new System.Windows.Forms.Label();
+            this.lblCriarPort = new System.Windows.Forms.Label();
+            this.lblSatus = new System.Windows.Forms.Label();
+            this.lblResumo = new System.Windows.Forms.Label();
+            this.lblAssunto = new System.Windows.Forms.Label();
+            this.lblNum = new System.Windows.Forms.Label();
+            this.panAssociacao = new System.Windows.Forms.Panel();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtLegCorrelata = new System.Windows.Forms.TextBox();
+            this.mskFimPrev = new System.Windows.Forms.MaskedTextBox();
+            this.mskInicioVige = new System.Windows.Forms.MaskedTextBox();
+            this.cboxTipo = new System.Windows.Forms.ComboBox();
+            this.txtNomeAss = new System.Windows.Forms.TextBox();
+            this.lblCadAsso = new System.Windows.Forms.Label();
+            this.lblLegCorrelata = new System.Windows.Forms.Label();
+            this.lblDataVig = new System.Windows.Forms.Label();
+            this.lblNomeAss = new System.Windows.Forms.Label();
+            this.lblTipoAss = new System.Windows.Forms.Label();
+            this.lblFimPrev = new System.Windows.Forms.Label();
             this.panPopPup = new System.Windows.Forms.Panel();
             this.lblSair = new System.Windows.Forms.Label();
             this.panUsers = new System.Windows.Forms.Panel();
@@ -63,6 +93,7 @@
             this.lblNomeUsr = new System.Windows.Forms.Label();
             this.panSideBar = new System.Windows.Forms.Panel();
             this.lblPortarias = new System.Windows.Forms.Label();
+            this.lblVinculaMem = new System.Windows.Forms.Label();
             this.lblAssociacoes = new System.Windows.Forms.Label();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.panActionBar = new System.Windows.Forms.Panel();
@@ -78,8 +109,16 @@
             this.fadeInEffectADM = new System.Windows.Forms.Timer(this.components);
             this.tmSlideEfxMenu = new System.Windows.Forms.Timer(this.components);
             this.tmBounceEfxNotify = new System.Windows.Forms.Timer(this.components);
-            this.panAssociacao = new System.Windows.Forms.Panel();
+            this.lblAsso = new System.Windows.Forms.Label();
+            this.cboxSelAsso = new System.Windows.Forms.ComboBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.lblAddMembros = new System.Windows.Forms.Label();
+            this.lblMembros = new System.Windows.Forms.Label();
+            this.lblVincular = new System.Windows.Forms.Label();
             this.panADM.SuspendLayout();
+            this.panVinculaMem.SuspendLayout();
+            this.panPortarias.SuspendLayout();
+            this.panAssociacao.SuspendLayout();
             this.panPopPup.SuspendLayout();
             this.panUsers.SuspendLayout();
             this.panNotify.SuspendLayout();
@@ -93,29 +132,369 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMaxRestore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panADM
             // 
             this.panADM.BackColor = System.Drawing.Color.White;
-            this.panADM.Controls.Add(this.panAssociacao);
-            this.panADM.Controls.Add(this.panPopPup);
+            this.panADM.Controls.Add(this.panVinculaMem);
             this.panADM.Controls.Add(this.panUsers);
+            this.panADM.Controls.Add(this.panAssociacao);
+            this.panADM.Controls.Add(this.panPortarias);
+            this.panADM.Controls.Add(this.panPopPup);
             this.panADM.Controls.Add(this.panSideBar);
             this.panADM.Controls.Add(this.panActionBar);
             this.panADM.Controls.Add(this.panTitleBar);
             this.panADM.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panADM.Location = new System.Drawing.Point(0, 0);
             this.panADM.Name = "panADM";
-            this.panADM.Size = new System.Drawing.Size(1000, 600);
+            this.panADM.Size = new System.Drawing.Size(1000, 650);
             this.panADM.TabIndex = 1;
+            // 
+            // panVinculaMem
+            // 
+            this.panVinculaMem.Controls.Add(this.lblVincular);
+            this.panVinculaMem.Controls.Add(this.lblMembros);
+            this.panVinculaMem.Controls.Add(this.lblAddMembros);
+            this.panVinculaMem.Controls.Add(this.dataGridView2);
+            this.panVinculaMem.Controls.Add(this.cboxSelAsso);
+            this.panVinculaMem.Controls.Add(this.lblAsso);
+            this.panVinculaMem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panVinculaMem.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panVinculaMem.Location = new System.Drawing.Point(75, 105);
+            this.panVinculaMem.Name = "panVinculaMem";
+            this.panVinculaMem.Size = new System.Drawing.Size(925, 545);
+            this.panVinculaMem.TabIndex = 14;
+            // 
+            // panPortarias
+            // 
+            this.panPortarias.Controls.Add(this.lblRelPort);
+            this.panPortarias.Controls.Add(this.lstPortRelacio);
+            this.panPortarias.Controls.Add(this.lblPortRelacio);
+            this.panPortarias.Controls.Add(this.txtAssunto);
+            this.panPortarias.Controls.Add(this.txtCabecalho);
+            this.panPortarias.Controls.Add(this.txtResumo);
+            this.panPortarias.Controls.Add(this.txtNumPort);
+            this.panPortarias.Controls.Add(this.cboxStatus);
+            this.panPortarias.Controls.Add(this.lblCabe);
+            this.panPortarias.Controls.Add(this.lblCriarPort);
+            this.panPortarias.Controls.Add(this.lblSatus);
+            this.panPortarias.Controls.Add(this.lblResumo);
+            this.panPortarias.Controls.Add(this.lblAssunto);
+            this.panPortarias.Controls.Add(this.lblNum);
+            this.panPortarias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panPortarias.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panPortarias.Location = new System.Drawing.Point(75, 105);
+            this.panPortarias.Name = "panPortarias";
+            this.panPortarias.Size = new System.Drawing.Size(925, 545);
+            this.panPortarias.TabIndex = 14;
+            // 
+            // lblRelPort
+            // 
+            this.lblRelPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblRelPort.AutoSize = true;
+            this.lblRelPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblRelPort.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelPort.ForeColor = System.Drawing.Color.White;
+            this.lblRelPort.Location = new System.Drawing.Point(824, 387);
+            this.lblRelPort.Name = "lblRelPort";
+            this.lblRelPort.Padding = new System.Windows.Forms.Padding(10);
+            this.lblRelPort.Size = new System.Drawing.Size(39, 42);
+            this.lblRelPort.TabIndex = 14;
+            this.lblRelPort.Text = "+";
+            this.lblRelPort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lstPortRelacio
+            // 
+            this.lstPortRelacio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lstPortRelacio.FormattingEnabled = true;
+            this.lstPortRelacio.ItemHeight = 22;
+            this.lstPortRelacio.Location = new System.Drawing.Point(636, 224);
+            this.lstPortRelacio.Name = "lstPortRelacio";
+            this.lstPortRelacio.Size = new System.Drawing.Size(227, 136);
+            this.lstPortRelacio.TabIndex = 13;
+            // 
+            // lblPortRelacio
+            // 
+            this.lblPortRelacio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPortRelacio.AutoSize = true;
+            this.lblPortRelacio.Location = new System.Drawing.Point(658, 182);
+            this.lblPortRelacio.Name = "lblPortRelacio";
+            this.lblPortRelacio.Size = new System.Drawing.Size(184, 22);
+            this.lblPortRelacio.TabIndex = 12;
+            this.lblPortRelacio.Text = "Portarias Relacionadas";
+            // 
+            // txtAssunto
+            // 
+            this.txtAssunto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAssunto.Location = new System.Drawing.Point(65, 387);
+            this.txtAssunto.Multiline = true;
+            this.txtAssunto.Name = "txtAssunto";
+            this.txtAssunto.Size = new System.Drawing.Size(503, 121);
+            this.txtAssunto.TabIndex = 11;
+            // 
+            // txtCabecalho
+            // 
+            this.txtCabecalho.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCabecalho.Location = new System.Drawing.Point(65, 224);
+            this.txtCabecalho.Multiline = true;
+            this.txtCabecalho.Name = "txtCabecalho";
+            this.txtCabecalho.Size = new System.Drawing.Size(503, 106);
+            this.txtCabecalho.TabIndex = 10;
+            // 
+            // txtResumo
+            // 
+            this.txtResumo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtResumo.Location = new System.Drawing.Point(65, 70);
+            this.txtResumo.Multiline = true;
+            this.txtResumo.Name = "txtResumo";
+            this.txtResumo.Size = new System.Drawing.Size(503, 103);
+            this.txtResumo.TabIndex = 9;
+            // 
+            // txtNumPort
+            // 
+            this.txtNumPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNumPort.Location = new System.Drawing.Point(694, 77);
+            this.txtNumPort.Name = "txtNumPort";
+            this.txtNumPort.Size = new System.Drawing.Size(169, 29);
+            this.txtNumPort.TabIndex = 8;
+            // 
+            // cboxStatus
+            // 
+            this.cboxStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxStatus.FormattingEnabled = true;
+            this.cboxStatus.Location = new System.Drawing.Point(694, 122);
+            this.cboxStatus.Name = "cboxStatus";
+            this.cboxStatus.Size = new System.Drawing.Size(169, 30);
+            this.cboxStatus.TabIndex = 7;
+            // 
+            // lblCabe
+            // 
+            this.lblCabe.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCabe.AutoSize = true;
+            this.lblCabe.Location = new System.Drawing.Point(61, 182);
+            this.lblCabe.Name = "lblCabe";
+            this.lblCabe.Size = new System.Drawing.Size(89, 22);
+            this.lblCabe.TabIndex = 6;
+            this.lblCabe.Text = "Cabeçalho";
+            // 
+            // lblCriarPort
+            // 
+            this.lblCriarPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCriarPort.AutoSize = true;
+            this.lblCriarPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblCriarPort.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriarPort.ForeColor = System.Drawing.Color.White;
+            this.lblCriarPort.Location = new System.Drawing.Point(794, 466);
+            this.lblCriarPort.Name = "lblCriarPort";
+            this.lblCriarPort.Padding = new System.Windows.Forms.Padding(10);
+            this.lblCriarPort.Size = new System.Drawing.Size(69, 42);
+            this.lblCriarPort.TabIndex = 5;
+            this.lblCriarPort.Text = "Criar";
+            // 
+            // lblSatus
+            // 
+            this.lblSatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSatus.AutoSize = true;
+            this.lblSatus.Location = new System.Drawing.Point(630, 126);
+            this.lblSatus.Name = "lblSatus";
+            this.lblSatus.Size = new System.Drawing.Size(58, 22);
+            this.lblSatus.TabIndex = 4;
+            this.lblSatus.Text = "Status";
+            // 
+            // lblResumo
+            // 
+            this.lblResumo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblResumo.AutoSize = true;
+            this.lblResumo.Location = new System.Drawing.Point(61, 37);
+            this.lblResumo.Name = "lblResumo";
+            this.lblResumo.Size = new System.Drawing.Size(72, 22);
+            this.lblResumo.TabIndex = 3;
+            this.lblResumo.Text = "Resumo";
+            // 
+            // lblAssunto
+            // 
+            this.lblAssunto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAssunto.AutoSize = true;
+            this.lblAssunto.Location = new System.Drawing.Point(61, 348);
+            this.lblAssunto.Name = "lblAssunto";
+            this.lblAssunto.Size = new System.Drawing.Size(72, 22);
+            this.lblAssunto.TabIndex = 2;
+            this.lblAssunto.Text = "Assunto";
+            // 
+            // lblNum
+            // 
+            this.lblNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNum.AutoSize = true;
+            this.lblNum.Location = new System.Drawing.Point(615, 80);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(73, 22);
+            this.lblNum.TabIndex = 0;
+            this.lblNum.Text = "Número";
+            // 
+            // panAssociacao
+            // 
+            this.panAssociacao.Controls.Add(this.txtDescricao);
+            this.panAssociacao.Controls.Add(this.lblDescricao);
+            this.panAssociacao.Controls.Add(this.txtLegCorrelata);
+            this.panAssociacao.Controls.Add(this.mskFimPrev);
+            this.panAssociacao.Controls.Add(this.mskInicioVige);
+            this.panAssociacao.Controls.Add(this.cboxTipo);
+            this.panAssociacao.Controls.Add(this.txtNomeAss);
+            this.panAssociacao.Controls.Add(this.lblCadAsso);
+            this.panAssociacao.Controls.Add(this.lblLegCorrelata);
+            this.panAssociacao.Controls.Add(this.lblDataVig);
+            this.panAssociacao.Controls.Add(this.lblNomeAss);
+            this.panAssociacao.Controls.Add(this.lblTipoAss);
+            this.panAssociacao.Controls.Add(this.lblFimPrev);
+            this.panAssociacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panAssociacao.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panAssociacao.Location = new System.Drawing.Point(75, 105);
+            this.panAssociacao.Name = "panAssociacao";
+            this.panAssociacao.Size = new System.Drawing.Size(925, 545);
+            this.panAssociacao.TabIndex = 23;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDescricao.Location = new System.Drawing.Point(47, 179);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(623, 88);
+            this.txtDescricao.TabIndex = 13;
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(47, 143);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(85, 22);
+            this.lblDescricao.TabIndex = 12;
+            this.lblDescricao.Text = "Descrição";
+            // 
+            // txtLegCorrelata
+            // 
+            this.txtLegCorrelata.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtLegCorrelata.Location = new System.Drawing.Point(47, 331);
+            this.txtLegCorrelata.Multiline = true;
+            this.txtLegCorrelata.Name = "txtLegCorrelata";
+            this.txtLegCorrelata.Size = new System.Drawing.Size(620, 157);
+            this.txtLegCorrelata.TabIndex = 11;
+            // 
+            // mskFimPrev
+            // 
+            this.mskFimPrev.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mskFimPrev.Culture = new System.Globalization.CultureInfo("pt-BR");
+            this.mskFimPrev.Location = new System.Drawing.Point(157, 87);
+            this.mskFimPrev.Mask = "00/00/0000";
+            this.mskFimPrev.Name = "mskFimPrev";
+            this.mskFimPrev.PromptChar = ' ';
+            this.mskFimPrev.Size = new System.Drawing.Size(100, 29);
+            this.mskFimPrev.TabIndex = 10;
+            this.mskFimPrev.ValidatingType = typeof(System.DateTime);
+            // 
+            // mskInicioVige
+            // 
+            this.mskInicioVige.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mskInicioVige.Culture = new System.Globalization.CultureInfo("pt-BR");
+            this.mskInicioVige.Location = new System.Drawing.Point(570, 87);
+            this.mskInicioVige.Mask = "00/00/0000";
+            this.mskInicioVige.Name = "mskInicioVige";
+            this.mskInicioVige.PromptChar = ' ';
+            this.mskInicioVige.Size = new System.Drawing.Size(100, 29);
+            this.mskInicioVige.TabIndex = 9;
+            this.mskInicioVige.ValidatingType = typeof(System.DateTime);
+            // 
+            // cboxTipo
+            // 
+            this.cboxTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxTipo.FormattingEnabled = true;
+            this.cboxTipo.Location = new System.Drawing.Point(514, 37);
+            this.cboxTipo.Name = "cboxTipo";
+            this.cboxTipo.Size = new System.Drawing.Size(156, 30);
+            this.cboxTipo.TabIndex = 8;
+            // 
+            // txtNomeAss
+            // 
+            this.txtNomeAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNomeAss.Location = new System.Drawing.Point(47, 38);
+            this.txtNomeAss.Name = "txtNomeAss";
+            this.txtNomeAss.Size = new System.Drawing.Size(327, 29);
+            this.txtNomeAss.TabIndex = 7;
+            // 
+            // lblCadAsso
+            // 
+            this.lblCadAsso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCadAsso.AutoSize = true;
+            this.lblCadAsso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblCadAsso.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadAsso.ForeColor = System.Drawing.Color.White;
+            this.lblCadAsso.Location = new System.Drawing.Point(778, 466);
+            this.lblCadAsso.Name = "lblCadAsso";
+            this.lblCadAsso.Padding = new System.Windows.Forms.Padding(10);
+            this.lblCadAsso.Size = new System.Drawing.Size(109, 42);
+            this.lblCadAsso.TabIndex = 6;
+            this.lblCadAsso.Text = "Cadastrar";
+            this.lblCadAsso.Click += new System.EventHandler(this.lblCadAsso_Click);
+            // 
+            // lblLegCorrelata
+            // 
+            this.lblLegCorrelata.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblLegCorrelata.AutoSize = true;
+            this.lblLegCorrelata.Location = new System.Drawing.Point(47, 286);
+            this.lblLegCorrelata.Name = "lblLegCorrelata";
+            this.lblLegCorrelata.Size = new System.Drawing.Size(162, 22);
+            this.lblLegCorrelata.TabIndex = 5;
+            this.lblLegCorrelata.Text = "Legislação correlata";
+            // 
+            // lblDataVig
+            // 
+            this.lblDataVig.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDataVig.AutoSize = true;
+            this.lblDataVig.Location = new System.Drawing.Point(424, 90);
+            this.lblDataVig.Name = "lblDataVig";
+            this.lblDataVig.Size = new System.Drawing.Size(140, 22);
+            this.lblDataVig.TabIndex = 4;
+            this.lblDataVig.Text = "Inicio da vigência";
+            // 
+            // lblNomeAss
+            // 
+            this.lblNomeAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNomeAss.AutoSize = true;
+            this.lblNomeAss.Location = new System.Drawing.Point(47, 11);
+            this.lblNomeAss.Name = "lblNomeAss";
+            this.lblNomeAss.Size = new System.Drawing.Size(56, 22);
+            this.lblNomeAss.TabIndex = 3;
+            this.lblNomeAss.Text = "Nome";
+            // 
+            // lblTipoAss
+            // 
+            this.lblTipoAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTipoAss.AutoSize = true;
+            this.lblTipoAss.Location = new System.Drawing.Point(510, 11);
+            this.lblTipoAss.Name = "lblTipoAss";
+            this.lblTipoAss.Size = new System.Drawing.Size(43, 22);
+            this.lblTipoAss.TabIndex = 1;
+            this.lblTipoAss.Text = "Tipo";
+            // 
+            // lblFimPrev
+            // 
+            this.lblFimPrev.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFimPrev.AutoSize = true;
+            this.lblFimPrev.Location = new System.Drawing.Point(47, 90);
+            this.lblFimPrev.Name = "lblFimPrev";
+            this.lblFimPrev.Size = new System.Drawing.Size(103, 22);
+            this.lblFimPrev.TabIndex = 0;
+            this.lblFimPrev.Text = "Fim previsto";
             // 
             // panPopPup
             // 
             this.panPopPup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panPopPup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panPopPup.Controls.Add(this.lblSair);
-            this.panPopPup.Location = new System.Drawing.Point(875, 97);
+            this.panPopPup.Location = new System.Drawing.Point(875, 103);
             this.panPopPup.Name = "panPopPup";
             this.panPopPup.Size = new System.Drawing.Size(125, 64);
             this.panPopPup.TabIndex = 4;
@@ -126,14 +505,16 @@
             // 
             // lblSair
             // 
-            this.lblSair.AutoSize = true;
+            this.lblSair.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblSair.Font = new System.Drawing.Font("Noto Sans UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
-            this.lblSair.Location = new System.Drawing.Point(37, 14);
+            this.lblSair.Location = new System.Drawing.Point(0, 0);
             this.lblSair.Name = "lblSair";
-            this.lblSair.Size = new System.Drawing.Size(53, 28);
+            this.lblSair.Padding = new System.Windows.Forms.Padding(10, 5, 5, 10);
+            this.lblSair.Size = new System.Drawing.Size(125, 64);
             this.lblSair.TabIndex = 0;
             this.lblSair.Text = "Sair";
+            this.lblSair.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSair.Click += new System.EventHandler(this.panPopPup_Click);
             this.lblSair.MouseEnter += new System.EventHandler(this.panPopPup_MouseEnter);
             this.lblSair.MouseLeave += new System.EventHandler(this.panPopPup_MouseLeave);
@@ -166,7 +547,7 @@
             this.panUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panUsers.Location = new System.Drawing.Point(75, 105);
             this.panUsers.Name = "panUsers";
-            this.panUsers.Size = new System.Drawing.Size(925, 495);
+            this.panUsers.Size = new System.Drawing.Size(925, 545);
             this.panUsers.TabIndex = 4;
             this.panUsers.SizeChanged += new System.EventHandler(this.panUsers_SizeChanged);
             // 
@@ -231,12 +612,12 @@
             this.lblCadUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCadUser.AutoSize = true;
             this.lblCadUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblCadUser.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadUser.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadUser.ForeColor = System.Drawing.Color.White;
-            this.lblCadUser.Location = new System.Drawing.Point(783, 428);
+            this.lblCadUser.Location = new System.Drawing.Point(783, 478);
             this.lblCadUser.Name = "lblCadUser";
             this.lblCadUser.Padding = new System.Windows.Forms.Padding(10);
-            this.lblCadUser.Size = new System.Drawing.Size(105, 42);
+            this.lblCadUser.Size = new System.Drawing.Size(109, 42);
             this.lblCadUser.TabIndex = 19;
             this.lblCadUser.Text = "Cadastrar";
             this.lblCadUser.Click += new System.EventHandler(this.lblCadUser_Click);
@@ -304,8 +685,8 @@
             // 
             this.lblAddEsp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAddEsp.AutoSize = true;
-            this.lblAddEsp.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblAddEsp.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblAddEsp.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddEsp.ForeColor = System.Drawing.Color.White;
             this.lblAddEsp.Location = new System.Drawing.Point(529, 280);
             this.lblAddEsp.Name = "lblAddEsp";
@@ -494,12 +875,13 @@
             // 
             this.panSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panSideBar.Controls.Add(this.lblPortarias);
+            this.panSideBar.Controls.Add(this.lblVinculaMem);
             this.panSideBar.Controls.Add(this.lblAssociacoes);
             this.panSideBar.Controls.Add(this.lblUsuarios);
             this.panSideBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panSideBar.Location = new System.Drawing.Point(0, 105);
             this.panSideBar.Name = "panSideBar";
-            this.panSideBar.Size = new System.Drawing.Size(75, 495);
+            this.panSideBar.Size = new System.Drawing.Size(75, 545);
             this.panSideBar.TabIndex = 2;
             // 
             // lblPortarias
@@ -509,14 +891,32 @@
             this.lblPortarias.ForeColor = System.Drawing.Color.White;
             this.lblPortarias.Image = global::Portaria.Properties.Resources.glassdoor;
             this.lblPortarias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPortarias.Location = new System.Drawing.Point(0, 120);
+            this.lblPortarias.Location = new System.Drawing.Point(0, 180);
             this.lblPortarias.Name = "lblPortarias";
             this.lblPortarias.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.lblPortarias.Size = new System.Drawing.Size(75, 60);
             this.lblPortarias.TabIndex = 2;
             this.lblPortarias.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPortarias.Click += new System.EventHandler(this.lblPortarias_Click);
             this.lblPortarias.MouseEnter += new System.EventHandler(this.lblPortarias_MouseEnter);
             this.lblPortarias.MouseLeave += new System.EventHandler(this.lblPortarias_MouseLeave);
+            // 
+            // lblVinculaMem
+            // 
+            this.lblVinculaMem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblVinculaMem.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVinculaMem.ForeColor = System.Drawing.Color.White;
+            this.lblVinculaMem.Image = global::Portaria.Properties.Resources.account_convert;
+            this.lblVinculaMem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblVinculaMem.Location = new System.Drawing.Point(0, 120);
+            this.lblVinculaMem.Name = "lblVinculaMem";
+            this.lblVinculaMem.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lblVinculaMem.Size = new System.Drawing.Size(75, 60);
+            this.lblVinculaMem.TabIndex = 3;
+            this.lblVinculaMem.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVinculaMem.Click += new System.EventHandler(this.lblAddMem_Click);
+            this.lblVinculaMem.MouseEnter += new System.EventHandler(this.lblAddMem_MouseEnter);
+            this.lblVinculaMem.MouseLeave += new System.EventHandler(this.lblAddMem_MouseLeave);
             // 
             // lblAssociacoes
             // 
@@ -531,6 +931,7 @@
             this.lblAssociacoes.Size = new System.Drawing.Size(75, 60);
             this.lblAssociacoes.TabIndex = 1;
             this.lblAssociacoes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAssociacoes.Click += new System.EventHandler(this.lblAssociacoes_Click);
             this.lblAssociacoes.MouseEnter += new System.EventHandler(this.lblAssociacoes_MouseEnter);
             this.lblAssociacoes.MouseLeave += new System.EventHandler(this.lblAssociacoes_MouseLeave);
             // 
@@ -547,6 +948,7 @@
             this.lblUsuarios.Size = new System.Drawing.Size(75, 60);
             this.lblUsuarios.TabIndex = 0;
             this.lblUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUsuarios.Click += new System.EventHandler(this.lblUsuarios_Click);
             this.lblUsuarios.MouseEnter += new System.EventHandler(this.lblUsuarios_MouseEnter);
             this.lblUsuarios.MouseLeave += new System.EventHandler(this.lblUsuarios_MouseLeave);
             // 
@@ -569,7 +971,7 @@
             this.lblSession.AutoSize = true;
             this.lblSession.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSession.ForeColor = System.Drawing.Color.White;
-            this.lblSession.Location = new System.Drawing.Point(901, 12);
+            this.lblSession.Location = new System.Drawing.Point(926, 12);
             this.lblSession.Name = "lblSession";
             this.lblSession.Padding = new System.Windows.Forms.Padding(10);
             this.lblSession.Size = new System.Drawing.Size(68, 42);
@@ -581,12 +983,13 @@
             // 
             this.ptbUser.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ptbUser.Image = global::Portaria.Properties.Resources.ic_account_circle_white_24dp;
-            this.ptbUser.Location = new System.Drawing.Point(837, 9);
+            this.ptbUser.Location = new System.Drawing.Point(872, 9);
             this.ptbUser.Name = "ptbUser";
             this.ptbUser.Size = new System.Drawing.Size(48, 48);
             this.ptbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptbUser.TabIndex = 2;
             this.ptbUser.TabStop = false;
+            this.ptbUser.Click += new System.EventHandler(this.lblSession_Click);
             // 
             // lblTitleForm
             // 
@@ -692,20 +1095,78 @@
             this.tmBounceEfxNotify.Interval = 1;
             this.tmBounceEfxNotify.Tick += new System.EventHandler(this.tmBounceEfxNotify_Tick);
             // 
-            // panAssociacao
+            // lblAsso
             // 
-            this.panAssociacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panAssociacao.Location = new System.Drawing.Point(75, 105);
-            this.panAssociacao.Name = "panAssociacao";
-            this.panAssociacao.Size = new System.Drawing.Size(925, 495);
-            this.panAssociacao.TabIndex = 23;
+            this.lblAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAsso.AutoSize = true;
+            this.lblAsso.Location = new System.Drawing.Point(77, 35);
+            this.lblAsso.Name = "lblAsso";
+            this.lblAsso.Size = new System.Drawing.Size(94, 22);
+            this.lblAsso.TabIndex = 0;
+            this.lblAsso.Text = "Associação";
+            // 
+            // cboxSelAsso
+            // 
+            this.cboxSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxSelAsso.FormattingEnabled = true;
+            this.cboxSelAsso.Location = new System.Drawing.Point(81, 70);
+            this.cboxSelAsso.Name = "cboxSelAsso";
+            this.cboxSelAsso.Size = new System.Drawing.Size(239, 30);
+            this.cboxSelAsso.TabIndex = 1;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(81, 158);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(761, 303);
+            this.dataGridView2.TabIndex = 3;
+            // 
+            // lblAddMembros
+            // 
+            this.lblAddMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAddMembros.AutoSize = true;
+            this.lblAddMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblAddMembros.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMembros.ForeColor = System.Drawing.Color.White;
+            this.lblAddMembros.Location = new System.Drawing.Point(81, 480);
+            this.lblAddMembros.Name = "lblAddMembros";
+            this.lblAddMembros.Padding = new System.Windows.Forms.Padding(7);
+            this.lblAddMembros.Size = new System.Drawing.Size(37, 40);
+            this.lblAddMembros.TabIndex = 4;
+            this.lblAddMembros.Text = "+";
+            // 
+            // lblMembros
+            // 
+            this.lblMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblMembros.AutoSize = true;
+            this.lblMembros.Location = new System.Drawing.Point(419, 112);
+            this.lblMembros.Name = "lblMembros";
+            this.lblMembros.Size = new System.Drawing.Size(84, 22);
+            this.lblMembros.TabIndex = 5;
+            this.lblMembros.Text = "Membros";
+            // 
+            // lblVincular
+            // 
+            this.lblVincular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVincular.AutoSize = true;
+            this.lblVincular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblVincular.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVincular.ForeColor = System.Drawing.Color.White;
+            this.lblVincular.Location = new System.Drawing.Point(738, 480);
+            this.lblVincular.Name = "lblVincular";
+            this.lblVincular.Padding = new System.Windows.Forms.Padding(7);
+            this.lblVincular.Size = new System.Drawing.Size(104, 40);
+            this.lblVincular.TabIndex = 6;
+            this.lblVincular.Text = "Vincular";
             // 
             // frmADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.ClientSize = new System.Drawing.Size(1000, 650);
             this.Controls.Add(this.panADM);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmADM";
@@ -713,8 +1174,13 @@
             this.Load += new System.EventHandler(this.frmADM_Load);
             this.SizeChanged += new System.EventHandler(this.frmADM_SizeChanged);
             this.panADM.ResumeLayout(false);
+            this.panVinculaMem.ResumeLayout(false);
+            this.panVinculaMem.PerformLayout();
+            this.panPortarias.ResumeLayout(false);
+            this.panPortarias.PerformLayout();
+            this.panAssociacao.ResumeLayout(false);
+            this.panAssociacao.PerformLayout();
             this.panPopPup.ResumeLayout(false);
-            this.panPopPup.PerformLayout();
             this.panUsers.ResumeLayout(false);
             this.panUsers.PerformLayout();
             this.panNotify.ResumeLayout(false);
@@ -732,6 +1198,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMaxRestore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -788,5 +1255,41 @@
         private System.Windows.Forms.Panel panPopPup;
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Panel panAssociacao;
+        private System.Windows.Forms.Label lblCadAsso;
+        private System.Windows.Forms.Label lblLegCorrelata;
+        private System.Windows.Forms.Label lblDataVig;
+        private System.Windows.Forms.Label lblNomeAss;
+        private System.Windows.Forms.Label lblTipoAss;
+        private System.Windows.Forms.Label lblFimPrev;
+        private System.Windows.Forms.TextBox txtNomeAss;
+        private System.Windows.Forms.ComboBox cboxTipo;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.TextBox txtLegCorrelata;
+        private System.Windows.Forms.MaskedTextBox mskFimPrev;
+        private System.Windows.Forms.MaskedTextBox mskInicioVige;
+        private System.Windows.Forms.Label lblVinculaMem;
+        private System.Windows.Forms.Panel panPortarias;
+        private System.Windows.Forms.Label lblCabe;
+        private System.Windows.Forms.Label lblCriarPort;
+        private System.Windows.Forms.Label lblSatus;
+        private System.Windows.Forms.Label lblResumo;
+        private System.Windows.Forms.Label lblAssunto;
+        private System.Windows.Forms.Label lblNum;
+        private System.Windows.Forms.ComboBox cboxStatus;
+        private System.Windows.Forms.TextBox txtAssunto;
+        private System.Windows.Forms.TextBox txtCabecalho;
+        private System.Windows.Forms.TextBox txtResumo;
+        private System.Windows.Forms.TextBox txtNumPort;
+        private System.Windows.Forms.Label lblPortRelacio;
+        private System.Windows.Forms.ListBox lstPortRelacio;
+        private System.Windows.Forms.Label lblRelPort;
+        private System.Windows.Forms.Panel panVinculaMem;
+        private System.Windows.Forms.Label lblAsso;
+        private System.Windows.Forms.ComboBox cboxSelAsso;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label lblMembros;
+        private System.Windows.Forms.Label lblAddMembros;
+        private System.Windows.Forms.Label lblVincular;
     }
 }
