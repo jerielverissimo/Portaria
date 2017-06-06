@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Usuarios>
+  <usuario>
+    <id></id>
+    <nome></nome>
+    <email></email>
+    <tel></tel>
+    <dataCriacao></dataCriacao>
+    <codEspcecialidade></codEspcecialidade>
+  </usuario>
+  <especialidade>
+    <cod_especialidade></cod_especialidade>
+    <nome_especialidade></nome_especialidade>
+  </especialidade>
+  <externo>
+    <cpf></cpf>
+    <id_usuario></id_usuario>
+  </externo>
+  <serv_aluno>
+    <senha></senha>
+    <tipo></tipo>
+    <protuario></protuario>
+    <SIAP></SIAP>
+    <id_usuario></id_usuario>
+  </serv_aluno>
+</Usuarios>

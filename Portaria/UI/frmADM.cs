@@ -191,7 +191,7 @@ namespace Portaria.VIEW
                 case true:
 
 
-                    panSideBar.Width -= 25;
+                    panSideBar.Width -= 50;
                     lblUsuarios.Text = "";
                     lblAssociacoes.Text = "";
                     lblPortarias.Text = "";
@@ -209,7 +209,7 @@ namespace Portaria.VIEW
                     break;
                 case false:
 
-                    panSideBar.Width += 25;
+                    panSideBar.Width += 50;
 
                     if (panSideBar.Width >= 250)
                     {
@@ -344,6 +344,11 @@ namespace Portaria.VIEW
         private void lblAddMem_MouseLeave(object sender, EventArgs e)
         {
             lblVinculaMem.BackColor = color.AzulSideBar;
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void panUsers_SizeChanged(object sender, EventArgs e)

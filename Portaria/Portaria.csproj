@@ -45,27 +45,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VIEW\frmADM.cs">
+    <Compile Include="UI\frmADM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VIEW\frmADM.Designer.cs">
+    <Compile Include="UI\frmADM.Designer.cs">
       <DependentUpon>frmADM.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\frmLogin.cs">
+    <Compile Include="UI\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VIEW\frmLogin.Designer.cs">
+    <Compile Include="UI\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEW\frmVisitantes.cs">
+    <Compile Include="UI\frmVisitantes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VIEW\frmVisitantes.Designer.cs">
+    <Compile Include="UI\frmVisitantes.Designer.cs">
       <DependentUpon>frmVisitantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VIEW\PALETT\Colors.cs" />
+    <Compile Include="UI\PALETT\Colors.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,13 +76,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="VIEW\frmADM.resx">
+    <EmbeddedResource Include="UI\frmADM.resx">
       <DependentUpon>frmADM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\frmLogin.resx">
+    <EmbeddedResource Include="UI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VIEW\frmVisitantes.resx">
+    <EmbeddedResource Include="UI\frmVisitantes.resx">
       <DependentUpon>frmVisitantes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -100,65 +100,69 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BLL\" />
-    <Folder Include="DALL\" />
-    <Folder Include="VIEW\FONT\" />
+    <Folder Include="UI\FONT\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\window-close.png" />
+    <None Include="UI\IMG\ICONS\window-close.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\ic_person_white_36dp.png" />
+    <None Include="UI\IMG\ICONS\ic_person_white_36dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\ic_people_white_36dp.png" />
+    <None Include="UI\IMG\ICONS\ic_people_white_36dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\account-star.png" />
+    <None Include="UI\IMG\ICONS\account-star.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\account-circle.png" />
+    <None Include="UI\IMG\ICONS\account-circle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\ic_account_circle_white_36dp.png" />
+    <None Include="UI\IMG\ICONS\ic_account_circle_white_36dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\window-maximize.png" />
+    <None Include="UI\IMG\ICONS\window-maximize.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\window-restore.png" />
+    <None Include="UI\IMG\ICONS\window-restore.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\window-minimize.png" />
+    <None Include="UI\IMG\ICONS\window-minimize.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\menu.png" />
+    <None Include="UI\IMG\ICONS\menu.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\glassdoor.png" />
+    <None Include="UI\IMG\ICONS\glassdoor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\ic_group_white_36dp.png" />
+    <None Include="UI\IMG\ICONS\ic_group_white_36dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\account-convert.png" />
+    <None Include="UI\IMG\ICONS\account-convert.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\account-network.png" />
+    <None Include="UI\IMG\ICONS\account-network.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\account-switch.png" />
+    <None Include="UI\IMG\ICONS\account-switch.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\google-circles-communities.png" />
+    <None Include="UI\IMG\ICONS\google-circles-communities.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\ic_account_circle_white_24dp.png" />
+    <None Include="UI\IMG\ICONS\ic_account_circle_white_24dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\check.png" />
+    <None Include="UI\IMG\ICONS\check.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="VIEW\IMG\ICONS\check-gray.png" />
+    <None Include="UI\IMG\ICONS\check-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Usuarios.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
