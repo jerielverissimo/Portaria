@@ -30,13 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panADM = new System.Windows.Forms.Panel();
-            this.panVinculaMem = new System.Windows.Forms.Panel();
-            this.lblVincular = new System.Windows.Forms.Label();
-            this.lblMembros = new System.Windows.Forms.Label();
-            this.lblAddMembros = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.cboxSelAsso = new System.Windows.Forms.ComboBox();
-            this.lblAsso = new System.Windows.Forms.Label();
             this.panUsers = new System.Windows.Forms.Panel();
             this.panNotify = new System.Windows.Forms.Panel();
             this.ptbCerto = new System.Windows.Forms.PictureBox();
@@ -66,6 +59,13 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtNomeUsr = new System.Windows.Forms.TextBox();
             this.lblNomeUsr = new System.Windows.Forms.Label();
+            this.panVinculaMem = new System.Windows.Forms.Panel();
+            this.lblVincular = new System.Windows.Forms.Label();
+            this.lblMembros = new System.Windows.Forms.Label();
+            this.lblAddMembros = new System.Windows.Forms.Label();
+            this.dgvMembros = new System.Windows.Forms.DataGridView();
+            this.cboxSelAsso = new System.Windows.Forms.ComboBox();
+            this.lblAsso = new System.Windows.Forms.Label();
             this.panAssociacao = new System.Windows.Forms.Panel();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -116,12 +116,12 @@
             this.tmSlideEfxMenu = new System.Windows.Forms.Timer(this.components);
             this.tmBounceEfxNotify = new System.Windows.Forms.Timer(this.components);
             this.panADM.SuspendLayout();
-            this.panVinculaMem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panUsers.SuspendLayout();
             this.panNotify.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).BeginInit();
             this.gboxTipoUsr.SuspendLayout();
+            this.panVinculaMem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.panAssociacao.SuspendLayout();
             this.panPortarias.SuspendLayout();
             this.panPopPup.SuspendLayout();
@@ -151,88 +151,6 @@
             this.panADM.Name = "panADM";
             this.panADM.Size = new System.Drawing.Size(1000, 650);
             this.panADM.TabIndex = 1;
-            // 
-            // panVinculaMem
-            // 
-            this.panVinculaMem.Controls.Add(this.lblVincular);
-            this.panVinculaMem.Controls.Add(this.lblMembros);
-            this.panVinculaMem.Controls.Add(this.lblAddMembros);
-            this.panVinculaMem.Controls.Add(this.dataGridView2);
-            this.panVinculaMem.Controls.Add(this.cboxSelAsso);
-            this.panVinculaMem.Controls.Add(this.lblAsso);
-            this.panVinculaMem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panVinculaMem.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panVinculaMem.Location = new System.Drawing.Point(75, 105);
-            this.panVinculaMem.Name = "panVinculaMem";
-            this.panVinculaMem.Size = new System.Drawing.Size(925, 545);
-            this.panVinculaMem.TabIndex = 14;
-            // 
-            // lblVincular
-            // 
-            this.lblVincular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVincular.AutoSize = true;
-            this.lblVincular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblVincular.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVincular.ForeColor = System.Drawing.Color.White;
-            this.lblVincular.Location = new System.Drawing.Point(738, 480);
-            this.lblVincular.Name = "lblVincular";
-            this.lblVincular.Padding = new System.Windows.Forms.Padding(7);
-            this.lblVincular.Size = new System.Drawing.Size(104, 40);
-            this.lblVincular.TabIndex = 6;
-            this.lblVincular.Text = "Vincular";
-            // 
-            // lblMembros
-            // 
-            this.lblMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMembros.AutoSize = true;
-            this.lblMembros.Location = new System.Drawing.Point(419, 112);
-            this.lblMembros.Name = "lblMembros";
-            this.lblMembros.Size = new System.Drawing.Size(84, 22);
-            this.lblMembros.TabIndex = 5;
-            this.lblMembros.Text = "Membros";
-            // 
-            // lblAddMembros
-            // 
-            this.lblAddMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAddMembros.AutoSize = true;
-            this.lblAddMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblAddMembros.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMembros.ForeColor = System.Drawing.Color.White;
-            this.lblAddMembros.Location = new System.Drawing.Point(81, 480);
-            this.lblAddMembros.Name = "lblAddMembros";
-            this.lblAddMembros.Padding = new System.Windows.Forms.Padding(7);
-            this.lblAddMembros.Size = new System.Drawing.Size(37, 40);
-            this.lblAddMembros.TabIndex = 4;
-            this.lblAddMembros.Text = "+";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(81, 158);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(761, 303);
-            this.dataGridView2.TabIndex = 3;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // cboxSelAsso
-            // 
-            this.cboxSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboxSelAsso.FormattingEnabled = true;
-            this.cboxSelAsso.Location = new System.Drawing.Point(81, 70);
-            this.cboxSelAsso.Name = "cboxSelAsso";
-            this.cboxSelAsso.Size = new System.Drawing.Size(239, 30);
-            this.cboxSelAsso.TabIndex = 1;
-            // 
-            // lblAsso
-            // 
-            this.lblAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAsso.AutoSize = true;
-            this.lblAsso.Location = new System.Drawing.Point(77, 35);
-            this.lblAsso.Name = "lblAsso";
-            this.lblAsso.Size = new System.Drawing.Size(94, 22);
-            this.lblAsso.TabIndex = 0;
-            this.lblAsso.Text = "Associação";
             // 
             // panUsers
             // 
@@ -585,6 +503,92 @@
             this.lblNomeUsr.Size = new System.Drawing.Size(56, 22);
             this.lblNomeUsr.TabIndex = 0;
             this.lblNomeUsr.Text = "Nome";
+            // 
+            // panVinculaMem
+            // 
+            this.panVinculaMem.Controls.Add(this.lblVincular);
+            this.panVinculaMem.Controls.Add(this.lblMembros);
+            this.panVinculaMem.Controls.Add(this.lblAddMembros);
+            this.panVinculaMem.Controls.Add(this.dgvMembros);
+            this.panVinculaMem.Controls.Add(this.cboxSelAsso);
+            this.panVinculaMem.Controls.Add(this.lblAsso);
+            this.panVinculaMem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panVinculaMem.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panVinculaMem.Location = new System.Drawing.Point(75, 105);
+            this.panVinculaMem.Name = "panVinculaMem";
+            this.panVinculaMem.Size = new System.Drawing.Size(925, 545);
+            this.panVinculaMem.TabIndex = 14;
+            // 
+            // lblVincular
+            // 
+            this.lblVincular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVincular.AutoSize = true;
+            this.lblVincular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblVincular.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVincular.ForeColor = System.Drawing.Color.White;
+            this.lblVincular.Location = new System.Drawing.Point(738, 480);
+            this.lblVincular.Name = "lblVincular";
+            this.lblVincular.Padding = new System.Windows.Forms.Padding(7);
+            this.lblVincular.Size = new System.Drawing.Size(104, 40);
+            this.lblVincular.TabIndex = 6;
+            this.lblVincular.Text = "Vincular";
+            this.lblVincular.Click += new System.EventHandler(this.lblVincular_Click);
+            // 
+            // lblMembros
+            // 
+            this.lblMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblMembros.AutoSize = true;
+            this.lblMembros.Location = new System.Drawing.Point(419, 112);
+            this.lblMembros.Name = "lblMembros";
+            this.lblMembros.Size = new System.Drawing.Size(84, 22);
+            this.lblMembros.TabIndex = 5;
+            this.lblMembros.Text = "Membros";
+            // 
+            // lblAddMembros
+            // 
+            this.lblAddMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAddMembros.AutoSize = true;
+            this.lblAddMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblAddMembros.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMembros.ForeColor = System.Drawing.Color.White;
+            this.lblAddMembros.Location = new System.Drawing.Point(81, 480);
+            this.lblAddMembros.Name = "lblAddMembros";
+            this.lblAddMembros.Padding = new System.Windows.Forms.Padding(7);
+            this.lblAddMembros.Size = new System.Drawing.Size(37, 40);
+            this.lblAddMembros.TabIndex = 4;
+            this.lblAddMembros.Text = "+";
+            // 
+            // dgvMembros
+            // 
+            this.dgvMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvMembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMembros.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMembros.Location = new System.Drawing.Point(81, 158);
+            this.dgvMembros.Name = "dgvMembros";
+            this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembros.Size = new System.Drawing.Size(761, 303);
+            this.dgvMembros.TabIndex = 3;
+            this.dgvMembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // cboxSelAsso
+            // 
+            this.cboxSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxSelAsso.FormattingEnabled = true;
+            this.cboxSelAsso.Location = new System.Drawing.Point(81, 70);
+            this.cboxSelAsso.Name = "cboxSelAsso";
+            this.cboxSelAsso.Size = new System.Drawing.Size(239, 30);
+            this.cboxSelAsso.TabIndex = 1;
+            // 
+            // lblAsso
+            // 
+            this.lblAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAsso.AutoSize = true;
+            this.lblAsso.Location = new System.Drawing.Point(77, 35);
+            this.lblAsso.Name = "lblAsso";
+            this.lblAsso.Size = new System.Drawing.Size(94, 22);
+            this.lblAsso.TabIndex = 0;
+            this.lblAsso.Text = "Associação";
             // 
             // panAssociacao
             // 
@@ -1175,9 +1179,6 @@
             this.Load += new System.EventHandler(this.frmADM_Load);
             this.SizeChanged += new System.EventHandler(this.frmADM_SizeChanged);
             this.panADM.ResumeLayout(false);
-            this.panVinculaMem.ResumeLayout(false);
-            this.panVinculaMem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panUsers.ResumeLayout(false);
             this.panUsers.PerformLayout();
             this.panNotify.ResumeLayout(false);
@@ -1185,6 +1186,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).EndInit();
             this.gboxTipoUsr.ResumeLayout(false);
             this.gboxTipoUsr.PerformLayout();
+            this.panVinculaMem.ResumeLayout(false);
+            this.panVinculaMem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.panAssociacao.ResumeLayout(false);
             this.panAssociacao.PerformLayout();
             this.panPortarias.ResumeLayout(false);
@@ -1288,7 +1292,7 @@
         private System.Windows.Forms.Panel panVinculaMem;
         private System.Windows.Forms.Label lblAsso;
         private System.Windows.Forms.ComboBox cboxSelAsso;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvMembros;
         private System.Windows.Forms.Label lblMembros;
         private System.Windows.Forms.Label lblAddMembros;
         private System.Windows.Forms.Label lblVincular;

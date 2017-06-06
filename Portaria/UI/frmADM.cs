@@ -17,6 +17,8 @@ namespace Portaria.VIEW
         // OBJ
 
         PALETT.Colors color = new PALETT.Colors();
+        BLL.UsuariosBLL usrBLL = new BLL.UsuariosBLL();
+        DAL.UsuarioDAL usrDALL = new DAL.UsuarioDAL();
 
         // Var 
 
@@ -64,6 +66,10 @@ namespace Portaria.VIEW
 
         private void frmADM_Load(object sender, EventArgs e)
         {
+
+            dgvMembros.DataSource = usrBLL.carregaUsuarios();
+            
+
             panTitleBar.BackColor = color.AzulTitleBar;
             panActionBar.BackColor = color.AzulActionBar;
             panSideBar.BackColor = color.AzulSideBar;
@@ -257,7 +263,16 @@ namespace Portaria.VIEW
 
         private void lblCadUser_Click(object sender, EventArgs e)
         {
+            
             tmBounceEfxNotify.Enabled = true;
+            usrDALL.Nome = txtNomeUsr.Text;
+            usrDALL.Email = mskEmail.Text;
+            usrDALL.Telefone = mskTelUsr.Text;
+            usrDALL.Data_criacao = mskDataCria.Text;
+            usrDALL.Cod_esp = 1;
+
+            usrBLL.carregaUsuarios();
+            usrBLL.Salvar(usrDALL.Nome, usrDALL.Email, usrDALL.Telefone, usrDALL.Data_criacao, usrDALL.Cod_esp);
         }
 
         private void frmADM_SizeChanged(object sender, EventArgs e)
@@ -347,6 +362,11 @@ namespace Portaria.VIEW
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lblVincular_Click(object sender, EventArgs e)
         {
 
         }

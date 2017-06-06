@@ -6,7 +6,7 @@
     <email></email>
     <tel></tel>
     <dataCriacao></dataCriacao>
-    <codEspcecialidade></codEspcecialidade>
+    <cod_esp></cod_esp>
   </usuario>
   <especialidade>
     <cod_especialidade></cod_especialidade>
