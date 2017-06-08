@@ -11,7 +11,30 @@ namespace Portaria.DAL
         private int cod;
         private int nome;
 
-        public int Cod { get => cod; set => cod = value; }
-        public int Nome { get => nome; set => nome = value; }
+        public int Cod
+        {
+            get
+            {
+                return cod;
+            }
+
+            set
+            {
+                cod = value;
+            }
+        }
+
+        public int Nome
+        {
+            get
+            {
+                return nome;
+            }
+
+            set
+            {
+                nome = value;
+            }
+        }
     }
 }

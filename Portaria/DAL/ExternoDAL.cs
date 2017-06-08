@@ -11,8 +11,30 @@ namespace Portaria.DAL
         private string cpf;
         private int id_usuario;
 
-       
-        public string Cpf { get => cpf; set => cpf = value; }
-        public int Id_usuario { get => id_usuario; set => id_usuario = value; }
+        public string Cpf
+        {
+            get
+            {
+                return cpf;
+            }
+
+            set
+            {
+                cpf = value;
+            }
+        }
+
+        public int Id_usuario
+        {
+            get
+            {
+                return id_usuario;
+            }
+
+            set
+            {
+                id_usuario = value;
+            }
+        }
     }
 }

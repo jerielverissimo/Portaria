@@ -11,10 +11,69 @@ namespace Portaria.DAL
         private string senha, tipo, prontuario, siape;
         private int id_usuario;
 
-        public string Senha { get => senha; set => senha = value; }
-        public string Tipo { get => tipo; set => tipo = value; }
-        public string Prontuario { get => prontuario; set => prontuario = value; }
-        public string Siape { get => siape; set => siape = value; }
-        public int Id_usuario { get => id_usuario; set => id_usuario = value; }
+        public string Senha
+        {
+            get
+            {
+                return senha;
+            }
+
+            set
+            {
+                senha = value;
+            }
+        }
+
+        public string Tipo
+        {
+            get
+            {
+                return tipo;
+            }
+
+            set
+            {
+                tipo = value;
+            }
+        }
+
+        public string Prontuario
+        {
+            get
+            {
+                return prontuario;
+            }
+
+            set
+            {
+                prontuario = value;
+            }
+        }
+
+        public string Siape
+        {
+            get
+            {
+                return siape;
+            }
+
+            set
+            {
+                siape = value;
+            }
+        }
+
+        public int Id_usuario
+        {
+            get
+            {
+                return id_usuario;
+            }
+
+            set
+            {
+                id_usuario = value;
+            }
+        }
     }
 }

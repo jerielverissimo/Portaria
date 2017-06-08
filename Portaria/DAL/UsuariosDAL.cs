@@ -12,12 +12,69 @@ namespace Portaria.DAL
         private string nome, email, telefone;
         private string data_criacao;
 
-        public int Id { get => id; set => id = value; }
-        public string Nome { get => nome; set => nome = value; }
-        public string Email { get => email; set => email = value; }
-        public string Telefone { get => telefone; set => telefone = value; }
-        
-        public int Cod_esp { get => cod_esp; set => cod_esp = value; }
-        public string Data_criacao { get => data_criacao; set => data_criacao = value; }
+        public int Cod_esp
+        {
+            get
+            {
+                return cod_esp;
+            }
+
+            set
+            {
+                cod_esp = value;
+            }
+        }
+
+        public string Nome
+        {
+            get
+            {
+                return nome;
+            }
+
+            set
+            {
+                nome = value;
+            }
+        }
+
+        public string Email
+        {
+            get
+            {
+                return email;
+            }
+
+            set
+            {
+                email = value;
+            }
+        }
+
+        public string Telefone
+        {
+            get
+            {
+                return telefone;
+            }
+
+            set
+            {
+                telefone = value;
+            }
+        }
+
+        public string Data_criacao
+        {
+            get
+            {
+                return data_criacao;
+            }
+
+            set
+            {
+                data_criacao = value;
+            }
+        }
     }
 }

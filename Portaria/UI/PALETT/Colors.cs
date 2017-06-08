@@ -44,10 +44,69 @@ namespace Portaria.VIEW.PALETT
             }
         }
 
-        public Color AzulTitleBar { get => azulTitleBar; set => azulTitleBar = value; }
-        public Color AzulSideBar { get => azulSideBar; set => azulSideBar = value; }
-        public Color AzulActionBar { get => azulActionBar; set => azulActionBar = value; }
-        public Color AzulSideBarHighlight { get => azulSideBarHighlight; set => azulSideBarHighlight = value; }
-        public Color VerdeNotify { get => verdeNotify; set => verdeNotify = value; }
+        public Color AzulTitleBar
+        {
+            get
+            {
+                return azulTitleBar;
+            }
+
+            set
+            {
+                azulTitleBar = value;
+            }
+        }
+
+        public Color AzulSideBar
+        {
+            get
+            {
+                return azulSideBar;
+            }
+
+            set
+            {
+                azulSideBar = value;
+            }
+        }
+
+        public Color AzulSideBarHighlight
+        {
+            get
+            {
+                return azulSideBarHighlight;
+            }
+
+            set
+            {
+                azulSideBarHighlight = value;
+            }
+        }
+
+        public Color AzulActionBar
+        {
+            get
+            {
+                return azulActionBar;
+            }
+
+            set
+            {
+                azulActionBar = value;
+            }
+        }
+
+        public Color VerdeNotify
+        {
+            get
+            {
+                return verdeNotify;
+            }
+
+            set
+            {
+                verdeNotify = value;
+            }
+        }
     }
 }
