@@ -8,19 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Portaria
+namespace Portaria.UI
 {
-    public partial class frmVisitantes : Form
+    public partial class frmMembros : Form
     {
-        
-        public frmVisitantes()
+        public frmMembros()
         {
             InitializeComponent();
-            panAssociaçoes.Visible = false;
             panMembros.Visible = false;
+            panAssociaçoes.Visible = false;
             panPortarias.Visible = false;
         }
-       
+
         #region Methods
 
         private void Maximiza_Restaura_Tela()
@@ -30,7 +29,7 @@ namespace Portaria
                 this.WindowState = FormWindowState.Normal;
                 this.CenterToScreen();
                 ptbMaxRestore.Image = Properties.Resources.window_maximize;
-                
+
 
             }
             else
@@ -40,17 +39,15 @@ namespace Portaria
                 this.WindowState = FormWindowState.Maximized;
 
                 ptbMaxRestore.Image = Properties.Resources.window_restore;
-                
+
             }
         }
 
         #endregion
 
-  
-
-        private void pctCloseWindow_Click(object sender, EventArgs e)
+        private void lblAtas_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
 
         private void lblAssociações_Click(object sender, EventArgs e)
@@ -73,6 +70,11 @@ namespace Portaria
         private void ptbWindowMini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pctCloseWindow_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void lblPortarias_Click(object sender, EventArgs e)

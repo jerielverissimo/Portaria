@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panADM = new System.Windows.Forms.Panel();
+            this.panVinculaMem = new System.Windows.Forms.Panel();
+            this.lblVincular = new System.Windows.Forms.Label();
+            this.lblMembros = new System.Windows.Forms.Label();
+            this.lblAddMembros = new System.Windows.Forms.Label();
+            this.dgvMembros = new System.Windows.Forms.DataGridView();
+            this.cboxSelAsso = new System.Windows.Forms.ComboBox();
+            this.lblAsso = new System.Windows.Forms.Label();
             this.panUsers = new System.Windows.Forms.Panel();
             this.panNotify = new System.Windows.Forms.Panel();
             this.ptbCerto = new System.Windows.Forms.PictureBox();
@@ -59,13 +66,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtNomeUsr = new System.Windows.Forms.TextBox();
             this.lblNomeUsr = new System.Windows.Forms.Label();
-            this.panVinculaMem = new System.Windows.Forms.Panel();
-            this.lblVincular = new System.Windows.Forms.Label();
-            this.lblMembros = new System.Windows.Forms.Label();
-            this.lblAddMembros = new System.Windows.Forms.Label();
-            this.dgvMembros = new System.Windows.Forms.DataGridView();
-            this.cboxSelAsso = new System.Windows.Forms.ComboBox();
-            this.lblAsso = new System.Windows.Forms.Label();
             this.panAssociacao = new System.Windows.Forms.Panel();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -116,12 +116,12 @@
             this.tmSlideEfxMenu = new System.Windows.Forms.Timer(this.components);
             this.tmBounceEfxNotify = new System.Windows.Forms.Timer(this.components);
             this.panADM.SuspendLayout();
+            this.panVinculaMem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.panUsers.SuspendLayout();
             this.panNotify.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).BeginInit();
             this.gboxTipoUsr.SuspendLayout();
-            this.panVinculaMem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.panAssociacao.SuspendLayout();
             this.panPortarias.SuspendLayout();
             this.panPopPup.SuspendLayout();
@@ -151,6 +151,92 @@
             this.panADM.Name = "panADM";
             this.panADM.Size = new System.Drawing.Size(1000, 650);
             this.panADM.TabIndex = 1;
+            // 
+            // panVinculaMem
+            // 
+            this.panVinculaMem.Controls.Add(this.lblVincular);
+            this.panVinculaMem.Controls.Add(this.lblMembros);
+            this.panVinculaMem.Controls.Add(this.lblAddMembros);
+            this.panVinculaMem.Controls.Add(this.dgvMembros);
+            this.panVinculaMem.Controls.Add(this.cboxSelAsso);
+            this.panVinculaMem.Controls.Add(this.lblAsso);
+            this.panVinculaMem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panVinculaMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panVinculaMem.Location = new System.Drawing.Point(75, 105);
+            this.panVinculaMem.Name = "panVinculaMem";
+            this.panVinculaMem.Size = new System.Drawing.Size(925, 545);
+            this.panVinculaMem.TabIndex = 14;
+            // 
+            // lblVincular
+            // 
+            this.lblVincular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVincular.AutoSize = true;
+            this.lblVincular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblVincular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVincular.ForeColor = System.Drawing.Color.White;
+            this.lblVincular.Location = new System.Drawing.Point(738, 480);
+            this.lblVincular.Name = "lblVincular";
+            this.lblVincular.Padding = new System.Windows.Forms.Padding(7);
+            this.lblVincular.Size = new System.Drawing.Size(101, 38);
+            this.lblVincular.TabIndex = 6;
+            this.lblVincular.Text = "Vincular";
+            this.lblVincular.Click += new System.EventHandler(this.lblVincular_Click);
+            // 
+            // lblMembros
+            // 
+            this.lblMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblMembros.AutoSize = true;
+            this.lblMembros.Location = new System.Drawing.Point(419, 112);
+            this.lblMembros.Name = "lblMembros";
+            this.lblMembros.Size = new System.Drawing.Size(75, 20);
+            this.lblMembros.TabIndex = 5;
+            this.lblMembros.Text = "Membros";
+            // 
+            // lblAddMembros
+            // 
+            this.lblAddMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAddMembros.AutoSize = true;
+            this.lblAddMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblAddMembros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMembros.ForeColor = System.Drawing.Color.White;
+            this.lblAddMembros.Location = new System.Drawing.Point(81, 480);
+            this.lblAddMembros.Name = "lblAddMembros";
+            this.lblAddMembros.Padding = new System.Windows.Forms.Padding(7);
+            this.lblAddMembros.Size = new System.Drawing.Size(36, 38);
+            this.lblAddMembros.TabIndex = 4;
+            this.lblAddMembros.Text = "+";
+            // 
+            // dgvMembros
+            // 
+            this.dgvMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvMembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMembros.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMembros.Location = new System.Drawing.Point(81, 158);
+            this.dgvMembros.Name = "dgvMembros";
+            this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembros.Size = new System.Drawing.Size(761, 303);
+            this.dgvMembros.TabIndex = 3;
+            this.dgvMembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // cboxSelAsso
+            // 
+            this.cboxSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxSelAsso.FormattingEnabled = true;
+            this.cboxSelAsso.Location = new System.Drawing.Point(81, 70);
+            this.cboxSelAsso.Name = "cboxSelAsso";
+            this.cboxSelAsso.Size = new System.Drawing.Size(239, 28);
+            this.cboxSelAsso.TabIndex = 1;
+            // 
+            // lblAsso
+            // 
+            this.lblAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAsso.AutoSize = true;
+            this.lblAsso.Location = new System.Drawing.Point(77, 35);
+            this.lblAsso.Name = "lblAsso";
+            this.lblAsso.Size = new System.Drawing.Size(91, 20);
+            this.lblAsso.TabIndex = 0;
+            this.lblAsso.Text = "Associação";
             // 
             // panUsers
             // 
@@ -209,22 +295,22 @@
             // 
             this.lblNotify.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNotify.AutoSize = true;
-            this.lblNotify.Font = new System.Drawing.Font("Noto Sans UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNotify.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNotify.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblNotify.Location = new System.Drawing.Point(-179, 6);
             this.lblNotify.Name = "lblNotify";
-            this.lblNotify.Size = new System.Drawing.Size(363, 28);
+            this.lblNotify.Size = new System.Drawing.Size(375, 25);
             this.lblNotify.TabIndex = 0;
             this.lblNotify.Text = "Usuário cadastrado com sucesso !";
             // 
             // mskSIAPE
             // 
             this.mskSIAPE.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskSIAPE.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskSIAPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskSIAPE.Location = new System.Drawing.Point(690, 87);
             this.mskSIAPE.Name = "mskSIAPE";
             this.mskSIAPE.PromptChar = ' ';
-            this.mskSIAPE.Size = new System.Drawing.Size(188, 29);
+            this.mskSIAPE.Size = new System.Drawing.Size(188, 26);
             this.mskSIAPE.TabIndex = 21;
             this.mskSIAPE.Visible = false;
             // 
@@ -232,10 +318,10 @@
             // 
             this.lblSIAPE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSIAPE.AutoSize = true;
-            this.lblSIAPE.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSIAPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSIAPE.Location = new System.Drawing.Point(614, 90);
             this.lblSIAPE.Name = "lblSIAPE";
-            this.lblSIAPE.Size = new System.Drawing.Size(53, 22);
+            this.lblSIAPE.Size = new System.Drawing.Size(57, 20);
             this.lblSIAPE.TabIndex = 20;
             this.lblSIAPE.Text = "SIAPE";
             this.lblSIAPE.Visible = false;
@@ -245,12 +331,12 @@
             this.lblCadUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCadUser.AutoSize = true;
             this.lblCadUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblCadUser.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadUser.ForeColor = System.Drawing.Color.White;
             this.lblCadUser.Location = new System.Drawing.Point(783, 478);
             this.lblCadUser.Name = "lblCadUser";
             this.lblCadUser.Padding = new System.Windows.Forms.Padding(10);
-            this.lblCadUser.Size = new System.Drawing.Size(109, 42);
+            this.lblCadUser.Size = new System.Drawing.Size(108, 40);
             this.lblCadUser.TabIndex = 19;
             this.lblCadUser.Text = "Cadastrar";
             this.lblCadUser.Click += new System.EventHandler(this.lblCadUser_Click);
@@ -260,10 +346,10 @@
             // txtSenhaADM
             // 
             this.txtSenhaADM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSenhaADM.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenhaADM.Location = new System.Drawing.Point(690, 137);
             this.txtSenhaADM.Name = "txtSenhaADM";
-            this.txtSenhaADM.Size = new System.Drawing.Size(188, 29);
+            this.txtSenhaADM.Size = new System.Drawing.Size(188, 26);
             this.txtSenhaADM.TabIndex = 18;
             this.txtSenhaADM.Visible = false;
             this.txtSenhaADM.WordWrap = false;
@@ -272,10 +358,10 @@
             // 
             this.lblSenhaADM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSenhaADM.AutoSize = true;
-            this.lblSenhaADM.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenhaADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenhaADM.Location = new System.Drawing.Point(610, 140);
             this.lblSenhaADM.Name = "lblSenhaADM";
-            this.lblSenhaADM.Size = new System.Drawing.Size(57, 22);
+            this.lblSenhaADM.Size = new System.Drawing.Size(56, 20);
             this.lblSenhaADM.TabIndex = 17;
             this.lblSenhaADM.Text = "Senha";
             this.lblSenhaADM.Visible = false;
@@ -284,10 +370,10 @@
             // 
             this.ckbADM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ckbADM.AutoSize = true;
-            this.ckbADM.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbADM.Location = new System.Drawing.Point(812, 189);
             this.ckbADM.Name = "ckbADM";
-            this.ckbADM.Size = new System.Drawing.Size(66, 26);
+            this.ckbADM.Size = new System.Drawing.Size(64, 24);
             this.ckbADM.TabIndex = 16;
             this.ckbADM.Text = "ADM";
             this.ckbADM.UseVisualStyleBackColor = true;
@@ -296,21 +382,21 @@
             // mskProntAlun
             // 
             this.mskProntAlun.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskProntAlun.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskProntAlun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskProntAlun.Location = new System.Drawing.Point(690, 87);
             this.mskProntAlun.Name = "mskProntAlun";
             this.mskProntAlun.PromptChar = ' ';
-            this.mskProntAlun.Size = new System.Drawing.Size(188, 29);
+            this.mskProntAlun.Size = new System.Drawing.Size(188, 26);
             this.mskProntAlun.TabIndex = 15;
             // 
             // lblProntUsr
             // 
             this.lblProntUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblProntUsr.AutoSize = true;
-            this.lblProntUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProntUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProntUsr.Location = new System.Drawing.Point(574, 90);
             this.lblProntUsr.Name = "lblProntUsr";
-            this.lblProntUsr.Size = new System.Drawing.Size(93, 22);
+            this.lblProntUsr.Size = new System.Drawing.Size(82, 20);
             this.lblProntUsr.TabIndex = 14;
             this.lblProntUsr.Text = "Prontuário";
             // 
@@ -319,55 +405,55 @@
             this.lblAddEsp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAddEsp.AutoSize = true;
             this.lblAddEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblAddEsp.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddEsp.ForeColor = System.Drawing.Color.White;
             this.lblAddEsp.Location = new System.Drawing.Point(529, 280);
             this.lblAddEsp.Name = "lblAddEsp";
             this.lblAddEsp.Padding = new System.Windows.Forms.Padding(10);
-            this.lblAddEsp.Size = new System.Drawing.Size(39, 42);
+            this.lblAddEsp.Size = new System.Drawing.Size(39, 40);
             this.lblAddEsp.TabIndex = 13;
             this.lblAddEsp.Text = "+";
             // 
             // cboxEsp
             // 
             this.cboxEsp.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboxEsp.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxEsp.FormattingEnabled = true;
             this.cboxEsp.Location = new System.Drawing.Point(277, 286);
             this.cboxEsp.Name = "cboxEsp";
-            this.cboxEsp.Size = new System.Drawing.Size(233, 30);
+            this.cboxEsp.Size = new System.Drawing.Size(233, 28);
             this.cboxEsp.TabIndex = 12;
             // 
             // lblEsp
             // 
             this.lblEsp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEsp.AutoSize = true;
-            this.lblEsp.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEsp.Location = new System.Drawing.Point(337, 241);
             this.lblEsp.Name = "lblEsp";
-            this.lblEsp.Size = new System.Drawing.Size(113, 22);
+            this.lblEsp.Size = new System.Drawing.Size(108, 20);
             this.lblEsp.TabIndex = 11;
             this.lblEsp.Text = "Especialidade";
             // 
             // mskCPF
             // 
             this.mskCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskCPF.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCPF.Location = new System.Drawing.Point(122, 287);
             this.mskCPF.Mask = "0000000000-00";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.PromptChar = ' ';
-            this.mskCPF.Size = new System.Drawing.Size(135, 29);
+            this.mskCPF.Size = new System.Drawing.Size(135, 26);
             this.mskCPF.TabIndex = 10;
             // 
             // lblCPF
             // 
             this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.Location = new System.Drawing.Point(61, 290);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(38, 22);
+            this.lblCPF.Size = new System.Drawing.Size(40, 20);
             this.lblCPF.TabIndex = 9;
             this.lblCPF.Text = "CPF";
             // 
@@ -422,12 +508,12 @@
             // mskDataCria
             // 
             this.mskDataCria.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskDataCria.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskDataCria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDataCria.Location = new System.Drawing.Point(122, 238);
             this.mskDataCria.Mask = "00/00/0000";
             this.mskDataCria.Name = "mskDataCria";
             this.mskDataCria.PromptChar = ' ';
-            this.mskDataCria.Size = new System.Drawing.Size(135, 29);
+            this.mskDataCria.Size = new System.Drawing.Size(135, 26);
             this.mskDataCria.TabIndex = 7;
             this.mskDataCria.ValidatingType = typeof(System.DateTime);
             // 
@@ -435,160 +521,74 @@
             // 
             this.lblDataCria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDataCria.AutoSize = true;
-            this.lblDataCria.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataCria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataCria.Location = new System.Drawing.Point(32, 241);
             this.lblDataCria.Name = "lblDataCria";
-            this.lblDataCria.Size = new System.Drawing.Size(67, 22);
+            this.lblDataCria.Size = new System.Drawing.Size(63, 20);
             this.lblDataCria.TabIndex = 6;
             this.lblDataCria.Text = "Criação";
             // 
             // mskTelUsr
             // 
             this.mskTelUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskTelUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTelUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelUsr.Location = new System.Drawing.Point(122, 189);
             this.mskTelUsr.Mask = "  (00) 0000-0000";
             this.mskTelUsr.Name = "mskTelUsr";
             this.mskTelUsr.PromptChar = ' ';
-            this.mskTelUsr.Size = new System.Drawing.Size(135, 29);
+            this.mskTelUsr.Size = new System.Drawing.Size(135, 26);
             this.mskTelUsr.TabIndex = 5;
             // 
             // lblTelUsr
             // 
             this.lblTelUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTelUsr.AutoSize = true;
-            this.lblTelUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelUsr.Location = new System.Drawing.Point(24, 192);
             this.lblTelUsr.Name = "lblTelUsr";
-            this.lblTelUsr.Size = new System.Drawing.Size(75, 22);
+            this.lblTelUsr.Size = new System.Drawing.Size(71, 20);
             this.lblTelUsr.TabIndex = 4;
             this.lblTelUsr.Text = "Telefone";
             // 
             // mskEmail
             // 
             this.mskEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskEmail.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskEmail.Location = new System.Drawing.Point(122, 140);
             this.mskEmail.Name = "mskEmail";
-            this.mskEmail.Size = new System.Drawing.Size(391, 29);
+            this.mskEmail.Size = new System.Drawing.Size(391, 26);
             this.mskEmail.TabIndex = 3;
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(48, 143);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 22);
+            this.lblEmail.Size = new System.Drawing.Size(48, 20);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             // 
             // txtNomeUsr
             // 
             this.txtNomeUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNomeUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeUsr.Location = new System.Drawing.Point(122, 91);
             this.txtNomeUsr.Name = "txtNomeUsr";
-            this.txtNomeUsr.Size = new System.Drawing.Size(391, 29);
+            this.txtNomeUsr.Size = new System.Drawing.Size(391, 26);
             this.txtNomeUsr.TabIndex = 1;
             // 
             // lblNomeUsr
             // 
             this.lblNomeUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNomeUsr.AutoSize = true;
-            this.lblNomeUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsr.Location = new System.Drawing.Point(43, 94);
             this.lblNomeUsr.Name = "lblNomeUsr";
-            this.lblNomeUsr.Size = new System.Drawing.Size(56, 22);
+            this.lblNomeUsr.Size = new System.Drawing.Size(51, 20);
             this.lblNomeUsr.TabIndex = 0;
             this.lblNomeUsr.Text = "Nome";
-            // 
-            // panVinculaMem
-            // 
-            this.panVinculaMem.Controls.Add(this.lblVincular);
-            this.panVinculaMem.Controls.Add(this.lblMembros);
-            this.panVinculaMem.Controls.Add(this.lblAddMembros);
-            this.panVinculaMem.Controls.Add(this.dgvMembros);
-            this.panVinculaMem.Controls.Add(this.cboxSelAsso);
-            this.panVinculaMem.Controls.Add(this.lblAsso);
-            this.panVinculaMem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panVinculaMem.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panVinculaMem.Location = new System.Drawing.Point(75, 105);
-            this.panVinculaMem.Name = "panVinculaMem";
-            this.panVinculaMem.Size = new System.Drawing.Size(925, 545);
-            this.panVinculaMem.TabIndex = 14;
-            // 
-            // lblVincular
-            // 
-            this.lblVincular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVincular.AutoSize = true;
-            this.lblVincular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblVincular.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVincular.ForeColor = System.Drawing.Color.White;
-            this.lblVincular.Location = new System.Drawing.Point(738, 480);
-            this.lblVincular.Name = "lblVincular";
-            this.lblVincular.Padding = new System.Windows.Forms.Padding(7);
-            this.lblVincular.Size = new System.Drawing.Size(104, 40);
-            this.lblVincular.TabIndex = 6;
-            this.lblVincular.Text = "Vincular";
-            this.lblVincular.Click += new System.EventHandler(this.lblVincular_Click);
-            // 
-            // lblMembros
-            // 
-            this.lblMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMembros.AutoSize = true;
-            this.lblMembros.Location = new System.Drawing.Point(419, 112);
-            this.lblMembros.Name = "lblMembros";
-            this.lblMembros.Size = new System.Drawing.Size(84, 22);
-            this.lblMembros.TabIndex = 5;
-            this.lblMembros.Text = "Membros";
-            // 
-            // lblAddMembros
-            // 
-            this.lblAddMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAddMembros.AutoSize = true;
-            this.lblAddMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblAddMembros.Font = new System.Drawing.Font("Noto Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMembros.ForeColor = System.Drawing.Color.White;
-            this.lblAddMembros.Location = new System.Drawing.Point(81, 480);
-            this.lblAddMembros.Name = "lblAddMembros";
-            this.lblAddMembros.Padding = new System.Windows.Forms.Padding(7);
-            this.lblAddMembros.Size = new System.Drawing.Size(37, 40);
-            this.lblAddMembros.TabIndex = 4;
-            this.lblAddMembros.Text = "+";
-            // 
-            // dgvMembros
-            // 
-            this.dgvMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvMembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMembros.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMembros.Location = new System.Drawing.Point(81, 158);
-            this.dgvMembros.Name = "dgvMembros";
-            this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembros.Size = new System.Drawing.Size(761, 303);
-            this.dgvMembros.TabIndex = 3;
-            this.dgvMembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // cboxSelAsso
-            // 
-            this.cboxSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboxSelAsso.FormattingEnabled = true;
-            this.cboxSelAsso.Location = new System.Drawing.Point(81, 70);
-            this.cboxSelAsso.Name = "cboxSelAsso";
-            this.cboxSelAsso.Size = new System.Drawing.Size(239, 30);
-            this.cboxSelAsso.TabIndex = 1;
-            // 
-            // lblAsso
-            // 
-            this.lblAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAsso.AutoSize = true;
-            this.lblAsso.Location = new System.Drawing.Point(77, 35);
-            this.lblAsso.Name = "lblAsso";
-            this.lblAsso.Size = new System.Drawing.Size(94, 22);
-            this.lblAsso.TabIndex = 0;
-            this.lblAsso.Text = "Associação";
             // 
             // panAssociacao
             // 
@@ -606,7 +606,7 @@
             this.panAssociacao.Controls.Add(this.lblTipoAss);
             this.panAssociacao.Controls.Add(this.lblFimPrev);
             this.panAssociacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panAssociacao.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panAssociacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panAssociacao.Location = new System.Drawing.Point(75, 105);
             this.panAssociacao.Name = "panAssociacao";
             this.panAssociacao.Size = new System.Drawing.Size(925, 545);
@@ -627,7 +627,7 @@
             this.lblDescricao.AutoSize = true;
             this.lblDescricao.Location = new System.Drawing.Point(47, 143);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(85, 22);
+            this.lblDescricao.Size = new System.Drawing.Size(80, 20);
             this.lblDescricao.TabIndex = 12;
             this.lblDescricao.Text = "Descrição";
             // 
@@ -643,24 +643,22 @@
             // mskFimPrev
             // 
             this.mskFimPrev.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskFimPrev.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.mskFimPrev.Location = new System.Drawing.Point(157, 87);
             this.mskFimPrev.Mask = "00/00/0000";
             this.mskFimPrev.Name = "mskFimPrev";
             this.mskFimPrev.PromptChar = ' ';
-            this.mskFimPrev.Size = new System.Drawing.Size(100, 29);
+            this.mskFimPrev.Size = new System.Drawing.Size(100, 26);
             this.mskFimPrev.TabIndex = 10;
             this.mskFimPrev.ValidatingType = typeof(System.DateTime);
             // 
             // mskInicioVige
             // 
             this.mskInicioVige.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskInicioVige.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.mskInicioVige.Location = new System.Drawing.Point(570, 87);
             this.mskInicioVige.Mask = "00/00/0000";
             this.mskInicioVige.Name = "mskInicioVige";
             this.mskInicioVige.PromptChar = ' ';
-            this.mskInicioVige.Size = new System.Drawing.Size(100, 29);
+            this.mskInicioVige.Size = new System.Drawing.Size(100, 26);
             this.mskInicioVige.TabIndex = 9;
             this.mskInicioVige.ValidatingType = typeof(System.DateTime);
             // 
@@ -670,7 +668,7 @@
             this.cboxTipo.FormattingEnabled = true;
             this.cboxTipo.Location = new System.Drawing.Point(514, 37);
             this.cboxTipo.Name = "cboxTipo";
-            this.cboxTipo.Size = new System.Drawing.Size(156, 30);
+            this.cboxTipo.Size = new System.Drawing.Size(156, 28);
             this.cboxTipo.TabIndex = 8;
             // 
             // txtNomeAss
@@ -678,7 +676,7 @@
             this.txtNomeAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNomeAss.Location = new System.Drawing.Point(47, 38);
             this.txtNomeAss.Name = "txtNomeAss";
-            this.txtNomeAss.Size = new System.Drawing.Size(327, 29);
+            this.txtNomeAss.Size = new System.Drawing.Size(327, 26);
             this.txtNomeAss.TabIndex = 7;
             // 
             // lblCadAsso
@@ -686,12 +684,12 @@
             this.lblCadAsso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCadAsso.AutoSize = true;
             this.lblCadAsso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblCadAsso.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadAsso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadAsso.ForeColor = System.Drawing.Color.White;
             this.lblCadAsso.Location = new System.Drawing.Point(778, 466);
             this.lblCadAsso.Name = "lblCadAsso";
             this.lblCadAsso.Padding = new System.Windows.Forms.Padding(10);
-            this.lblCadAsso.Size = new System.Drawing.Size(109, 42);
+            this.lblCadAsso.Size = new System.Drawing.Size(108, 40);
             this.lblCadAsso.TabIndex = 6;
             this.lblCadAsso.Text = "Cadastrar";
             this.lblCadAsso.Click += new System.EventHandler(this.lblCadAsso_Click);
@@ -702,7 +700,7 @@
             this.lblLegCorrelata.AutoSize = true;
             this.lblLegCorrelata.Location = new System.Drawing.Point(47, 286);
             this.lblLegCorrelata.Name = "lblLegCorrelata";
-            this.lblLegCorrelata.Size = new System.Drawing.Size(162, 22);
+            this.lblLegCorrelata.Size = new System.Drawing.Size(151, 20);
             this.lblLegCorrelata.TabIndex = 5;
             this.lblLegCorrelata.Text = "Legislação correlata";
             // 
@@ -712,7 +710,7 @@
             this.lblDataVig.AutoSize = true;
             this.lblDataVig.Location = new System.Drawing.Point(424, 90);
             this.lblDataVig.Name = "lblDataVig";
-            this.lblDataVig.Size = new System.Drawing.Size(140, 22);
+            this.lblDataVig.Size = new System.Drawing.Size(129, 20);
             this.lblDataVig.TabIndex = 4;
             this.lblDataVig.Text = "Inicio da vigência";
             // 
@@ -722,7 +720,7 @@
             this.lblNomeAss.AutoSize = true;
             this.lblNomeAss.Location = new System.Drawing.Point(47, 11);
             this.lblNomeAss.Name = "lblNomeAss";
-            this.lblNomeAss.Size = new System.Drawing.Size(56, 22);
+            this.lblNomeAss.Size = new System.Drawing.Size(51, 20);
             this.lblNomeAss.TabIndex = 3;
             this.lblNomeAss.Text = "Nome";
             // 
@@ -732,7 +730,7 @@
             this.lblTipoAss.AutoSize = true;
             this.lblTipoAss.Location = new System.Drawing.Point(510, 11);
             this.lblTipoAss.Name = "lblTipoAss";
-            this.lblTipoAss.Size = new System.Drawing.Size(43, 22);
+            this.lblTipoAss.Size = new System.Drawing.Size(39, 20);
             this.lblTipoAss.TabIndex = 1;
             this.lblTipoAss.Text = "Tipo";
             // 
@@ -742,7 +740,7 @@
             this.lblFimPrev.AutoSize = true;
             this.lblFimPrev.Location = new System.Drawing.Point(47, 90);
             this.lblFimPrev.Name = "lblFimPrev";
-            this.lblFimPrev.Size = new System.Drawing.Size(103, 22);
+            this.lblFimPrev.Size = new System.Drawing.Size(94, 20);
             this.lblFimPrev.TabIndex = 0;
             this.lblFimPrev.Text = "Fim previsto";
             // 
@@ -763,7 +761,7 @@
             this.panPortarias.Controls.Add(this.lblAssunto);
             this.panPortarias.Controls.Add(this.lblNum);
             this.panPortarias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panPortarias.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panPortarias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panPortarias.Location = new System.Drawing.Point(75, 105);
             this.panPortarias.Name = "panPortarias";
             this.panPortarias.Size = new System.Drawing.Size(925, 545);
@@ -774,12 +772,12 @@
             this.lblRelPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblRelPort.AutoSize = true;
             this.lblRelPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblRelPort.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRelPort.ForeColor = System.Drawing.Color.White;
             this.lblRelPort.Location = new System.Drawing.Point(824, 387);
             this.lblRelPort.Name = "lblRelPort";
             this.lblRelPort.Padding = new System.Windows.Forms.Padding(10);
-            this.lblRelPort.Size = new System.Drawing.Size(39, 42);
+            this.lblRelPort.Size = new System.Drawing.Size(39, 40);
             this.lblRelPort.TabIndex = 14;
             this.lblRelPort.Text = "+";
             this.lblRelPort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -788,10 +786,10 @@
             // 
             this.lstPortRelacio.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lstPortRelacio.FormattingEnabled = true;
-            this.lstPortRelacio.ItemHeight = 22;
+            this.lstPortRelacio.ItemHeight = 20;
             this.lstPortRelacio.Location = new System.Drawing.Point(636, 224);
             this.lstPortRelacio.Name = "lstPortRelacio";
-            this.lstPortRelacio.Size = new System.Drawing.Size(227, 136);
+            this.lstPortRelacio.Size = new System.Drawing.Size(227, 124);
             this.lstPortRelacio.TabIndex = 13;
             // 
             // lblPortRelacio
@@ -800,7 +798,7 @@
             this.lblPortRelacio.AutoSize = true;
             this.lblPortRelacio.Location = new System.Drawing.Point(658, 182);
             this.lblPortRelacio.Name = "lblPortRelacio";
-            this.lblPortRelacio.Size = new System.Drawing.Size(184, 22);
+            this.lblPortRelacio.Size = new System.Drawing.Size(173, 20);
             this.lblPortRelacio.TabIndex = 12;
             this.lblPortRelacio.Text = "Portarias Relacionadas";
             // 
@@ -836,7 +834,7 @@
             this.txtNumPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNumPort.Location = new System.Drawing.Point(694, 77);
             this.txtNumPort.Name = "txtNumPort";
-            this.txtNumPort.Size = new System.Drawing.Size(169, 29);
+            this.txtNumPort.Size = new System.Drawing.Size(169, 26);
             this.txtNumPort.TabIndex = 8;
             // 
             // cboxStatus
@@ -845,7 +843,7 @@
             this.cboxStatus.FormattingEnabled = true;
             this.cboxStatus.Location = new System.Drawing.Point(694, 122);
             this.cboxStatus.Name = "cboxStatus";
-            this.cboxStatus.Size = new System.Drawing.Size(169, 30);
+            this.cboxStatus.Size = new System.Drawing.Size(169, 28);
             this.cboxStatus.TabIndex = 7;
             // 
             // lblCabe
@@ -854,7 +852,7 @@
             this.lblCabe.AutoSize = true;
             this.lblCabe.Location = new System.Drawing.Point(61, 182);
             this.lblCabe.Name = "lblCabe";
-            this.lblCabe.Size = new System.Drawing.Size(89, 22);
+            this.lblCabe.Size = new System.Drawing.Size(85, 20);
             this.lblCabe.TabIndex = 6;
             this.lblCabe.Text = "Cabeçalho";
             // 
@@ -863,12 +861,12 @@
             this.lblCriarPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCriarPort.AutoSize = true;
             this.lblCriarPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblCriarPort.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriarPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCriarPort.ForeColor = System.Drawing.Color.White;
             this.lblCriarPort.Location = new System.Drawing.Point(794, 466);
             this.lblCriarPort.Name = "lblCriarPort";
             this.lblCriarPort.Padding = new System.Windows.Forms.Padding(10);
-            this.lblCriarPort.Size = new System.Drawing.Size(69, 42);
+            this.lblCriarPort.Size = new System.Drawing.Size(67, 40);
             this.lblCriarPort.TabIndex = 5;
             this.lblCriarPort.Text = "Criar";
             // 
@@ -878,7 +876,7 @@
             this.lblSatus.AutoSize = true;
             this.lblSatus.Location = new System.Drawing.Point(630, 126);
             this.lblSatus.Name = "lblSatus";
-            this.lblSatus.Size = new System.Drawing.Size(58, 22);
+            this.lblSatus.Size = new System.Drawing.Size(56, 20);
             this.lblSatus.TabIndex = 4;
             this.lblSatus.Text = "Status";
             // 
@@ -888,7 +886,7 @@
             this.lblResumo.AutoSize = true;
             this.lblResumo.Location = new System.Drawing.Point(61, 37);
             this.lblResumo.Name = "lblResumo";
-            this.lblResumo.Size = new System.Drawing.Size(72, 22);
+            this.lblResumo.Size = new System.Drawing.Size(69, 20);
             this.lblResumo.TabIndex = 3;
             this.lblResumo.Text = "Resumo";
             // 
@@ -898,7 +896,7 @@
             this.lblAssunto.AutoSize = true;
             this.lblAssunto.Location = new System.Drawing.Point(61, 348);
             this.lblAssunto.Name = "lblAssunto";
-            this.lblAssunto.Size = new System.Drawing.Size(72, 22);
+            this.lblAssunto.Size = new System.Drawing.Size(68, 20);
             this.lblAssunto.TabIndex = 2;
             this.lblAssunto.Text = "Assunto";
             // 
@@ -908,7 +906,7 @@
             this.lblNum.AutoSize = true;
             this.lblNum.Location = new System.Drawing.Point(615, 80);
             this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(73, 22);
+            this.lblNum.Size = new System.Drawing.Size(65, 20);
             this.lblNum.TabIndex = 0;
             this.lblNum.Text = "Número";
             // 
@@ -929,7 +927,7 @@
             // lblSair
             // 
             this.lblSair.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSair.Font = new System.Drawing.Font("Noto Sans UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
             this.lblSair.Location = new System.Drawing.Point(0, 0);
             this.lblSair.Name = "lblSair";
@@ -958,7 +956,7 @@
             // lblPortarias
             // 
             this.lblPortarias.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPortarias.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPortarias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPortarias.ForeColor = System.Drawing.Color.White;
             this.lblPortarias.Image = global::Portaria.Properties.Resources.glassdoor;
             this.lblPortarias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -975,7 +973,7 @@
             // lblVinculaMem
             // 
             this.lblVinculaMem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblVinculaMem.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVinculaMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVinculaMem.ForeColor = System.Drawing.Color.White;
             this.lblVinculaMem.Image = global::Portaria.Properties.Resources.account_convert;
             this.lblVinculaMem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -992,7 +990,7 @@
             // lblAssociacoes
             // 
             this.lblAssociacoes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblAssociacoes.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssociacoes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAssociacoes.ForeColor = System.Drawing.Color.White;
             this.lblAssociacoes.Image = global::Portaria.Properties.Resources.google_circles_communities;
             this.lblAssociacoes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1009,7 +1007,7 @@
             // lblUsuarios
             // 
             this.lblUsuarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblUsuarios.Font = new System.Drawing.Font("Noto Sans UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuarios.ForeColor = System.Drawing.Color.White;
             this.lblUsuarios.Image = global::Portaria.Properties.Resources.ic_group_white_36dp;
             this.lblUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1040,12 +1038,12 @@
             // 
             this.lblSession.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblSession.AutoSize = true;
-            this.lblSession.Font = new System.Drawing.Font("Noto Sans UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSession.ForeColor = System.Drawing.Color.White;
             this.lblSession.Location = new System.Drawing.Point(926, 12);
             this.lblSession.Name = "lblSession";
             this.lblSession.Padding = new System.Windows.Forms.Padding(10);
-            this.lblSession.Size = new System.Drawing.Size(68, 42);
+            this.lblSession.Size = new System.Drawing.Size(68, 40);
             this.lblSession.TabIndex = 3;
             this.lblSession.Text = "ADM";
             this.lblSession.Click += new System.EventHandler(this.lblSession_Click);
@@ -1065,11 +1063,11 @@
             // lblTitleForm
             // 
             this.lblTitleForm.AutoSize = true;
-            this.lblTitleForm.Font = new System.Drawing.Font("Noto Sans UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleForm.ForeColor = System.Drawing.Color.White;
             this.lblTitleForm.Location = new System.Drawing.Point(70, 19);
             this.lblTitleForm.Name = "lblTitleForm";
-            this.lblTitleForm.Size = new System.Drawing.Size(223, 28);
+            this.lblTitleForm.Size = new System.Drawing.Size(228, 25);
             this.lblTitleForm.TabIndex = 1;
             this.lblTitleForm.Text = "Cadastro de Usuário";
             // 
@@ -1179,6 +1177,9 @@
             this.Load += new System.EventHandler(this.frmADM_Load);
             this.SizeChanged += new System.EventHandler(this.frmADM_SizeChanged);
             this.panADM.ResumeLayout(false);
+            this.panVinculaMem.ResumeLayout(false);
+            this.panVinculaMem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.panUsers.ResumeLayout(false);
             this.panUsers.PerformLayout();
             this.panNotify.ResumeLayout(false);
@@ -1186,9 +1187,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).EndInit();
             this.gboxTipoUsr.ResumeLayout(false);
             this.gboxTipoUsr.PerformLayout();
-            this.panVinculaMem.ResumeLayout(false);
-            this.panVinculaMem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.panAssociacao.ResumeLayout(false);
             this.panAssociacao.PerformLayout();
             this.panPortarias.ResumeLayout(false);

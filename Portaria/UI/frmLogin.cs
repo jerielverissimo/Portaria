@@ -195,7 +195,10 @@ namespace Portaria.VIEW
 
         private void lblEntrarMembro_Click(object sender, EventArgs e)
         {
-           
+            UI.frmMembros membros = new UI.frmMembros();
+            
+            membros.Show();
+            
         }
 
         private void fadeOutEffect_Tick(object sender, EventArgs e)
