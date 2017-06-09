@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portaria.DAL
+namespace Portaria.Model
 {
-    class ServidorAlunoDALL : UsuarioDAL
+    class ServidorAluno : Usuario
     {
         private string senha, tipo, prontuario, siape;
         private int id_usuario;

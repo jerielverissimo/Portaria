@@ -17,8 +17,8 @@ namespace Portaria.VIEW
         // OBJ
 
         PALETT.Colors color = new PALETT.Colors();
-        BLL.UsuariosBLL usrBLL = new BLL.UsuariosBLL();
-        DAL.UsuarioDAL usrDALL = new DAL.UsuarioDAL();
+        DAL.UsuariosDAL usrDAL = new DAL.UsuariosDAL();
+        Model.Usuario usrModel = new Model.Usuario();
 
         // Var 
 
@@ -67,7 +67,7 @@ namespace Portaria.VIEW
         private void frmADM_Load(object sender, EventArgs e)
         {
 
-            dgvMembros.DataSource = usrBLL.carregaUsuarios();
+            dgvMembros.DataSource = usrDAL.carregaUsuarios();
             
 
             panTitleBar.BackColor = color.AzulTitleBar;
@@ -265,14 +265,16 @@ namespace Portaria.VIEW
         {
             
             tmBounceEfxNotify.Enabled = true;
-            usrDALL.Nome = txtNomeUsr.Text;
-            usrDALL.Email = mskEmail.Text;
-            usrDALL.Telefone = mskTelUsr.Text;
-            usrDALL.Data_criacao = mskDataCria.Text;
-            usrDALL.Cod_esp = 1;
+            tmBounceEfxNotify.Tag = panADM;
+            usrModel.Nome = txtNomeUsr.Text;
+            usrModel.Email = mskEmail.Text;
+            usrModel.Telefone = mskTelUsr.Text;
+            usrModel.Data_criacao = mskDataCria.Text;
+            usrModel.Cod_esp = Convert.ToInt32(cboxEsp.SelectedValue);
 
-            usrBLL.carregaUsuarios();
-            usrBLL.Salvar(usrDALL.Nome, usrDALL.Email, usrDALL.Telefone, usrDALL.Data_criacao, usrDALL.Cod_esp);
+            dgvMembros.DataSource = null;
+            usrDAL.Salvar(usrModel.Nome, usrModel.Email, usrModel.Telefone, usrModel.Data_criacao, usrModel.Cod_esp);
+            dgvMembros.DataSource = usrDAL.carregaUsuarios();
         }
 
         private void frmADM_SizeChanged(object sender, EventArgs e)
@@ -343,6 +345,7 @@ namespace Portaria.VIEW
         {
             lblTitleForm.Text = "Vincular Membros";
             panVinculaMem.BringToFront();
+            
         }
 
         private void lblCadAsso_Click(object sender, EventArgs e)
@@ -371,6 +374,16 @@ namespace Portaria.VIEW
 
         }
 
+        private void cboxEsp_Click(object sender, EventArgs e)
+        {
+            var especialidadeDAL = new DAL.EspecialidadeDAL();
+            var especialidades = especialidadeDAL.todasEspecialidades();
+
+            cboxEsp.DataSource = especialidades;
+            cboxEsp.DisplayMember = "Nome";
+            cboxEsp.ValueMember = "Cod";
+        }
+
         private void panUsers_SizeChanged(object sender, EventArgs e)
         {
             pan_X = panUsers.Width * 0.2;
@@ -388,6 +401,8 @@ namespace Portaria.VIEW
 
         private void tmBounceEfxNotify_Tick(object sender, EventArgs e)
         {
+            var panel = (System.Windows.Forms.Panel)tmBounceEfxNotify.Tag;
+
             panNotify.Width = Convert.ToInt32(tamPanNotify);
             panNotify.Left = Convert.ToInt32(origemPanNotify);
 
@@ -398,7 +413,7 @@ namespace Portaria.VIEW
                     tamPanNotify += largPanNotify;
                     origemPanNotify -= posPanNotify;
 
-                    if (panNotify.Width == panADM.ClientSize.Width && panNotify.Left == 0)
+                    if (panNotify.Width == panel.ClientSize.Width && panNotify.Left == 0)
                     {
                         panNotify.Dock = DockStyle.Top;
                         notifyAtivada = true;
@@ -412,7 +427,7 @@ namespace Portaria.VIEW
                     tamPanNotify -= largPanNotify;
                     origemPanNotify += posPanNotify;
 
-                    if (panNotify.Width == 0 && panNotify.Left == panADM.ClientSize.Width / 2)
+                    if (panNotify.Width == 0 && panNotify.Left == panel.ClientSize.Width / 2)
                     {
                         notifyAtivada = false;
                         tmBounceEfxNotify.Enabled = false;

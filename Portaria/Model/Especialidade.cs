@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portaria.DAL
+namespace Portaria.Model
 {
-    class EspecialidadeDAL
+    class Especialidade
     {
         private int cod;
-        private int nome;
+        private string nome;
 
         public int Cod
         {
@@ -24,7 +24,7 @@ namespace Portaria.DAL
             }
         }
 
-        public int Nome
+        public string Nome
         {
             get
             {

@@ -30,13 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panADM = new System.Windows.Forms.Panel();
-            this.panVinculaMem = new System.Windows.Forms.Panel();
-            this.lblVincular = new System.Windows.Forms.Label();
-            this.lblMembros = new System.Windows.Forms.Label();
-            this.lblAddMembros = new System.Windows.Forms.Label();
-            this.dgvMembros = new System.Windows.Forms.DataGridView();
-            this.cboxSelAsso = new System.Windows.Forms.ComboBox();
-            this.lblAsso = new System.Windows.Forms.Label();
             this.panUsers = new System.Windows.Forms.Panel();
             this.panNotify = new System.Windows.Forms.Panel();
             this.ptbCerto = new System.Windows.Forms.PictureBox();
@@ -66,21 +59,16 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtNomeUsr = new System.Windows.Forms.TextBox();
             this.lblNomeUsr = new System.Windows.Forms.Label();
-            this.panAssociacao = new System.Windows.Forms.Panel();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.txtLegCorrelata = new System.Windows.Forms.TextBox();
-            this.mskFimPrev = new System.Windows.Forms.MaskedTextBox();
-            this.mskInicioVige = new System.Windows.Forms.MaskedTextBox();
-            this.cboxTipo = new System.Windows.Forms.ComboBox();
-            this.txtNomeAss = new System.Windows.Forms.TextBox();
-            this.lblCadAsso = new System.Windows.Forms.Label();
-            this.lblLegCorrelata = new System.Windows.Forms.Label();
-            this.lblDataVig = new System.Windows.Forms.Label();
-            this.lblNomeAss = new System.Windows.Forms.Label();
-            this.lblTipoAss = new System.Windows.Forms.Label();
-            this.lblFimPrev = new System.Windows.Forms.Label();
+            this.panVinculaMem = new System.Windows.Forms.Panel();
+            this.lblVincular = new System.Windows.Forms.Label();
+            this.lblMembros = new System.Windows.Forms.Label();
+            this.lblAddMembros = new System.Windows.Forms.Label();
+            this.dgvMembros = new System.Windows.Forms.DataGridView();
+            this.cboxSelAsso = new System.Windows.Forms.ComboBox();
+            this.lblAsso = new System.Windows.Forms.Label();
             this.panPortarias = new System.Windows.Forms.Panel();
+            this.cboxPortAsso = new System.Windows.Forms.ComboBox();
+            this.lblSelAsso = new System.Windows.Forms.Label();
             this.lblRelPort = new System.Windows.Forms.Label();
             this.lstPortRelacio = new System.Windows.Forms.ListBox();
             this.lblPortRelacio = new System.Windows.Forms.Label();
@@ -95,6 +83,20 @@
             this.lblResumo = new System.Windows.Forms.Label();
             this.lblAssunto = new System.Windows.Forms.Label();
             this.lblNum = new System.Windows.Forms.Label();
+            this.panAssociacao = new System.Windows.Forms.Panel();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtLegCorrelata = new System.Windows.Forms.TextBox();
+            this.mskFimPrev = new System.Windows.Forms.MaskedTextBox();
+            this.mskInicioVige = new System.Windows.Forms.MaskedTextBox();
+            this.cboxTipo = new System.Windows.Forms.ComboBox();
+            this.txtNomeAss = new System.Windows.Forms.TextBox();
+            this.lblCadAsso = new System.Windows.Forms.Label();
+            this.lblLegCorrelata = new System.Windows.Forms.Label();
+            this.lblDataVig = new System.Windows.Forms.Label();
+            this.lblNomeAss = new System.Windows.Forms.Label();
+            this.lblTipoAss = new System.Windows.Forms.Label();
+            this.lblFimPrev = new System.Windows.Forms.Label();
             this.panPopPup = new System.Windows.Forms.Panel();
             this.lblSair = new System.Windows.Forms.Label();
             this.panSideBar = new System.Windows.Forms.Panel();
@@ -116,14 +118,14 @@
             this.tmSlideEfxMenu = new System.Windows.Forms.Timer(this.components);
             this.tmBounceEfxNotify = new System.Windows.Forms.Timer(this.components);
             this.panADM.SuspendLayout();
-            this.panVinculaMem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.panUsers.SuspendLayout();
             this.panNotify.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).BeginInit();
             this.gboxTipoUsr.SuspendLayout();
-            this.panAssociacao.SuspendLayout();
+            this.panVinculaMem.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.panPortarias.SuspendLayout();
+            this.panAssociacao.SuspendLayout();
             this.panPopPup.SuspendLayout();
             this.panSideBar.SuspendLayout();
             this.panActionBar.SuspendLayout();
@@ -138,10 +140,10 @@
             // panADM
             // 
             this.panADM.BackColor = System.Drawing.Color.White;
-            this.panADM.Controls.Add(this.panVinculaMem);
             this.panADM.Controls.Add(this.panUsers);
-            this.panADM.Controls.Add(this.panAssociacao);
+            this.panADM.Controls.Add(this.panVinculaMem);
             this.panADM.Controls.Add(this.panPortarias);
+            this.panADM.Controls.Add(this.panAssociacao);
             this.panADM.Controls.Add(this.panPopPup);
             this.panADM.Controls.Add(this.panSideBar);
             this.panADM.Controls.Add(this.panActionBar);
@@ -151,92 +153,6 @@
             this.panADM.Name = "panADM";
             this.panADM.Size = new System.Drawing.Size(1000, 650);
             this.panADM.TabIndex = 1;
-            // 
-            // panVinculaMem
-            // 
-            this.panVinculaMem.Controls.Add(this.lblVincular);
-            this.panVinculaMem.Controls.Add(this.lblMembros);
-            this.panVinculaMem.Controls.Add(this.lblAddMembros);
-            this.panVinculaMem.Controls.Add(this.dgvMembros);
-            this.panVinculaMem.Controls.Add(this.cboxSelAsso);
-            this.panVinculaMem.Controls.Add(this.lblAsso);
-            this.panVinculaMem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panVinculaMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panVinculaMem.Location = new System.Drawing.Point(75, 105);
-            this.panVinculaMem.Name = "panVinculaMem";
-            this.panVinculaMem.Size = new System.Drawing.Size(925, 545);
-            this.panVinculaMem.TabIndex = 14;
-            // 
-            // lblVincular
-            // 
-            this.lblVincular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblVincular.AutoSize = true;
-            this.lblVincular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblVincular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVincular.ForeColor = System.Drawing.Color.White;
-            this.lblVincular.Location = new System.Drawing.Point(738, 480);
-            this.lblVincular.Name = "lblVincular";
-            this.lblVincular.Padding = new System.Windows.Forms.Padding(7);
-            this.lblVincular.Size = new System.Drawing.Size(101, 38);
-            this.lblVincular.TabIndex = 6;
-            this.lblVincular.Text = "Vincular";
-            this.lblVincular.Click += new System.EventHandler(this.lblVincular_Click);
-            // 
-            // lblMembros
-            // 
-            this.lblMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMembros.AutoSize = true;
-            this.lblMembros.Location = new System.Drawing.Point(419, 112);
-            this.lblMembros.Name = "lblMembros";
-            this.lblMembros.Size = new System.Drawing.Size(75, 20);
-            this.lblMembros.TabIndex = 5;
-            this.lblMembros.Text = "Membros";
-            // 
-            // lblAddMembros
-            // 
-            this.lblAddMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAddMembros.AutoSize = true;
-            this.lblAddMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblAddMembros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddMembros.ForeColor = System.Drawing.Color.White;
-            this.lblAddMembros.Location = new System.Drawing.Point(81, 480);
-            this.lblAddMembros.Name = "lblAddMembros";
-            this.lblAddMembros.Padding = new System.Windows.Forms.Padding(7);
-            this.lblAddMembros.Size = new System.Drawing.Size(36, 38);
-            this.lblAddMembros.TabIndex = 4;
-            this.lblAddMembros.Text = "+";
-            // 
-            // dgvMembros
-            // 
-            this.dgvMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvMembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMembros.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMembros.Location = new System.Drawing.Point(81, 158);
-            this.dgvMembros.Name = "dgvMembros";
-            this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembros.Size = new System.Drawing.Size(761, 303);
-            this.dgvMembros.TabIndex = 3;
-            this.dgvMembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
-            // cboxSelAsso
-            // 
-            this.cboxSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboxSelAsso.FormattingEnabled = true;
-            this.cboxSelAsso.Location = new System.Drawing.Point(81, 70);
-            this.cboxSelAsso.Name = "cboxSelAsso";
-            this.cboxSelAsso.Size = new System.Drawing.Size(239, 28);
-            this.cboxSelAsso.TabIndex = 1;
-            // 
-            // lblAsso
-            // 
-            this.lblAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAsso.AutoSize = true;
-            this.lblAsso.Location = new System.Drawing.Point(77, 35);
-            this.lblAsso.Name = "lblAsso";
-            this.lblAsso.Size = new System.Drawing.Size(91, 20);
-            this.lblAsso.TabIndex = 0;
-            this.lblAsso.Text = "Associação";
             // 
             // panUsers
             // 
@@ -423,6 +339,7 @@
             this.cboxEsp.Name = "cboxEsp";
             this.cboxEsp.Size = new System.Drawing.Size(233, 28);
             this.cboxEsp.TabIndex = 12;
+            this.cboxEsp.Click += new System.EventHandler(this.cboxEsp_Click);
             // 
             // lblEsp
             // 
@@ -590,6 +507,279 @@
             this.lblNomeUsr.TabIndex = 0;
             this.lblNomeUsr.Text = "Nome";
             // 
+            // panVinculaMem
+            // 
+            this.panVinculaMem.Controls.Add(this.lblVincular);
+            this.panVinculaMem.Controls.Add(this.lblMembros);
+            this.panVinculaMem.Controls.Add(this.lblAddMembros);
+            this.panVinculaMem.Controls.Add(this.dgvMembros);
+            this.panVinculaMem.Controls.Add(this.cboxSelAsso);
+            this.panVinculaMem.Controls.Add(this.lblAsso);
+            this.panVinculaMem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panVinculaMem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panVinculaMem.Location = new System.Drawing.Point(75, 105);
+            this.panVinculaMem.Name = "panVinculaMem";
+            this.panVinculaMem.Size = new System.Drawing.Size(925, 545);
+            this.panVinculaMem.TabIndex = 14;
+            // 
+            // lblVincular
+            // 
+            this.lblVincular.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblVincular.AutoSize = true;
+            this.lblVincular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblVincular.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVincular.ForeColor = System.Drawing.Color.White;
+            this.lblVincular.Location = new System.Drawing.Point(738, 480);
+            this.lblVincular.Name = "lblVincular";
+            this.lblVincular.Padding = new System.Windows.Forms.Padding(7);
+            this.lblVincular.Size = new System.Drawing.Size(101, 38);
+            this.lblVincular.TabIndex = 6;
+            this.lblVincular.Text = "Vincular";
+            this.lblVincular.Click += new System.EventHandler(this.lblVincular_Click);
+            // 
+            // lblMembros
+            // 
+            this.lblMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblMembros.AutoSize = true;
+            this.lblMembros.Location = new System.Drawing.Point(419, 112);
+            this.lblMembros.Name = "lblMembros";
+            this.lblMembros.Size = new System.Drawing.Size(75, 20);
+            this.lblMembros.TabIndex = 5;
+            this.lblMembros.Text = "Membros";
+            // 
+            // lblAddMembros
+            // 
+            this.lblAddMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAddMembros.AutoSize = true;
+            this.lblAddMembros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblAddMembros.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddMembros.ForeColor = System.Drawing.Color.White;
+            this.lblAddMembros.Location = new System.Drawing.Point(81, 480);
+            this.lblAddMembros.Name = "lblAddMembros";
+            this.lblAddMembros.Padding = new System.Windows.Forms.Padding(7);
+            this.lblAddMembros.Size = new System.Drawing.Size(36, 38);
+            this.lblAddMembros.TabIndex = 4;
+            this.lblAddMembros.Text = "+";
+            // 
+            // dgvMembros
+            // 
+            this.dgvMembros.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvMembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMembros.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMembros.Location = new System.Drawing.Point(81, 158);
+            this.dgvMembros.Name = "dgvMembros";
+            this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembros.Size = new System.Drawing.Size(761, 303);
+            this.dgvMembros.TabIndex = 3;
+            this.dgvMembros.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // cboxSelAsso
+            // 
+            this.cboxSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxSelAsso.FormattingEnabled = true;
+            this.cboxSelAsso.Location = new System.Drawing.Point(81, 70);
+            this.cboxSelAsso.Name = "cboxSelAsso";
+            this.cboxSelAsso.Size = new System.Drawing.Size(239, 28);
+            this.cboxSelAsso.TabIndex = 1;
+            // 
+            // lblAsso
+            // 
+            this.lblAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAsso.AutoSize = true;
+            this.lblAsso.Location = new System.Drawing.Point(77, 35);
+            this.lblAsso.Name = "lblAsso";
+            this.lblAsso.Size = new System.Drawing.Size(91, 20);
+            this.lblAsso.TabIndex = 0;
+            this.lblAsso.Text = "Associação";
+            // 
+            // panPortarias
+            // 
+            this.panPortarias.Controls.Add(this.cboxPortAsso);
+            this.panPortarias.Controls.Add(this.lblSelAsso);
+            this.panPortarias.Controls.Add(this.lblRelPort);
+            this.panPortarias.Controls.Add(this.lstPortRelacio);
+            this.panPortarias.Controls.Add(this.lblPortRelacio);
+            this.panPortarias.Controls.Add(this.txtAssunto);
+            this.panPortarias.Controls.Add(this.txtCabecalho);
+            this.panPortarias.Controls.Add(this.txtResumo);
+            this.panPortarias.Controls.Add(this.txtNumPort);
+            this.panPortarias.Controls.Add(this.cboxStatus);
+            this.panPortarias.Controls.Add(this.lblCabe);
+            this.panPortarias.Controls.Add(this.lblCriarPort);
+            this.panPortarias.Controls.Add(this.lblSatus);
+            this.panPortarias.Controls.Add(this.lblResumo);
+            this.panPortarias.Controls.Add(this.lblAssunto);
+            this.panPortarias.Controls.Add(this.lblNum);
+            this.panPortarias.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panPortarias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panPortarias.Location = new System.Drawing.Point(75, 105);
+            this.panPortarias.Name = "panPortarias";
+            this.panPortarias.Size = new System.Drawing.Size(925, 545);
+            this.panPortarias.TabIndex = 14;
+            // 
+            // cboxPortAsso
+            // 
+            this.cboxPortAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxPortAsso.FormattingEnabled = true;
+            this.cboxPortAsso.Location = new System.Drawing.Point(694, 49);
+            this.cboxPortAsso.Name = "cboxPortAsso";
+            this.cboxPortAsso.Size = new System.Drawing.Size(169, 28);
+            this.cboxPortAsso.TabIndex = 16;
+            // 
+            // lblSelAsso
+            // 
+            this.lblSelAsso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSelAsso.AutoSize = true;
+            this.lblSelAsso.Location = new System.Drawing.Point(595, 53);
+            this.lblSelAsso.Name = "lblSelAsso";
+            this.lblSelAsso.Size = new System.Drawing.Size(91, 20);
+            this.lblSelAsso.TabIndex = 15;
+            this.lblSelAsso.Text = "Associação";
+            // 
+            // lblRelPort
+            // 
+            this.lblRelPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblRelPort.AutoSize = true;
+            this.lblRelPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblRelPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRelPort.ForeColor = System.Drawing.Color.White;
+            this.lblRelPort.Location = new System.Drawing.Point(823, 400);
+            this.lblRelPort.Name = "lblRelPort";
+            this.lblRelPort.Padding = new System.Windows.Forms.Padding(10);
+            this.lblRelPort.Size = new System.Drawing.Size(39, 40);
+            this.lblRelPort.TabIndex = 14;
+            this.lblRelPort.Text = "+";
+            this.lblRelPort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lstPortRelacio
+            // 
+            this.lstPortRelacio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lstPortRelacio.FormattingEnabled = true;
+            this.lstPortRelacio.ItemHeight = 20;
+            this.lstPortRelacio.Location = new System.Drawing.Point(635, 237);
+            this.lstPortRelacio.Name = "lstPortRelacio";
+            this.lstPortRelacio.Size = new System.Drawing.Size(227, 124);
+            this.lstPortRelacio.TabIndex = 13;
+            // 
+            // lblPortRelacio
+            // 
+            this.lblPortRelacio.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblPortRelacio.AutoSize = true;
+            this.lblPortRelacio.Location = new System.Drawing.Point(657, 195);
+            this.lblPortRelacio.Name = "lblPortRelacio";
+            this.lblPortRelacio.Size = new System.Drawing.Size(173, 20);
+            this.lblPortRelacio.TabIndex = 12;
+            this.lblPortRelacio.Text = "Portarias Relacionadas";
+            // 
+            // txtAssunto
+            // 
+            this.txtAssunto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtAssunto.Location = new System.Drawing.Point(65, 387);
+            this.txtAssunto.Multiline = true;
+            this.txtAssunto.Name = "txtAssunto";
+            this.txtAssunto.Size = new System.Drawing.Size(503, 121);
+            this.txtAssunto.TabIndex = 11;
+            // 
+            // txtCabecalho
+            // 
+            this.txtCabecalho.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCabecalho.Location = new System.Drawing.Point(65, 224);
+            this.txtCabecalho.Multiline = true;
+            this.txtCabecalho.Name = "txtCabecalho";
+            this.txtCabecalho.Size = new System.Drawing.Size(503, 106);
+            this.txtCabecalho.TabIndex = 10;
+            // 
+            // txtResumo
+            // 
+            this.txtResumo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtResumo.Location = new System.Drawing.Point(65, 49);
+            this.txtResumo.Multiline = true;
+            this.txtResumo.Name = "txtResumo";
+            this.txtResumo.Size = new System.Drawing.Size(503, 103);
+            this.txtResumo.TabIndex = 9;
+            // 
+            // txtNumPort
+            // 
+            this.txtNumPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNumPort.Location = new System.Drawing.Point(694, 87);
+            this.txtNumPort.Name = "txtNumPort";
+            this.txtNumPort.Size = new System.Drawing.Size(169, 26);
+            this.txtNumPort.TabIndex = 8;
+            // 
+            // cboxStatus
+            // 
+            this.cboxStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxStatus.FormattingEnabled = true;
+            this.cboxStatus.Location = new System.Drawing.Point(694, 124);
+            this.cboxStatus.Name = "cboxStatus";
+            this.cboxStatus.Size = new System.Drawing.Size(169, 28);
+            this.cboxStatus.TabIndex = 7;
+            // 
+            // lblCabe
+            // 
+            this.lblCabe.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCabe.AutoSize = true;
+            this.lblCabe.Location = new System.Drawing.Point(61, 182);
+            this.lblCabe.Name = "lblCabe";
+            this.lblCabe.Size = new System.Drawing.Size(85, 20);
+            this.lblCabe.TabIndex = 6;
+            this.lblCabe.Text = "Cabeçalho";
+            // 
+            // lblCriarPort
+            // 
+            this.lblCriarPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCriarPort.AutoSize = true;
+            this.lblCriarPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblCriarPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCriarPort.ForeColor = System.Drawing.Color.White;
+            this.lblCriarPort.Location = new System.Drawing.Point(794, 466);
+            this.lblCriarPort.Name = "lblCriarPort";
+            this.lblCriarPort.Padding = new System.Windows.Forms.Padding(10);
+            this.lblCriarPort.Size = new System.Drawing.Size(67, 40);
+            this.lblCriarPort.TabIndex = 5;
+            this.lblCriarPort.Text = "Criar";
+            // 
+            // lblSatus
+            // 
+            this.lblSatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblSatus.AutoSize = true;
+            this.lblSatus.Location = new System.Drawing.Point(630, 128);
+            this.lblSatus.Name = "lblSatus";
+            this.lblSatus.Size = new System.Drawing.Size(56, 20);
+            this.lblSatus.TabIndex = 4;
+            this.lblSatus.Text = "Status";
+            // 
+            // lblResumo
+            // 
+            this.lblResumo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblResumo.AutoSize = true;
+            this.lblResumo.Location = new System.Drawing.Point(61, 16);
+            this.lblResumo.Name = "lblResumo";
+            this.lblResumo.Size = new System.Drawing.Size(69, 20);
+            this.lblResumo.TabIndex = 3;
+            this.lblResumo.Text = "Resumo";
+            // 
+            // lblAssunto
+            // 
+            this.lblAssunto.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAssunto.AutoSize = true;
+            this.lblAssunto.Location = new System.Drawing.Point(61, 348);
+            this.lblAssunto.Name = "lblAssunto";
+            this.lblAssunto.Size = new System.Drawing.Size(68, 20);
+            this.lblAssunto.TabIndex = 2;
+            this.lblAssunto.Text = "Assunto";
+            // 
+            // lblNum
+            // 
+            this.lblNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNum.AutoSize = true;
+            this.lblNum.Location = new System.Drawing.Point(615, 90);
+            this.lblNum.Name = "lblNum";
+            this.lblNum.Size = new System.Drawing.Size(65, 20);
+            this.lblNum.TabIndex = 0;
+            this.lblNum.Text = "Número";
+            // 
             // panAssociacao
             // 
             this.panAssociacao.Controls.Add(this.txtDescricao);
@@ -743,172 +933,6 @@
             this.lblFimPrev.Size = new System.Drawing.Size(94, 20);
             this.lblFimPrev.TabIndex = 0;
             this.lblFimPrev.Text = "Fim previsto";
-            // 
-            // panPortarias
-            // 
-            this.panPortarias.Controls.Add(this.lblRelPort);
-            this.panPortarias.Controls.Add(this.lstPortRelacio);
-            this.panPortarias.Controls.Add(this.lblPortRelacio);
-            this.panPortarias.Controls.Add(this.txtAssunto);
-            this.panPortarias.Controls.Add(this.txtCabecalho);
-            this.panPortarias.Controls.Add(this.txtResumo);
-            this.panPortarias.Controls.Add(this.txtNumPort);
-            this.panPortarias.Controls.Add(this.cboxStatus);
-            this.panPortarias.Controls.Add(this.lblCabe);
-            this.panPortarias.Controls.Add(this.lblCriarPort);
-            this.panPortarias.Controls.Add(this.lblSatus);
-            this.panPortarias.Controls.Add(this.lblResumo);
-            this.panPortarias.Controls.Add(this.lblAssunto);
-            this.panPortarias.Controls.Add(this.lblNum);
-            this.panPortarias.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panPortarias.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panPortarias.Location = new System.Drawing.Point(75, 105);
-            this.panPortarias.Name = "panPortarias";
-            this.panPortarias.Size = new System.Drawing.Size(925, 545);
-            this.panPortarias.TabIndex = 14;
-            // 
-            // lblRelPort
-            // 
-            this.lblRelPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblRelPort.AutoSize = true;
-            this.lblRelPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblRelPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRelPort.ForeColor = System.Drawing.Color.White;
-            this.lblRelPort.Location = new System.Drawing.Point(824, 387);
-            this.lblRelPort.Name = "lblRelPort";
-            this.lblRelPort.Padding = new System.Windows.Forms.Padding(10);
-            this.lblRelPort.Size = new System.Drawing.Size(39, 40);
-            this.lblRelPort.TabIndex = 14;
-            this.lblRelPort.Text = "+";
-            this.lblRelPort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lstPortRelacio
-            // 
-            this.lstPortRelacio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lstPortRelacio.FormattingEnabled = true;
-            this.lstPortRelacio.ItemHeight = 20;
-            this.lstPortRelacio.Location = new System.Drawing.Point(636, 224);
-            this.lstPortRelacio.Name = "lstPortRelacio";
-            this.lstPortRelacio.Size = new System.Drawing.Size(227, 124);
-            this.lstPortRelacio.TabIndex = 13;
-            // 
-            // lblPortRelacio
-            // 
-            this.lblPortRelacio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblPortRelacio.AutoSize = true;
-            this.lblPortRelacio.Location = new System.Drawing.Point(658, 182);
-            this.lblPortRelacio.Name = "lblPortRelacio";
-            this.lblPortRelacio.Size = new System.Drawing.Size(173, 20);
-            this.lblPortRelacio.TabIndex = 12;
-            this.lblPortRelacio.Text = "Portarias Relacionadas";
-            // 
-            // txtAssunto
-            // 
-            this.txtAssunto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtAssunto.Location = new System.Drawing.Point(65, 387);
-            this.txtAssunto.Multiline = true;
-            this.txtAssunto.Name = "txtAssunto";
-            this.txtAssunto.Size = new System.Drawing.Size(503, 121);
-            this.txtAssunto.TabIndex = 11;
-            // 
-            // txtCabecalho
-            // 
-            this.txtCabecalho.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCabecalho.Location = new System.Drawing.Point(65, 224);
-            this.txtCabecalho.Multiline = true;
-            this.txtCabecalho.Name = "txtCabecalho";
-            this.txtCabecalho.Size = new System.Drawing.Size(503, 106);
-            this.txtCabecalho.TabIndex = 10;
-            // 
-            // txtResumo
-            // 
-            this.txtResumo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtResumo.Location = new System.Drawing.Point(65, 70);
-            this.txtResumo.Multiline = true;
-            this.txtResumo.Name = "txtResumo";
-            this.txtResumo.Size = new System.Drawing.Size(503, 103);
-            this.txtResumo.TabIndex = 9;
-            // 
-            // txtNumPort
-            // 
-            this.txtNumPort.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNumPort.Location = new System.Drawing.Point(694, 77);
-            this.txtNumPort.Name = "txtNumPort";
-            this.txtNumPort.Size = new System.Drawing.Size(169, 26);
-            this.txtNumPort.TabIndex = 8;
-            // 
-            // cboxStatus
-            // 
-            this.cboxStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboxStatus.FormattingEnabled = true;
-            this.cboxStatus.Location = new System.Drawing.Point(694, 122);
-            this.cboxStatus.Name = "cboxStatus";
-            this.cboxStatus.Size = new System.Drawing.Size(169, 28);
-            this.cboxStatus.TabIndex = 7;
-            // 
-            // lblCabe
-            // 
-            this.lblCabe.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCabe.AutoSize = true;
-            this.lblCabe.Location = new System.Drawing.Point(61, 182);
-            this.lblCabe.Name = "lblCabe";
-            this.lblCabe.Size = new System.Drawing.Size(85, 20);
-            this.lblCabe.TabIndex = 6;
-            this.lblCabe.Text = "Cabeçalho";
-            // 
-            // lblCriarPort
-            // 
-            this.lblCriarPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCriarPort.AutoSize = true;
-            this.lblCriarPort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblCriarPort.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriarPort.ForeColor = System.Drawing.Color.White;
-            this.lblCriarPort.Location = new System.Drawing.Point(794, 466);
-            this.lblCriarPort.Name = "lblCriarPort";
-            this.lblCriarPort.Padding = new System.Windows.Forms.Padding(10);
-            this.lblCriarPort.Size = new System.Drawing.Size(67, 40);
-            this.lblCriarPort.TabIndex = 5;
-            this.lblCriarPort.Text = "Criar";
-            // 
-            // lblSatus
-            // 
-            this.lblSatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblSatus.AutoSize = true;
-            this.lblSatus.Location = new System.Drawing.Point(630, 126);
-            this.lblSatus.Name = "lblSatus";
-            this.lblSatus.Size = new System.Drawing.Size(56, 20);
-            this.lblSatus.TabIndex = 4;
-            this.lblSatus.Text = "Status";
-            // 
-            // lblResumo
-            // 
-            this.lblResumo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblResumo.AutoSize = true;
-            this.lblResumo.Location = new System.Drawing.Point(61, 37);
-            this.lblResumo.Name = "lblResumo";
-            this.lblResumo.Size = new System.Drawing.Size(69, 20);
-            this.lblResumo.TabIndex = 3;
-            this.lblResumo.Text = "Resumo";
-            // 
-            // lblAssunto
-            // 
-            this.lblAssunto.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAssunto.AutoSize = true;
-            this.lblAssunto.Location = new System.Drawing.Point(61, 348);
-            this.lblAssunto.Name = "lblAssunto";
-            this.lblAssunto.Size = new System.Drawing.Size(68, 20);
-            this.lblAssunto.TabIndex = 2;
-            this.lblAssunto.Text = "Assunto";
-            // 
-            // lblNum
-            // 
-            this.lblNum.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNum.AutoSize = true;
-            this.lblNum.Location = new System.Drawing.Point(615, 80);
-            this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(65, 20);
-            this.lblNum.TabIndex = 0;
-            this.lblNum.Text = "Número";
             // 
             // panPopPup
             // 
@@ -1177,9 +1201,6 @@
             this.Load += new System.EventHandler(this.frmADM_Load);
             this.SizeChanged += new System.EventHandler(this.frmADM_SizeChanged);
             this.panADM.ResumeLayout(false);
-            this.panVinculaMem.ResumeLayout(false);
-            this.panVinculaMem.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.panUsers.ResumeLayout(false);
             this.panUsers.PerformLayout();
             this.panNotify.ResumeLayout(false);
@@ -1187,10 +1208,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).EndInit();
             this.gboxTipoUsr.ResumeLayout(false);
             this.gboxTipoUsr.PerformLayout();
-            this.panAssociacao.ResumeLayout(false);
-            this.panAssociacao.PerformLayout();
+            this.panVinculaMem.ResumeLayout(false);
+            this.panVinculaMem.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.panPortarias.ResumeLayout(false);
             this.panPortarias.PerformLayout();
+            this.panAssociacao.ResumeLayout(false);
+            this.panAssociacao.PerformLayout();
             this.panPopPup.ResumeLayout(false);
             this.panSideBar.ResumeLayout(false);
             this.panActionBar.ResumeLayout(false);
@@ -1294,5 +1318,7 @@
         private System.Windows.Forms.Label lblMembros;
         private System.Windows.Forms.Label lblAddMembros;
         private System.Windows.Forms.Label lblVincular;
+        private System.Windows.Forms.ComboBox cboxPortAsso;
+        private System.Windows.Forms.Label lblSelAsso;
     }
 }

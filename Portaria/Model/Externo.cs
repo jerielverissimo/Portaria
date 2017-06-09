@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portaria.DAL
+namespace Portaria.Model
 {
-    class ExternoDAL : UsuarioDAL
+    class Externo : Usuario
     {
         private string cpf;
         private int id_usuario;

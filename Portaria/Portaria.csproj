@@ -45,11 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\UsuariosBLL.cs" />
-    <Compile Include="DAL\EspecialidadeDAL.cs" />
-    <Compile Include="DAL\ExternoDAL.cs" />
-    <Compile Include="DAL\ServidorAlunoDALL.cs" />
+    <Compile Include="DAL\EspecialidadesDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
+    <Compile Include="Model\Externo.cs" />
+    <Compile Include="Model\ServidorAluno.cs" />
+    <Compile Include="Model\Usuarios.cs" />
+    <Compile Include="Model\Especialidade.cs" />
     <Compile Include="UI\frmADM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +115,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BLL\" />
     <Folder Include="UI\FONT\" />
   </ItemGroup>
   <ItemGroup>
@@ -174,9 +176,7 @@
     <None Include="UI\IMG\ICONS\check-gray.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Usuarios.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="DAL\Usuarios.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

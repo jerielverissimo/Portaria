@@ -3,78 +3,69 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
+using System.IO;
+using System.Data;
+using System.Xml.Linq;
 
 namespace Portaria.DAL
 {
-    class UsuarioDAL
+    class UsuariosDAL
     {
-        private int id, cod_esp;
-        private string nome, email, telefone;
-        private string data_criacao;
 
-        public int Cod_esp
+        private string xml_path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+
+
+        public DataTable dt = new DataTable(); // cria tabela de dados
+        public DataSet ds = new DataSet();
+        
+
+
+        public DataTable carregaUsuarios()
         {
-            get
+            try
             {
-                return cod_esp;
-            }
 
-            set
-            {
-                cod_esp = value;
+                ds.ReadXml(xml_path + @"\DAL\Usuarios.xml");
+                dt = ds.Tables[("usuario")];
             }
+            catch (FileNotFoundException e)
+            {
+                System.Windows.Forms.MessageBox.Show(e.Message);
+                dt = new DataTable("usuario");
+                dt.Columns.Add("id");
+                dt.Columns.Add("nome");
+                dt.Columns.Add("email");
+                dt.Columns.Add("tel");
+                dt.Columns.Add("data_criacao");
+                dt.Columns.Add("cod_esp");
+            }
+            return dt;
         }
 
-        public string Nome
+        public void Salvar (string nome, string email, string tel, string data_criacao, int cod_esp)
         {
-            get
+            try
             {
-                return nome;
-            }
-
-            set
+                
+                var xDoc = XDocument.Load(xml_path + @"\DAL\Usuarios.xml"); 
+                var count = xDoc.Descendants("usuario").Count();
+                var novoUsuario = new XElement("usuario",
+                                  new XElement("id", count + 1),
+                                  new XElement("nome", nome),
+                                  new XElement("email", email),
+                                  new XElement("tel", tel),
+                                  new XElement("data_criacao", data_criacao),
+                                  new XElement("cod_esp", cod_esp));
+                xDoc.Root.Add(novoUsuario);
+                xDoc.Save(xml_path + @"\DAL\Usuarios.xml");
+            } catch (FileNotFoundException ex)
             {
-                nome = value;
+                System.Windows.Forms.MessageBox.Show(ex.Message);
             }
+            
+          
         }
 
-        public string Email
-        {
-            get
-            {
-                return email;
-            }
-
-            set
-            {
-                email = value;
-            }
-        }
-
-        public string Telefone
-        {
-            get
-            {
-                return telefone;
-            }
-
-            set
-            {
-                telefone = value;
-            }
-        }
-
-        public string Data_criacao
-        {
-            get
-            {
-                return data_criacao;
-            }
-
-            set
-            {
-                data_criacao = value;
-            }
-        }
     }
 }
