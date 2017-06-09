@@ -50,22 +50,8 @@
             this.pctCloseWindow = new System.Windows.Forms.PictureBox();
             this.panMembros = new System.Windows.Forms.Panel();
             this.dgvMembros = new System.Windows.Forms.DataGridView();
-            this.clNomeMembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clProntuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clCriação = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clEspecialidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panAssociaçoes = new System.Windows.Forms.Panel();
             this.dgvAssociações = new System.Windows.Forms.DataGridView();
-            this.clNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDataFimPrevisto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDescrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clLegislacaoCorrelata = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelPesquisa = new System.Windows.Forms.Panel();
             this.panPortarias = new System.Windows.Forms.Panel();
             this.dgvPortarias = new System.Windows.Forms.DataGridView();
@@ -73,10 +59,23 @@
             this.clStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clPortariasRelacionadas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clAssociacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDataVigencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDataFimPrevista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDataFimEfetiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDataVigenciaAssoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDataFimPrevisto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDescrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clLegislacaoCorrelata = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNomeMembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clProntuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clCriação = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clEspecialidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTipoMembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelMenu.SuspendLayout();
             this.panTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).BeginInit();
@@ -283,7 +282,7 @@
             this.clCriação,
             this.clCpf,
             this.clEspecialidade,
-            this.dataGridViewTextBoxColumn3});
+            this.clTipoMembro});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,46 +304,6 @@
             this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvMembros.Size = new System.Drawing.Size(749, 362);
             this.dgvMembros.TabIndex = 5;
-            // 
-            // clNomeMembro
-            // 
-            this.clNomeMembro.HeaderText = "Nome :";
-            this.clNomeMembro.Name = "clNomeMembro";
-            // 
-            // clEmail
-            // 
-            this.clEmail.HeaderText = "E-mail";
-            this.clEmail.Name = "clEmail";
-            // 
-            // clTelefone
-            // 
-            this.clTelefone.HeaderText = "Telefone";
-            this.clTelefone.Name = "clTelefone";
-            // 
-            // clProntuario
-            // 
-            this.clProntuario.HeaderText = "Prontuario";
-            this.clProntuario.Name = "clProntuario";
-            // 
-            // clCriação
-            // 
-            this.clCriação.HeaderText = "Data Criação";
-            this.clCriação.Name = "clCriação";
-            // 
-            // clCpf
-            // 
-            this.clCpf.HeaderText = "CPF";
-            this.clCpf.Name = "clCpf";
-            // 
-            // clEspecialidade
-            // 
-            this.clEspecialidade.HeaderText = "Especialidade";
-            this.clEspecialidade.Name = "clEspecialidade";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // panAssociaçoes
             // 
@@ -378,8 +337,8 @@
             this.dgvAssociações.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAssociações.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clNome,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
+            this.clTipo,
+            this.clDataVigenciaAssoc,
             this.clDataFimPrevisto,
             this.clDescrição,
             this.clLegislacaoCorrelata});
@@ -404,36 +363,6 @@
             this.dgvAssociações.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAssociações.Size = new System.Drawing.Size(742, 357);
             this.dgvAssociações.TabIndex = 5;
-            // 
-            // clNome
-            // 
-            this.clNome.HeaderText = "Nome";
-            this.clNome.Name = "clNome";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Data Vigencia";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // clDataFimPrevisto
-            // 
-            this.clDataFimPrevisto.HeaderText = "Data Fim Previsto";
-            this.clDataFimPrevisto.Name = "clDataFimPrevisto";
-            // 
-            // clDescrição
-            // 
-            this.clDescrição.HeaderText = "Descrição";
-            this.clDescrição.Name = "clDescrição";
-            // 
-            // clLegislacaoCorrelata
-            // 
-            this.clLegislacaoCorrelata.HeaderText = "Legislação Correlata";
-            this.clLegislacaoCorrelata.Name = "clLegislacaoCorrelata";
             // 
             // panelPesquisa
             // 
@@ -478,7 +407,6 @@
             this.clStatus,
             this.clPortariasRelacionadas,
             this.clAssociacao,
-            this.clTipo,
             this.clDataVigencia,
             this.clDataFimPrevista,
             this.clDataFimEfetiva});
@@ -524,11 +452,6 @@
             this.clAssociacao.HeaderText = "Associação";
             this.clAssociacao.Name = "clAssociacao";
             // 
-            // clTipo
-            // 
-            this.clTipo.HeaderText = "Tipo";
-            this.clTipo.Name = "clTipo";
-            // 
             // clDataVigencia
             // 
             this.clDataVigencia.HeaderText = "Data Vigencia";
@@ -543,6 +466,76 @@
             // 
             this.clDataFimEfetiva.HeaderText = "Data Fim Efetiva";
             this.clDataFimEfetiva.Name = "clDataFimEfetiva";
+            // 
+            // clNome
+            // 
+            this.clNome.HeaderText = "Nome";
+            this.clNome.Name = "clNome";
+            // 
+            // clTipo
+            // 
+            this.clTipo.HeaderText = "Tipo";
+            this.clTipo.Name = "clTipo";
+            // 
+            // clDataVigenciaAssoc
+            // 
+            this.clDataVigenciaAssoc.HeaderText = "Data Vigencia";
+            this.clDataVigenciaAssoc.Name = "clDataVigenciaAssoc";
+            // 
+            // clDataFimPrevisto
+            // 
+            this.clDataFimPrevisto.HeaderText = "Data Fim Previsto";
+            this.clDataFimPrevisto.Name = "clDataFimPrevisto";
+            // 
+            // clDescrição
+            // 
+            this.clDescrição.HeaderText = "Descrição";
+            this.clDescrição.Name = "clDescrição";
+            // 
+            // clLegislacaoCorrelata
+            // 
+            this.clLegislacaoCorrelata.HeaderText = "Legislação Correlata";
+            this.clLegislacaoCorrelata.Name = "clLegislacaoCorrelata";
+            // 
+            // clNomeMembro
+            // 
+            this.clNomeMembro.HeaderText = "Nome :";
+            this.clNomeMembro.Name = "clNomeMembro";
+            // 
+            // clEmail
+            // 
+            this.clEmail.HeaderText = "E-mail";
+            this.clEmail.Name = "clEmail";
+            // 
+            // clTelefone
+            // 
+            this.clTelefone.HeaderText = "Telefone";
+            this.clTelefone.Name = "clTelefone";
+            // 
+            // clProntuario
+            // 
+            this.clProntuario.HeaderText = "Prontuario";
+            this.clProntuario.Name = "clProntuario";
+            // 
+            // clCriação
+            // 
+            this.clCriação.HeaderText = "Data Criação";
+            this.clCriação.Name = "clCriação";
+            // 
+            // clCpf
+            // 
+            this.clCpf.HeaderText = "CPF";
+            this.clCpf.Name = "clCpf";
+            // 
+            // clEspecialidade
+            // 
+            this.clEspecialidade.HeaderText = "Especialidade";
+            this.clEspecialidade.Name = "clEspecialidade";
+            // 
+            // clTipoMembro
+            // 
+            this.clTipoMembro.HeaderText = "Tipo";
+            this.clTipoMembro.Name = "clTipoMembro";
             // 
             // frmMembros
             // 
@@ -588,6 +581,11 @@
         private System.Windows.Forms.PictureBox ptbWindowMini;
         private System.Windows.Forms.Panel panMembros;
         private System.Windows.Forms.DataGridView dgvMembros;
+        private System.Windows.Forms.Panel panAssociaçoes;
+        private System.Windows.Forms.DataGridView dgvAssociações;
+        private System.Windows.Forms.Panel panelPesquisa;
+        private System.Windows.Forms.Panel panPortarias;
+        private System.Windows.Forms.DataGridView dgvPortarias;
         private System.Windows.Forms.DataGridViewTextBoxColumn clNomeMembro;
         private System.Windows.Forms.DataGridViewTextBoxColumn clEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTelefone;
@@ -595,23 +593,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clCriação;
         private System.Windows.Forms.DataGridViewTextBoxColumn clCpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn clEspecialidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Panel panAssociaçoes;
-        private System.Windows.Forms.DataGridView dgvAssociações;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTipoMembro;
         private System.Windows.Forms.DataGridViewTextBoxColumn clNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clDataVigenciaAssoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDataFimPrevisto;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDescrição;
         private System.Windows.Forms.DataGridViewTextBoxColumn clLegislacaoCorrelata;
-        private System.Windows.Forms.Panel panelPesquisa;
-        private System.Windows.Forms.Panel panPortarias;
-        private System.Windows.Forms.DataGridView dgvPortarias;
         private System.Windows.Forms.DataGridViewTextBoxColumn clNumero;
         private System.Windows.Forms.DataGridViewTextBoxColumn clStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn clPortariasRelacionadas;
         private System.Windows.Forms.DataGridViewTextBoxColumn clAssociacao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDataVigencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDataFimPrevista;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDataFimEfetiva;

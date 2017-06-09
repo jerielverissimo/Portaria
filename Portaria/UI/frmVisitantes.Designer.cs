@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelBar = new System.Windows.Forms.Panel();
             this.ptbWindowMini = new System.Windows.Forms.PictureBox();
             this.ptbMaxRestore = new System.Windows.Forms.PictureBox();
@@ -47,13 +47,11 @@
             this.lblRelatorios = new System.Windows.Forms.Label();
             this.lblMembros = new System.Windows.Forms.Label();
             this.panMembros = new System.Windows.Forms.Panel();
+            this.dgvMembros = new System.Windows.Forms.DataGridView();
             this.panelPesquisa = new System.Windows.Forms.Panel();
             this.panAssociaçoes = new System.Windows.Forms.Panel();
+            this.dgvAssociações = new System.Windows.Forms.DataGridView();
             this.panPortarias = new System.Windows.Forms.Panel();
-            this.lblBemVindo = new System.Windows.Forms.Label();
-            this.lblAssocMessage = new System.Windows.Forms.Label();
-            this.lblMembrosMessage = new System.Windows.Forms.Label();
-            this.lblPortariasMessage = new System.Windows.Forms.Label();
             this.dgvPortarias = new System.Windows.Forms.DataGridView();
             this.clNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,14 +61,10 @@
             this.clDataVigencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDataFimPrevista = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clDataFimEfetiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvAssociações = new System.Windows.Forms.DataGridView();
-            this.clNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDataFimPrevisto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clDescrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clLegislacaoCorrelata = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMembros = new System.Windows.Forms.DataGridView();
+            this.lblBemVindo = new System.Windows.Forms.Label();
+            this.lblAssocMessage = new System.Windows.Forms.Label();
+            this.lblMembrosMessage = new System.Windows.Forms.Label();
+            this.lblPortariasMessage = new System.Windows.Forms.Label();
             this.clNomeMembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,18 +72,24 @@
             this.clCriação = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clEspecialidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTipoMembro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTipoAssociacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDataVigenciaAssoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDataFimPrevisto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDescrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clLegislacaoCorrelata = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbWindowMini)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbMaxRestore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCloseWindow)).BeginInit();
             this.panelMenu.SuspendLayout();
             this.panMembros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.panAssociaçoes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAssociações)).BeginInit();
             this.panPortarias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPortarias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAssociações)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.SuspendLayout();
             // 
             // panelBar
@@ -231,6 +231,54 @@
             this.panMembros.Size = new System.Drawing.Size(737, 451);
             this.panMembros.TabIndex = 1;
             // 
+            // dgvMembros
+            // 
+            this.dgvMembros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMembros.BackgroundColor = System.Drawing.Color.White;
+            this.dgvMembros.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMembros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clNomeMembro,
+            this.clEmail,
+            this.clTelefone,
+            this.clProntuario,
+            this.clCriação,
+            this.clCpf,
+            this.clEspecialidade,
+            this.clTipoMembro});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMembros.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMembros.Location = new System.Drawing.Point(6, 47);
+            this.dgvMembros.Name = "dgvMembros";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembros.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMembros.Size = new System.Drawing.Size(724, 357);
+            this.dgvMembros.TabIndex = 5;
+            // 
             // panelPesquisa
             // 
             this.panelPesquisa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -253,6 +301,52 @@
             this.panAssociaçoes.Size = new System.Drawing.Size(737, 454);
             this.panAssociaçoes.TabIndex = 3;
             // 
+            // dgvAssociações
+            // 
+            this.dgvAssociações.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvAssociações.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAssociações.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAssociações.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAssociações.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvAssociações.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAssociações.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clNome,
+            this.clTipoAssociacao,
+            this.clDataVigenciaAssoc,
+            this.clDataFimPrevisto,
+            this.clDescrição,
+            this.clLegislacaoCorrelata});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAssociações.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvAssociações.Location = new System.Drawing.Point(6, 49);
+            this.dgvAssociações.Name = "dgvAssociações";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAssociações.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvAssociações.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAssociações.Size = new System.Drawing.Size(724, 357);
+            this.dgvAssociações.TabIndex = 5;
+            // 
             // panPortarias
             // 
             this.panPortarias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -264,49 +358,6 @@
             this.panPortarias.Name = "panPortarias";
             this.panPortarias.Size = new System.Drawing.Size(734, 454);
             this.panPortarias.TabIndex = 4;
-            // 
-            // lblBemVindo
-            // 
-            this.lblBemVindo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblBemVindo.AutoSize = true;
-            this.lblBemVindo.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBemVindo.Location = new System.Drawing.Point(311, 41);
-            this.lblBemVindo.Name = "lblBemVindo";
-            this.lblBemVindo.Size = new System.Drawing.Size(180, 25);
-            this.lblBemVindo.TabIndex = 5;
-            this.lblBemVindo.Text = "Bem Vindo Visitante";
-            // 
-            // lblAssocMessage
-            // 
-            this.lblAssocMessage.AutoSize = true;
-            this.lblAssocMessage.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssocMessage.Location = new System.Drawing.Point(156, 86);
-            this.lblAssocMessage.Name = "lblAssocMessage";
-            this.lblAssocMessage.Size = new System.Drawing.Size(246, 25);
-            this.lblAssocMessage.TabIndex = 6;
-            this.lblAssocMessage.Text = "←Visualizar as Associações";
-            // 
-            // lblMembrosMessage
-            // 
-            this.lblMembrosMessage.AutoSize = true;
-            this.lblMembrosMessage.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMembrosMessage.Location = new System.Drawing.Point(156, 139);
-            this.lblMembrosMessage.Name = "lblMembrosMessage";
-            this.lblMembrosMessage.Size = new System.Drawing.Size(194, 25);
-            this.lblMembrosMessage.TabIndex = 7;
-            this.lblMembrosMessage.Text = "←Visualizar Membros";
-            // 
-            // lblPortariasMessage
-            // 
-            this.lblPortariasMessage.AutoSize = true;
-            this.lblPortariasMessage.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPortariasMessage.Location = new System.Drawing.Point(156, 192);
-            this.lblPortariasMessage.Name = "lblPortariasMessage";
-            this.lblPortariasMessage.Size = new System.Drawing.Size(216, 25);
-            this.lblPortariasMessage.TabIndex = 8;
-            this.lblPortariasMessage.Text = "←Visualizar as Portarias";
             // 
             // dgvPortarias
             // 
@@ -396,129 +447,48 @@
             this.clDataFimEfetiva.HeaderText = "Data Fim Efetiva";
             this.clDataFimEfetiva.Name = "clDataFimEfetiva";
             // 
-            // dgvAssociações
+            // lblBemVindo
             // 
-            this.dgvAssociações.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblBemVindo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvAssociações.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAssociações.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAssociações.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAssociações.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvAssociações.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAssociações.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clNome,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.clDataFimPrevisto,
-            this.clDescrição,
-            this.clLegislacaoCorrelata});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Coral;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAssociações.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvAssociações.Location = new System.Drawing.Point(6, 49);
-            this.dgvAssociações.Name = "dgvAssociações";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAssociações.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvAssociações.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAssociações.Size = new System.Drawing.Size(724, 357);
-            this.dgvAssociações.TabIndex = 5;
+            this.lblBemVindo.AutoSize = true;
+            this.lblBemVindo.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBemVindo.Location = new System.Drawing.Point(311, 41);
+            this.lblBemVindo.Name = "lblBemVindo";
+            this.lblBemVindo.Size = new System.Drawing.Size(180, 25);
+            this.lblBemVindo.TabIndex = 5;
+            this.lblBemVindo.Text = "Bem Vindo Visitante";
             // 
-            // clNome
+            // lblAssocMessage
             // 
-            this.clNome.HeaderText = "Nome";
-            this.clNome.Name = "clNome";
+            this.lblAssocMessage.AutoSize = true;
+            this.lblAssocMessage.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssocMessage.Location = new System.Drawing.Point(156, 86);
+            this.lblAssocMessage.Name = "lblAssocMessage";
+            this.lblAssocMessage.Size = new System.Drawing.Size(246, 25);
+            this.lblAssocMessage.TabIndex = 6;
+            this.lblAssocMessage.Text = "←Visualizar as Associações";
             // 
-            // dataGridViewTextBoxColumn1
+            // lblMembrosMessage
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.lblMembrosMessage.AutoSize = true;
+            this.lblMembrosMessage.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMembrosMessage.Location = new System.Drawing.Point(156, 139);
+            this.lblMembrosMessage.Name = "lblMembrosMessage";
+            this.lblMembrosMessage.Size = new System.Drawing.Size(194, 25);
+            this.lblMembrosMessage.TabIndex = 7;
+            this.lblMembrosMessage.Text = "←Visualizar Membros";
             // 
-            // dataGridViewTextBoxColumn2
+            // lblPortariasMessage
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Data Vigencia";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // clDataFimPrevisto
-            // 
-            this.clDataFimPrevisto.HeaderText = "Data Fim Previsto";
-            this.clDataFimPrevisto.Name = "clDataFimPrevisto";
-            // 
-            // clDescrição
-            // 
-            this.clDescrição.HeaderText = "Descrição";
-            this.clDescrição.Name = "clDescrição";
-            // 
-            // clLegislacaoCorrelata
-            // 
-            this.clLegislacaoCorrelata.HeaderText = "Legislação Correlata";
-            this.clLegislacaoCorrelata.Name = "clLegislacaoCorrelata";
-            // 
-            // dgvMembros
-            // 
-            this.dgvMembros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMembros.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMembros.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMembros.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto Cn", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvMembros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMembros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clNomeMembro,
-            this.clEmail,
-            this.clTelefone,
-            this.clProntuario,
-            this.clCriação,
-            this.clCpf,
-            this.clEspecialidade,
-            this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Coral;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMembros.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvMembros.Location = new System.Drawing.Point(6, 47);
-            this.dgvMembros.Name = "dgvMembros";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembros.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvMembros.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMembros.Size = new System.Drawing.Size(724, 357);
-            this.dgvMembros.TabIndex = 5;
+            this.lblPortariasMessage.AutoSize = true;
+            this.lblPortariasMessage.Font = new System.Drawing.Font("Roboto Cn", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPortariasMessage.Location = new System.Drawing.Point(156, 192);
+            this.lblPortariasMessage.Name = "lblPortariasMessage";
+            this.lblPortariasMessage.Size = new System.Drawing.Size(216, 25);
+            this.lblPortariasMessage.TabIndex = 8;
+            this.lblPortariasMessage.Text = "←Visualizar as Portarias";
             // 
             // clNomeMembro
             // 
@@ -555,10 +525,40 @@
             this.clEspecialidade.HeaderText = "Especialidade";
             this.clEspecialidade.Name = "clEspecialidade";
             // 
-            // dataGridViewTextBoxColumn3
+            // clTipoMembro
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.clTipoMembro.HeaderText = "Tipo";
+            this.clTipoMembro.Name = "clTipoMembro";
+            // 
+            // clNome
+            // 
+            this.clNome.HeaderText = "Nome";
+            this.clNome.Name = "clNome";
+            // 
+            // clTipoAssociacao
+            // 
+            this.clTipoAssociacao.HeaderText = "Tipo";
+            this.clTipoAssociacao.Name = "clTipoAssociacao";
+            // 
+            // clDataVigenciaAssoc
+            // 
+            this.clDataVigenciaAssoc.HeaderText = "Data Vigencia";
+            this.clDataVigenciaAssoc.Name = "clDataVigenciaAssoc";
+            // 
+            // clDataFimPrevisto
+            // 
+            this.clDataFimPrevisto.HeaderText = "Data Fim Previsto";
+            this.clDataFimPrevisto.Name = "clDataFimPrevisto";
+            // 
+            // clDescrição
+            // 
+            this.clDescrição.HeaderText = "Descrição";
+            this.clDescrição.Name = "clDescrição";
+            // 
+            // clLegislacaoCorrelata
+            // 
+            this.clLegislacaoCorrelata.HeaderText = "Legislação Correlata";
+            this.clLegislacaoCorrelata.Name = "clLegislacaoCorrelata";
             // 
             // frmVisitantes
             // 
@@ -586,11 +586,11 @@
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panMembros.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.panAssociaçoes.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAssociações)).EndInit();
             this.panPortarias.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPortarias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAssociações)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -625,6 +625,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clDataFimPrevista;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDataFimEfetiva;
         private System.Windows.Forms.DataGridView dgvMembros;
+        private System.Windows.Forms.DataGridView dgvAssociações;
         private System.Windows.Forms.DataGridViewTextBoxColumn clNomeMembro;
         private System.Windows.Forms.DataGridViewTextBoxColumn clEmail;
         private System.Windows.Forms.DataGridViewTextBoxColumn clTelefone;
@@ -632,11 +633,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clCriação;
         private System.Windows.Forms.DataGridViewTextBoxColumn clCpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn clEspecialidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridView dgvAssociações;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTipoMembro;
         private System.Windows.Forms.DataGridViewTextBoxColumn clNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clTipoAssociacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clDataVigenciaAssoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDataFimPrevisto;
         private System.Windows.Forms.DataGridViewTextBoxColumn clDescrição;
         private System.Windows.Forms.DataGridViewTextBoxColumn clLegislacaoCorrelata;
