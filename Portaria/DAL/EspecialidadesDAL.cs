@@ -25,17 +25,17 @@ namespace Portaria.DAL
         {
             List<Especialidade> especialidades = new List<Especialidade>();
 
-            ds.ReadXml(xml_path + @"\DAL\Especialidades.xml");
+            ds.ReadXml(xml_path + @"\BD\Especialidades.xml");
             dt = ds.Tables[("especialidade")];
 
-            var xDoc = XDocument.Load(xml_path + @"\DAL\Especialidades.xml");
+            var xDoc = XDocument.Load(xml_path + @"\BD\Especialidades.xml");
 
             foreach (XElement xe in xDoc.Descendants("especialidade"))
             {
                 Especialidade especialidade = new Especialidade();
 
-                especialidade.Cod = Convert.ToInt32(xe.Element("cod_especialidade").Value);
-                especialidade.Nome = xe.Element("nome_especialidade").Value;
+                especialidade.Cod = Convert.ToInt32(xe.Element("cod").Value);
+                especialidade.Nome = xe.Element("nome").Value;
 
                 especialidades.Add(especialidade);
             }
@@ -48,7 +48,7 @@ namespace Portaria.DAL
             try
             {
 
-                ds.ReadXml(xml_path + @"\DAL\Especialidades.xml");
+                ds.ReadXml(xml_path + @"\BD\Especialidades.xml");
                 dt = ds.Tables[("especialidade")];
             }
             catch (FileNotFoundException ex)
@@ -64,13 +64,13 @@ namespace Portaria.DAL
             try
             {
                 
-                var xDoc = XDocument.Load(xml_path + @"\DAL\Especialidades.xml");
+                var xDoc = XDocument.Load(xml_path + @"\BD\Especialidades.xml");
                 var count = xDoc.Descendants("especialidade").Count();
                 var novoElemento = new XElement("especialidade",
-                                  new XElement("id", count + 1),
+                                  new XElement("cod", count + 1),
                                   new XElement("nome", nome));
                 xDoc.Root.Add(novoElemento);
-                xDoc.Save(xml_path + @"\DAL\Especialidades.xml");
+                xDoc.Save(xml_path + @"\BD\Especialidades.xml");
             } catch (FileNotFoundException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);

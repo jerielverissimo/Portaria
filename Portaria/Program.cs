@@ -16,7 +16,7 @@ namespace Portaria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VIEW.frmLogin());
+            Application.Run(new UI.FORMS.frmLogin());
         }
     }
 }

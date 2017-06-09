@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Portaria.VIEW
+namespace Portaria.UI.FORMS
 {
     public partial class frmADM : Form
     {
@@ -16,7 +16,7 @@ namespace Portaria.VIEW
 
         // OBJ
 
-        PALETT.Colors color = new PALETT.Colors();
+        UI.PALETT.Colors color = new PALETT.Colors();
         DAL.UsuariosDAL usrDAL = new DAL.UsuariosDAL();
         Model.Usuario usrModel = new Model.Usuario();
 
@@ -68,7 +68,8 @@ namespace Portaria.VIEW
         {
 
             dgvMembros.DataSource = usrDAL.carregaUsuarios();
-            
+
+            mskDataCria.Text = DateTime.Now.ToString();
 
             panTitleBar.BackColor = color.AzulTitleBar;
             panActionBar.BackColor = color.AzulActionBar;
@@ -86,8 +87,8 @@ namespace Portaria.VIEW
             largPanNotify = panADM.ClientSize.Width  * PORCENEFX;
             posPanNotify = (panADM.ClientSize.Width / 2) * PORCENEFX;
 
-            this.Opacity = 0.1;
-            fadeInEffectADM.Enabled = true;
+            //this.Opacity = 0.1;
+           // fadeInEffectADM.Enabled = true;
         }
 
         // Eventos
@@ -124,17 +125,7 @@ namespace Portaria.VIEW
             Maximiza_Restaura_Tela();
         }
 
-        private void fadeEffectADM_Tick(object sender, EventArgs e)
-        {
-            if (this.Opacity <= 1.0)
-            {
-                this.Opacity += 0.025;
-            }else
-            {
-                fadeInEffectADM.Enabled = false;
-            }
-        }
-
+       
         private void rdbTipoServ_CheckedChanged(object sender, EventArgs e)
         {
             if (rdbTipoServ.Checked)
@@ -382,6 +373,11 @@ namespace Portaria.VIEW
             cboxEsp.DataSource = especialidades;
             cboxEsp.DisplayMember = "Nome";
             cboxEsp.ValueMember = "Cod";
+        }
+
+        private void lblAddEsp_Click(object sender, EventArgs e)
+        {
+            
         }
 
         private void panUsers_SizeChanged(object sender, EventArgs e)

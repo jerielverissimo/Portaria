@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<especialidades>
+  <especialidade>
+    <cod>1</cod>
+    <nome>Engenheiro</nome>
+  </especialidade>
+  <especialidade>
+    <cod>2</cod>
+    <nome>Motorista</nome>
+  </especialidade>
+</especialidades>

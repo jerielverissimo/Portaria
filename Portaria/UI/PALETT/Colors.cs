@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace Portaria.VIEW.PALETT
+namespace Portaria.UI.PALETT
 {
     class Colors
     {

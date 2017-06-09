@@ -1,4 +1,4 @@
-﻿namespace Portaria.VIEW
+﻿namespace Portaria.UI.FORMS
 {
     partial class frmADM
     {
@@ -114,7 +114,6 @@
             this.ptbMaxRestore = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.ptbWindowClose = new System.Windows.Forms.PictureBox();
-            this.fadeInEffectADM = new System.Windows.Forms.Timer(this.components);
             this.tmSlideEfxMenu = new System.Windows.Forms.Timer(this.components);
             this.tmBounceEfxNotify = new System.Windows.Forms.Timer(this.components);
             this.panADM.SuspendLayout();
@@ -329,6 +328,7 @@
             this.lblAddEsp.Size = new System.Drawing.Size(39, 40);
             this.lblAddEsp.TabIndex = 13;
             this.lblAddEsp.Text = "+";
+            this.lblAddEsp.Click += new System.EventHandler(this.lblAddEsp_Click);
             // 
             // cboxEsp
             // 
@@ -427,12 +427,11 @@
             this.mskDataCria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.mskDataCria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDataCria.Location = new System.Drawing.Point(122, 238);
-            this.mskDataCria.Mask = "00/00/0000";
+            this.mskDataCria.Mask = "  00/00/0000";
             this.mskDataCria.Name = "mskDataCria";
             this.mskDataCria.PromptChar = ' ';
             this.mskDataCria.Size = new System.Drawing.Size(135, 26);
             this.mskDataCria.TabIndex = 7;
-            this.mskDataCria.ValidatingType = typeof(System.DateTime);
             // 
             // lblDataCria
             // 
@@ -1173,11 +1172,6 @@
             this.ptbWindowClose.TabStop = false;
             this.ptbWindowClose.Click += new System.EventHandler(this.ptbWindowClose_Click);
             // 
-            // fadeInEffectADM
-            // 
-            this.fadeInEffectADM.Interval = 1;
-            this.fadeInEffectADM.Tick += new System.EventHandler(this.fadeEffectADM_Tick);
-            // 
             // tmSlideEfxMenu
             // 
             this.tmSlideEfxMenu.Interval = 1;
@@ -1238,7 +1232,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox ptbMaxRestore;
         private System.Windows.Forms.PictureBox ptbWindowMini;
-        private System.Windows.Forms.Timer fadeInEffectADM;
         private System.Windows.Forms.Panel panSideBar;
         private System.Windows.Forms.Panel panActionBar;
         private System.Windows.Forms.PictureBox ptbSideMenu;

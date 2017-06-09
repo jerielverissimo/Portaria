@@ -47,32 +47,38 @@
   <ItemGroup>
     <Compile Include="DAL\EspecialidadesDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
-    <Compile Include="Model\Externo.cs" />
-    <Compile Include="Model\ServidorAluno.cs" />
-    <Compile Include="Model\Usuarios.cs" />
-    <Compile Include="Model\Especialidade.cs" />
-    <Compile Include="UI\frmADM.cs">
+    <Compile Include="MODEL\Externo.cs" />
+    <Compile Include="MODEL\ServidorAluno.cs" />
+    <Compile Include="MODEL\Usuario.cs" />
+    <Compile Include="MODEL\Especialidade.cs" />
+    <Compile Include="UI\FORMS\frmADM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmADM.Designer.cs">
+    <Compile Include="UI\FORMS\frmADM.Designer.cs">
       <DependentUpon>frmADM.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmLogin.cs">
+    <Compile Include="UI\FORMS\frmEspecialidades.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmLogin.Designer.cs">
+    <Compile Include="UI\FORMS\frmEspecialidades.Designer.cs">
+      <DependentUpon>frmEspecialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FORMS\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FORMS\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmMembros.cs">
+    <Compile Include="UI\FORMS\frmMembros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmMembros.Designer.cs">
+    <Compile Include="UI\FORMS\frmMembros.Designer.cs">
       <DependentUpon>frmMembros.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmVisitantes.cs">
+    <Compile Include="UI\FORMS\frmVisitantes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmVisitantes.Designer.cs">
+    <Compile Include="UI\FORMS\frmVisitantes.Designer.cs">
       <DependentUpon>frmVisitantes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -89,16 +95,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UI\frmADM.resx">
+    <EmbeddedResource Include="UI\FORMS\frmADM.resx">
       <DependentUpon>frmADM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmLogin.resx">
+    <EmbeddedResource Include="UI\FORMS\frmEspecialidades.resx">
+      <DependentUpon>frmEspecialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FORMS\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmMembros.resx">
+    <EmbeddedResource Include="UI\FORMS\frmMembros.resx">
       <DependentUpon>frmMembros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmVisitantes.resx">
+    <EmbeddedResource Include="UI\FORMS\frmVisitantes.resx">
       <DependentUpon>frmVisitantes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -176,7 +185,8 @@
     <None Include="UI\IMG\ICONS\check-gray.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DAL\Usuarios.xml" />
+    <Content Include="BD\Usuarios.xml" />
+    <Content Include="BD\Especialidades.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

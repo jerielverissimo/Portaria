@@ -1,4 +1,4 @@
-﻿namespace Portaria.VIEW
+﻿namespace Portaria.UI.FORMS
 {
     partial class frmLogin
     {
