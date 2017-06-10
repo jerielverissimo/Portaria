@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\EspecialidadesBLL.cs" />
+    <Compile Include="BLL\UsuariosBLL.cs" />
     <Compile Include="DAL\EspecialidadesDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="MODEL\Externo.cs" />
@@ -124,7 +126,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="UI\FONT\" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,7 @@
   <ItemGroup>
     <Content Include="BD\Usuarios.xml" />
     <Content Include="BD\Especialidades.xml" />
+    <None Include="UI\IMG\ICONS\alert.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

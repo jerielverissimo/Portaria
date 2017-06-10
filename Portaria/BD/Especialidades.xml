@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <especialidades>
   <especialidade>
     <cod>1</cod>
@@ -7,5 +7,9 @@
   <especialidade>
     <cod>2</cod>
     <nome>Motorista</nome>
+  </especialidade>
+  <especialidade>
+    <cod>3</cod>
+    <nome>Segurança</nome>
   </especialidade>
 </especialidades>

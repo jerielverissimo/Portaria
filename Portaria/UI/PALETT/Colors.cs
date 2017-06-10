@@ -17,6 +17,9 @@ namespace Portaria.UI.PALETT
         private Color azulSideBarHighlight = ColorTranslator.FromHtml("#7bc0f7");
         private Color azulActionBar = ColorTranslator.FromHtml("#2196F3");
         private Color verdeNotify = ColorTranslator.FromHtml("#b2ff59");
+        private Color vermelhoNotify = ColorTranslator.FromHtml("#f44242");
+        private Color white = ColorTranslator.FromHtml("#fff");
+        private Color gray = ColorTranslator.FromHtml("#444");
 
         public Color AzulBackground
         {
@@ -108,5 +111,9 @@ namespace Portaria.UI.PALETT
                 verdeNotify = value;
             }
         }
+
+        public Color VermelhoNotify { get => vermelhoNotify; set => vermelhoNotify = value; }
+        public Color White { get => white; set => white = value; }
+        public Color Gray { get => gray; set => gray = value; }
     }
 }

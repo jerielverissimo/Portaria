@@ -32,7 +32,7 @@
             this.panADM = new System.Windows.Forms.Panel();
             this.panUsers = new System.Windows.Forms.Panel();
             this.panNotify = new System.Windows.Forms.Panel();
-            this.ptbCerto = new System.Windows.Forms.PictureBox();
+            this.ptbNotify = new System.Windows.Forms.PictureBox();
             this.lblNotify = new System.Windows.Forms.Label();
             this.mskSIAPE = new System.Windows.Forms.MaskedTextBox();
             this.lblSIAPE = new System.Windows.Forms.Label();
@@ -119,7 +119,7 @@
             this.panADM.SuspendLayout();
             this.panUsers.SuspendLayout();
             this.panNotify.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbNotify)).BeginInit();
             this.gboxTipoUsr.SuspendLayout();
             this.panVinculaMem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
@@ -188,23 +188,23 @@
             // panNotify
             // 
             this.panNotify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panNotify.Controls.Add(this.ptbCerto);
+            this.panNotify.Controls.Add(this.ptbNotify);
             this.panNotify.Controls.Add(this.lblNotify);
             this.panNotify.Location = new System.Drawing.Point(450, 0);
             this.panNotify.Name = "panNotify";
             this.panNotify.Size = new System.Drawing.Size(0, 40);
             this.panNotify.TabIndex = 22;
             // 
-            // ptbCerto
+            // ptbNotify
             // 
-            this.ptbCerto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ptbCerto.Image = global::Portaria.Properties.Resources.check_gray;
-            this.ptbCerto.Location = new System.Drawing.Point(-78, 2);
-            this.ptbCerto.Name = "ptbCerto";
-            this.ptbCerto.Size = new System.Drawing.Size(36, 36);
-            this.ptbCerto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ptbCerto.TabIndex = 1;
-            this.ptbCerto.TabStop = false;
+            this.ptbNotify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbNotify.Image = global::Portaria.Properties.Resources.check_gray;
+            this.ptbNotify.Location = new System.Drawing.Point(-78, 2);
+            this.ptbNotify.Name = "ptbNotify";
+            this.ptbNotify.Size = new System.Drawing.Size(36, 36);
+            this.ptbNotify.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbNotify.TabIndex = 1;
+            this.ptbNotify.TabStop = false;
             // 
             // lblNotify
             // 
@@ -1199,7 +1199,7 @@
             this.panUsers.PerformLayout();
             this.panNotify.ResumeLayout(false);
             this.panNotify.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ptbCerto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbNotify)).EndInit();
             this.gboxTipoUsr.ResumeLayout(false);
             this.gboxTipoUsr.PerformLayout();
             this.panVinculaMem.ResumeLayout(false);
@@ -1269,7 +1269,7 @@
         private System.Windows.Forms.PictureBox ptbUser;
         private System.Windows.Forms.Label lblSession;
         private System.Windows.Forms.Panel panNotify;
-        private System.Windows.Forms.PictureBox ptbCerto;
+        private System.Windows.Forms.PictureBox ptbNotify;
         private System.Windows.Forms.Label lblNotify;
         private System.Windows.Forms.Timer tmBounceEfxNotify;
         private System.Windows.Forms.Panel panPopPup;

@@ -19,14 +19,16 @@ namespace Portaria.UI.FORMS
         UI.PALETT.Colors color = new PALETT.Colors();
         DAL.UsuariosDAL usrDAL = new DAL.UsuariosDAL();
         Model.Usuario usrModel = new Model.Usuario();
+        Notification notify = new Notification();
+
 
         // Var 
 
-        const float PORCENEFX = 0.2f;
+       
 
         int window_X = 0, window_Y = 0; // Variáveis usadas para mover form com o mouse
         double pan_X = 0;
-        float posPanNotify = 0, largPanNotify = 0, tamPanNotify = 0, origemPanNotify = 0;
+        
         bool menuAberto = false, notifyAtivada = false; // variáveis para controle das animações
 
         // methods
@@ -81,11 +83,11 @@ namespace Portaria.UI.FORMS
 
             panNotify.Left = (panUsers.Width / 2) - panNotify.Width;
 
-            
 
-            posPanNotify = panADM.ClientSize.Width / 2;
-            largPanNotify = panADM.ClientSize.Width  * PORCENEFX;
-            posPanNotify = (panADM.ClientSize.Width / 2) * PORCENEFX;
+
+            notify.PosPanNotify = panADM.ClientSize.Width / 2;
+            notify.LargPanNotify = panADM.ClientSize.Width  * Notification.__PORCENEFX;
+            notify.PosPanNotify = (panADM.ClientSize.Width / 2) * Notification.__PORCENEFX;
 
             //this.Opacity = 0.1;
            // fadeInEffectADM.Enabled = true;
@@ -257,7 +259,7 @@ namespace Portaria.UI.FORMS
             
             tmBounceEfxNotify.Enabled = true;
             tmBounceEfxNotify.Tag = panADM;
-            usrModel.Nome = txtNomeUsr.Text;
+           /* usrModel.Nome = txtNomeUsr.Text;
             usrModel.Email = mskEmail.Text;
             usrModel.Telefone = mskTelUsr.Text;
             usrModel.Data_criacao = mskDataCria.Text;
@@ -265,20 +267,20 @@ namespace Portaria.UI.FORMS
 
             dgvMembros.DataSource = null;
             usrDAL.Salvar(usrModel.Nome, usrModel.Email, usrModel.Telefone, usrModel.Data_criacao, usrModel.Cod_esp);
-            dgvMembros.DataSource = usrDAL.carregaUsuarios();
+            dgvMembros.DataSource = usrDAL.carregaUsuarios();*/
         }
 
         private void frmADM_SizeChanged(object sender, EventArgs e)
         {
-            posPanNotify = 0;
-            largPanNotify = 0;
-            tamPanNotify = 0;
-            origemPanNotify = 0;
+            notify.PosPanNotify = 0;
+            notify.LargPanNotify = 0;
+            notify.TamPanNotify = 0;
+            notify.OrigemPanNotify = 0;
 
             panNotify.Left = (panADM.ClientSize.Width - panNotify.ClientSize.Width) / 2;
-            origemPanNotify = panADM.ClientSize.Width / 2;
-            largPanNotify = panADM.ClientSize.Width * PORCENEFX;
-            posPanNotify = (panADM.ClientSize.Width / 2) * PORCENEFX;
+            notify.OrigemPanNotify = panADM.ClientSize.Width / 2;
+            notify.LargPanNotify = panADM.ClientSize.Width * Notification.__PORCENEFX;
+            notify.PosPanNotify = (panADM.ClientSize.Width / 2) * Notification.__PORCENEFX;
 
             if (notifyAtivada == true)
             {
@@ -378,6 +380,9 @@ namespace Portaria.UI.FORMS
         private void lblAddEsp_Click(object sender, EventArgs e)
         {
             
+            frmEspecialidades frm = new frmEspecialidades();
+
+            frm.ShowDialog();
         }
 
         private void panUsers_SizeChanged(object sender, EventArgs e)
@@ -397,40 +402,10 @@ namespace Portaria.UI.FORMS
 
         private void tmBounceEfxNotify_Tick(object sender, EventArgs e)
         {
-            var panel = (System.Windows.Forms.Panel)tmBounceEfxNotify.Tag;
 
-            panNotify.Width = Convert.ToInt32(tamPanNotify);
-            panNotify.Left = Convert.ToInt32(origemPanNotify);
+            notify.setMessage("Usuário cadastrado com sucesso!", true, lblNotify, ptbNotify, panNotify);
+            notify.elasticAnimation(panNotify, tmBounceEfxNotify);
 
-            switch (notifyAtivada)
-            {
-                case false:
-
-                    tamPanNotify += largPanNotify;
-                    origemPanNotify -= posPanNotify;
-
-                    if (panNotify.Width == panel.ClientSize.Width && panNotify.Left == 0)
-                    {
-                        panNotify.Dock = DockStyle.Top;
-                        notifyAtivada = true;
-                        tmBounceEfxNotify.Enabled = false;
-                    }
-
-                    break;
-
-                case true:
-                    panNotify.Dock = DockStyle.None;
-                    tamPanNotify -= largPanNotify;
-                    origemPanNotify += posPanNotify;
-
-                    if (panNotify.Width == 0 && panNotify.Left == panel.ClientSize.Width / 2)
-                    {
-                        notifyAtivada = false;
-                        tmBounceEfxNotify.Enabled = false;
-                    }
-
-                    break;
-            }
         }
 
         private void ptbMaxRestore_Click(object sender, EventArgs e)
