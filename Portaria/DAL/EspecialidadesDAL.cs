@@ -28,7 +28,7 @@ namespace Portaria.DAL
            // ds.ReadXml(xml_path + @"\BD\Especialidades.xml");
             //dt = ds.Tables[("especialidade")];
 
-            var xDoc = XDocument.Load(xml_path + @"\BD\Especialidades.xml");
+            var xDoc = XDocument.Load(xml_path + @"\DB\Especialidades.xml");
 
             foreach (XElement xe in xDoc.Descendants("especialidade"))
             {
@@ -48,7 +48,7 @@ namespace Portaria.DAL
             try
             {
 
-                ds.ReadXml(xml_path + @"\BD\Especialidades.xml");
+                ds.ReadXml(xml_path + @"\DB\Especialidades.xml");
                 dt = ds.Tables[("especialidade")];
             }
             catch (FileNotFoundException ex)
@@ -64,13 +64,13 @@ namespace Portaria.DAL
             try
             {
                 
-                var xDoc = XDocument.Load(xml_path + @"\BD\Especialidades.xml");
+                var xDoc = XDocument.Load(xml_path + @"\DB\Especialidades.xml");
                 var count = xDoc.Descendants("especialidade").Count();
                 var novoElemento = new XElement("especialidade",
                                   new XElement("cod", count + 1),
                                   new XElement("nome", nome));
                 xDoc.Root.Add(novoElemento);
-                xDoc.Save(xml_path + @"\BD\Especialidades.xml");
+                xDoc.Save(xml_path + @"\DB\Especialidades.xml");
 
             } catch (FileNotFoundException ex)
             {

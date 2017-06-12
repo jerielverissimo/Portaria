@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Externos>
+  <externo>
+    <id_usuario>1</id_usuario>
+    <cpf>123123123</cpf>
+  </externo>
+  <externo>
+    <id_usuario>2</id_usuario>
+    <cpf>567567657</cpf>
+  </externo>
+  <especialidade>
+    <id>3</id>
+    <nome>JExterno</nome>
+    <email>jexterno@email.com</email>
+    <telefone>  (11) 4556-6566</telefone>
+    <data_criacao>  12/06/2017</data_criacao>
+    <esp></esp>
+  </especialidade>
+  <especialidade>
+    <id>3</id>
+    <nome>Especial</nome>
+    <email>especial@email.com</email>
+    <telefone>  (11) 6788-1212</telefone>
+    <data_criacao>  12/06/2017</data_criacao>
+    <esp>Engenheiro</esp>
+  </especialidade>
+</Externos>

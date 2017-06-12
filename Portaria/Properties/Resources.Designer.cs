@@ -203,6 +203,16 @@ namespace Portaria.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_mode_edit_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("ic_mode_edit_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_people_white_36dp {
             get {
                 object obj = ResourceManager.GetObject("ic_people_white_36dp", resourceCulture);
@@ -236,6 +246,16 @@ namespace Portaria.Properties {
         internal static System.Drawing.Bitmap menu {
             get {
                 object obj = ResourceManager.GetObject("menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap view_list {
+            get {
+                object obj = ResourceManager.GetObject("view-list", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

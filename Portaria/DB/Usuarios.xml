@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Usuarios>
+  <usuario>
+    <id>1</id>
+    <nome>Jeriel Baptista Verissimo</nome>
+    <email>jeriel.verissimo@prontonmail.com</email>
+    <tel>  (11) 4481-7868</tel>
+    <data_criacao>  12/06/2017</data_criacao>
+    <cod_esp>1</cod_esp>
+  </usuario>
+  <usuario>
+    <id>2</id>
+    <nome>Jeriel</nome>
+    <email>sdfsdf</email>
+    <tel>  (11) 1111-11</tel>
+    <data_criacao>  12/06/2017</data_criacao>
+    <cod_esp>4</cod_esp>
+  </usuario>
+  <usuario>
+    <id>3</id>
+    <nome>Externo</nome>
+    <email>externo@email.com</email>
+    <tel>  (11) 4444-4578</tel>
+    <data_criacao>  12/06/2017</data_criacao>
+    <cod_esp>5</cod_esp>
+  </usuario>
+</Usuarios>

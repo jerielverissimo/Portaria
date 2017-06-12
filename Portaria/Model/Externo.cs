@@ -10,6 +10,7 @@ namespace Portaria.Model
     {
         private string cpf;
         private int id_usuario;
+        private string esp;
 
         public string Cpf
         {
@@ -36,5 +37,7 @@ namespace Portaria.Model
                 id_usuario = value;
             }
         }
+
+        public string Esp { get => esp; set => esp = value; }
     }
 }

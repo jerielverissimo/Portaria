@@ -12,6 +12,9 @@ namespace Portaria.UI.FORMS
 {
     public partial class frmUsuarios : Form
     {
+
+        DAL.ExternoDAL extDAL = new DAL.ExternoDAL();
+
         public frmUsuarios()
         {
             InitializeComponent();
@@ -24,8 +27,12 @@ namespace Portaria.UI.FORMS
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            DAL.UsuariosDAL usrDAL = new DAL.UsuariosDAL();
-            dgvUsuarios.DataSource = usrDAL.carregaUsuarios();
+            dgvUsuarios.DataSource = extDAL.carregaExterno();
+        }
+
+        private void rdbExteron_CheckedChanged(object sender, EventArgs e)
+        {
+            dgvUsuarios.DataSource = extDAL.carregaExterno();
         }
     }
 }

@@ -16,4 +16,8 @@
     <cod>4</cod>
     <nome>Pedreiro</nome>
   </especialidade>
+  <especialidade>
+    <cod>5</cod>
+    <nome>Professor</nome>
+  </especialidade>
 </especialidades>

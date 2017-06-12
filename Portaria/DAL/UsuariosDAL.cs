@@ -26,7 +26,7 @@ namespace Portaria.DAL
             try
             {
 
-                ds.ReadXml(xml_path + @"\BD\Usuarios.xml");
+                ds.ReadXml(xml_path + @"\DB\Usuarios.xml");
                 dt = ds.Tables[("usuario")];
             }
             catch (FileNotFoundException e)
@@ -48,7 +48,7 @@ namespace Portaria.DAL
             try
             {
                 
-                var xDoc = XDocument.Load(xml_path + @"\BD\Usuarios.xml"); 
+                var xDoc = XDocument.Load(xml_path + @"\DB\Usuarios.xml"); 
                 var count = xDoc.Descendants("usuario").Count();
                 var novoUsuario = new XElement("usuario",
                                   new XElement("id", count + 1),
@@ -58,7 +58,7 @@ namespace Portaria.DAL
                                   new XElement("data_criacao", data_criacao),
                                   new XElement("cod_esp", cod_esp));
                 xDoc.Root.Add(novoUsuario);
-                xDoc.Save(xml_path + @"\BD\Usuarios.xml");
+                xDoc.Save(xml_path + @"\DB\Usuarios.xml");
             } catch (FileNotFoundException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);

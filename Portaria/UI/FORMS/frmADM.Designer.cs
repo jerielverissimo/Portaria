@@ -48,7 +48,7 @@
             this.mskCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.gboxTipoUsr = new System.Windows.Forms.GroupBox();
-            this.rdbTipoAlluno = new System.Windows.Forms.RadioButton();
+            this.rdbTipoAluno = new System.Windows.Forms.RadioButton();
             this.rdbTipoServ = new System.Windows.Forms.RadioButton();
             this.rdbTipoExt = new System.Windows.Forms.RadioButton();
             this.mskDataCria = new System.Windows.Forms.MaskedTextBox();
@@ -59,6 +59,20 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtNomeUsr = new System.Windows.Forms.TextBox();
             this.lblNomeUsr = new System.Windows.Forms.Label();
+            this.panAssociacao = new System.Windows.Forms.Panel();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtLegCorrelata = new System.Windows.Forms.TextBox();
+            this.mskFimPrev = new System.Windows.Forms.MaskedTextBox();
+            this.mskInicioVige = new System.Windows.Forms.MaskedTextBox();
+            this.cboxTipo = new System.Windows.Forms.ComboBox();
+            this.txtNomeAss = new System.Windows.Forms.TextBox();
+            this.lblCadAsso = new System.Windows.Forms.Label();
+            this.lblLegCorrelata = new System.Windows.Forms.Label();
+            this.lblDataVig = new System.Windows.Forms.Label();
+            this.lblNomeAss = new System.Windows.Forms.Label();
+            this.lblTipoAss = new System.Windows.Forms.Label();
+            this.lblFimPrev = new System.Windows.Forms.Label();
             this.panVinculaMem = new System.Windows.Forms.Panel();
             this.lblVincular = new System.Windows.Forms.Label();
             this.lblMembros = new System.Windows.Forms.Label();
@@ -83,20 +97,6 @@
             this.lblResumo = new System.Windows.Forms.Label();
             this.lblAssunto = new System.Windows.Forms.Label();
             this.lblNum = new System.Windows.Forms.Label();
-            this.panAssociacao = new System.Windows.Forms.Panel();
-            this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.lblDescricao = new System.Windows.Forms.Label();
-            this.txtLegCorrelata = new System.Windows.Forms.TextBox();
-            this.mskFimPrev = new System.Windows.Forms.MaskedTextBox();
-            this.mskInicioVige = new System.Windows.Forms.MaskedTextBox();
-            this.cboxTipo = new System.Windows.Forms.ComboBox();
-            this.txtNomeAss = new System.Windows.Forms.TextBox();
-            this.lblCadAsso = new System.Windows.Forms.Label();
-            this.lblLegCorrelata = new System.Windows.Forms.Label();
-            this.lblDataVig = new System.Windows.Forms.Label();
-            this.lblNomeAss = new System.Windows.Forms.Label();
-            this.lblTipoAss = new System.Windows.Forms.Label();
-            this.lblFimPrev = new System.Windows.Forms.Label();
             this.panPopPup = new System.Windows.Forms.Panel();
             this.lblSair = new System.Windows.Forms.Label();
             this.panSideBar = new System.Windows.Forms.Panel();
@@ -105,6 +105,8 @@
             this.lblAssociacoes = new System.Windows.Forms.Label();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.panActionBar = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ptbEditMode = new System.Windows.Forms.PictureBox();
             this.lblSession = new System.Windows.Forms.Label();
             this.ptbUser = new System.Windows.Forms.PictureBox();
             this.lblTitleForm = new System.Windows.Forms.Label();
@@ -121,13 +123,15 @@
             this.panNotify.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbNotify)).BeginInit();
             this.gboxTipoUsr.SuspendLayout();
+            this.panAssociacao.SuspendLayout();
             this.panVinculaMem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
             this.panPortarias.SuspendLayout();
-            this.panAssociacao.SuspendLayout();
             this.panPopPup.SuspendLayout();
             this.panSideBar.SuspendLayout();
             this.panActionBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbEditMode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSideMenu)).BeginInit();
             this.panTitleBar.SuspendLayout();
@@ -139,10 +143,10 @@
             // panADM
             // 
             this.panADM.BackColor = System.Drawing.Color.White;
-            this.panADM.Controls.Add(this.panVinculaMem);
             this.panADM.Controls.Add(this.panUsers);
-            this.panADM.Controls.Add(this.panPortarias);
             this.panADM.Controls.Add(this.panAssociacao);
+            this.panADM.Controls.Add(this.panVinculaMem);
+            this.panADM.Controls.Add(this.panPortarias);
             this.panADM.Controls.Add(this.panPopPup);
             this.panADM.Controls.Add(this.panSideBar);
             this.panADM.Controls.Add(this.panActionBar);
@@ -299,6 +303,7 @@
             this.mskProntAlun.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.mskProntAlun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskProntAlun.Location = new System.Drawing.Point(690, 87);
+            this.mskProntAlun.Mask = "000000-00";
             this.mskProntAlun.Name = "mskProntAlun";
             this.mskProntAlun.PromptChar = ' ';
             this.mskProntAlun.Size = new System.Drawing.Size(188, 26);
@@ -358,7 +363,7 @@
             this.mskCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCPF.Location = new System.Drawing.Point(122, 287);
-            this.mskCPF.Mask = "0000000000-00";
+            this.mskCPF.Mask = "000,000,000-00";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.PromptChar = ' ';
             this.mskCPF.Size = new System.Drawing.Size(135, 26);
@@ -378,7 +383,7 @@
             // gboxTipoUsr
             // 
             this.gboxTipoUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gboxTipoUsr.Controls.Add(this.rdbTipoAlluno);
+            this.gboxTipoUsr.Controls.Add(this.rdbTipoAluno);
             this.gboxTipoUsr.Controls.Add(this.rdbTipoServ);
             this.gboxTipoUsr.Controls.Add(this.rdbTipoExt);
             this.gboxTipoUsr.Location = new System.Drawing.Point(122, 332);
@@ -388,26 +393,26 @@
             this.gboxTipoUsr.TabStop = false;
             this.gboxTipoUsr.Text = "Tipo";
             // 
-            // rdbTipoAlluno
+            // rdbTipoAluno
             // 
-            this.rdbTipoAlluno.AutoSize = true;
-            this.rdbTipoAlluno.Checked = true;
-            this.rdbTipoAlluno.Location = new System.Drawing.Point(265, 32);
-            this.rdbTipoAlluno.Name = "rdbTipoAlluno";
-            this.rdbTipoAlluno.Size = new System.Drawing.Size(52, 17);
-            this.rdbTipoAlluno.TabIndex = 2;
-            this.rdbTipoAlluno.TabStop = true;
-            this.rdbTipoAlluno.Text = "Aluno";
-            this.rdbTipoAlluno.UseVisualStyleBackColor = true;
-            this.rdbTipoAlluno.CheckedChanged += new System.EventHandler(this.rdbTipoAlluno_CheckedChanged);
+            this.rdbTipoAluno.AutoSize = true;
+            this.rdbTipoAluno.Location = new System.Drawing.Point(265, 32);
+            this.rdbTipoAluno.Name = "rdbTipoAluno";
+            this.rdbTipoAluno.Size = new System.Drawing.Size(52, 17);
+            this.rdbTipoAluno.TabIndex = 2;
+            this.rdbTipoAluno.Text = "Aluno";
+            this.rdbTipoAluno.UseVisualStyleBackColor = true;
+            this.rdbTipoAluno.CheckedChanged += new System.EventHandler(this.rdbTipoAlluno_CheckedChanged);
             // 
             // rdbTipoServ
             // 
             this.rdbTipoServ.AutoSize = true;
+            this.rdbTipoServ.Checked = true;
             this.rdbTipoServ.Location = new System.Drawing.Point(143, 32);
             this.rdbTipoServ.Name = "rdbTipoServ";
             this.rdbTipoServ.Size = new System.Drawing.Size(64, 17);
             this.rdbTipoServ.TabIndex = 1;
+            this.rdbTipoServ.TabStop = true;
             this.rdbTipoServ.Text = "Servidor";
             this.rdbTipoServ.UseVisualStyleBackColor = true;
             this.rdbTipoServ.CheckedChanged += new System.EventHandler(this.rdbTipoServ_CheckedChanged);
@@ -506,6 +511,160 @@
             this.lblNomeUsr.Size = new System.Drawing.Size(51, 20);
             this.lblNomeUsr.TabIndex = 0;
             this.lblNomeUsr.Text = "Nome";
+            // 
+            // panAssociacao
+            // 
+            this.panAssociacao.Controls.Add(this.txtDescricao);
+            this.panAssociacao.Controls.Add(this.lblDescricao);
+            this.panAssociacao.Controls.Add(this.txtLegCorrelata);
+            this.panAssociacao.Controls.Add(this.mskFimPrev);
+            this.panAssociacao.Controls.Add(this.mskInicioVige);
+            this.panAssociacao.Controls.Add(this.cboxTipo);
+            this.panAssociacao.Controls.Add(this.txtNomeAss);
+            this.panAssociacao.Controls.Add(this.lblCadAsso);
+            this.panAssociacao.Controls.Add(this.lblLegCorrelata);
+            this.panAssociacao.Controls.Add(this.lblDataVig);
+            this.panAssociacao.Controls.Add(this.lblNomeAss);
+            this.panAssociacao.Controls.Add(this.lblTipoAss);
+            this.panAssociacao.Controls.Add(this.lblFimPrev);
+            this.panAssociacao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panAssociacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panAssociacao.Location = new System.Drawing.Point(75, 105);
+            this.panAssociacao.Name = "panAssociacao";
+            this.panAssociacao.Size = new System.Drawing.Size(925, 545);
+            this.panAssociacao.TabIndex = 23;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtDescricao.Location = new System.Drawing.Point(47, 179);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(623, 88);
+            this.txtDescricao.TabIndex = 13;
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(47, 143);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(80, 20);
+            this.lblDescricao.TabIndex = 12;
+            this.lblDescricao.Text = "Descrição";
+            // 
+            // txtLegCorrelata
+            // 
+            this.txtLegCorrelata.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtLegCorrelata.Location = new System.Drawing.Point(47, 331);
+            this.txtLegCorrelata.Multiline = true;
+            this.txtLegCorrelata.Name = "txtLegCorrelata";
+            this.txtLegCorrelata.Size = new System.Drawing.Size(620, 157);
+            this.txtLegCorrelata.TabIndex = 11;
+            // 
+            // mskFimPrev
+            // 
+            this.mskFimPrev.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mskFimPrev.Location = new System.Drawing.Point(157, 87);
+            this.mskFimPrev.Mask = "00/00/0000";
+            this.mskFimPrev.Name = "mskFimPrev";
+            this.mskFimPrev.PromptChar = ' ';
+            this.mskFimPrev.Size = new System.Drawing.Size(100, 26);
+            this.mskFimPrev.TabIndex = 10;
+            this.mskFimPrev.ValidatingType = typeof(System.DateTime);
+            // 
+            // mskInicioVige
+            // 
+            this.mskInicioVige.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.mskInicioVige.Location = new System.Drawing.Point(570, 87);
+            this.mskInicioVige.Mask = "00/00/0000";
+            this.mskInicioVige.Name = "mskInicioVige";
+            this.mskInicioVige.PromptChar = ' ';
+            this.mskInicioVige.Size = new System.Drawing.Size(100, 26);
+            this.mskInicioVige.TabIndex = 9;
+            this.mskInicioVige.ValidatingType = typeof(System.DateTime);
+            // 
+            // cboxTipo
+            // 
+            this.cboxTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxTipo.FormattingEnabled = true;
+            this.cboxTipo.Location = new System.Drawing.Point(514, 37);
+            this.cboxTipo.Name = "cboxTipo";
+            this.cboxTipo.Size = new System.Drawing.Size(156, 28);
+            this.cboxTipo.TabIndex = 8;
+            // 
+            // txtNomeAss
+            // 
+            this.txtNomeAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtNomeAss.Location = new System.Drawing.Point(47, 38);
+            this.txtNomeAss.Name = "txtNomeAss";
+            this.txtNomeAss.Size = new System.Drawing.Size(327, 26);
+            this.txtNomeAss.TabIndex = 7;
+            // 
+            // lblCadAsso
+            // 
+            this.lblCadAsso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCadAsso.AutoSize = true;
+            this.lblCadAsso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.lblCadAsso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCadAsso.ForeColor = System.Drawing.Color.White;
+            this.lblCadAsso.Location = new System.Drawing.Point(778, 466);
+            this.lblCadAsso.Name = "lblCadAsso";
+            this.lblCadAsso.Padding = new System.Windows.Forms.Padding(10);
+            this.lblCadAsso.Size = new System.Drawing.Size(108, 40);
+            this.lblCadAsso.TabIndex = 6;
+            this.lblCadAsso.Text = "Cadastrar";
+            this.lblCadAsso.Click += new System.EventHandler(this.lblCadAsso_Click);
+            // 
+            // lblLegCorrelata
+            // 
+            this.lblLegCorrelata.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblLegCorrelata.AutoSize = true;
+            this.lblLegCorrelata.Location = new System.Drawing.Point(47, 286);
+            this.lblLegCorrelata.Name = "lblLegCorrelata";
+            this.lblLegCorrelata.Size = new System.Drawing.Size(151, 20);
+            this.lblLegCorrelata.TabIndex = 5;
+            this.lblLegCorrelata.Text = "Legislação correlata";
+            // 
+            // lblDataVig
+            // 
+            this.lblDataVig.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDataVig.AutoSize = true;
+            this.lblDataVig.Location = new System.Drawing.Point(424, 90);
+            this.lblDataVig.Name = "lblDataVig";
+            this.lblDataVig.Size = new System.Drawing.Size(129, 20);
+            this.lblDataVig.TabIndex = 4;
+            this.lblDataVig.Text = "Inicio da vigência";
+            // 
+            // lblNomeAss
+            // 
+            this.lblNomeAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblNomeAss.AutoSize = true;
+            this.lblNomeAss.Location = new System.Drawing.Point(47, 11);
+            this.lblNomeAss.Name = "lblNomeAss";
+            this.lblNomeAss.Size = new System.Drawing.Size(51, 20);
+            this.lblNomeAss.TabIndex = 3;
+            this.lblNomeAss.Text = "Nome";
+            // 
+            // lblTipoAss
+            // 
+            this.lblTipoAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTipoAss.AutoSize = true;
+            this.lblTipoAss.Location = new System.Drawing.Point(510, 11);
+            this.lblTipoAss.Name = "lblTipoAss";
+            this.lblTipoAss.Size = new System.Drawing.Size(39, 20);
+            this.lblTipoAss.TabIndex = 1;
+            this.lblTipoAss.Text = "Tipo";
+            // 
+            // lblFimPrev
+            // 
+            this.lblFimPrev.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFimPrev.AutoSize = true;
+            this.lblFimPrev.Location = new System.Drawing.Point(47, 90);
+            this.lblFimPrev.Name = "lblFimPrev";
+            this.lblFimPrev.Size = new System.Drawing.Size(94, 20);
+            this.lblFimPrev.TabIndex = 0;
+            this.lblFimPrev.Text = "Fim previsto";
             // 
             // panVinculaMem
             // 
@@ -781,160 +940,6 @@
             this.lblNum.TabIndex = 0;
             this.lblNum.Text = "Número";
             // 
-            // panAssociacao
-            // 
-            this.panAssociacao.Controls.Add(this.txtDescricao);
-            this.panAssociacao.Controls.Add(this.lblDescricao);
-            this.panAssociacao.Controls.Add(this.txtLegCorrelata);
-            this.panAssociacao.Controls.Add(this.mskFimPrev);
-            this.panAssociacao.Controls.Add(this.mskInicioVige);
-            this.panAssociacao.Controls.Add(this.cboxTipo);
-            this.panAssociacao.Controls.Add(this.txtNomeAss);
-            this.panAssociacao.Controls.Add(this.lblCadAsso);
-            this.panAssociacao.Controls.Add(this.lblLegCorrelata);
-            this.panAssociacao.Controls.Add(this.lblDataVig);
-            this.panAssociacao.Controls.Add(this.lblNomeAss);
-            this.panAssociacao.Controls.Add(this.lblTipoAss);
-            this.panAssociacao.Controls.Add(this.lblFimPrev);
-            this.panAssociacao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panAssociacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panAssociacao.Location = new System.Drawing.Point(75, 105);
-            this.panAssociacao.Name = "panAssociacao";
-            this.panAssociacao.Size = new System.Drawing.Size(925, 545);
-            this.panAssociacao.TabIndex = 23;
-            // 
-            // txtDescricao
-            // 
-            this.txtDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDescricao.Location = new System.Drawing.Point(47, 179);
-            this.txtDescricao.Multiline = true;
-            this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(623, 88);
-            this.txtDescricao.TabIndex = 13;
-            // 
-            // lblDescricao
-            // 
-            this.lblDescricao.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblDescricao.AutoSize = true;
-            this.lblDescricao.Location = new System.Drawing.Point(47, 143);
-            this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(80, 20);
-            this.lblDescricao.TabIndex = 12;
-            this.lblDescricao.Text = "Descrição";
-            // 
-            // txtLegCorrelata
-            // 
-            this.txtLegCorrelata.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtLegCorrelata.Location = new System.Drawing.Point(47, 331);
-            this.txtLegCorrelata.Multiline = true;
-            this.txtLegCorrelata.Name = "txtLegCorrelata";
-            this.txtLegCorrelata.Size = new System.Drawing.Size(620, 157);
-            this.txtLegCorrelata.TabIndex = 11;
-            // 
-            // mskFimPrev
-            // 
-            this.mskFimPrev.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskFimPrev.Location = new System.Drawing.Point(157, 87);
-            this.mskFimPrev.Mask = "00/00/0000";
-            this.mskFimPrev.Name = "mskFimPrev";
-            this.mskFimPrev.PromptChar = ' ';
-            this.mskFimPrev.Size = new System.Drawing.Size(100, 26);
-            this.mskFimPrev.TabIndex = 10;
-            this.mskFimPrev.ValidatingType = typeof(System.DateTime);
-            // 
-            // mskInicioVige
-            // 
-            this.mskInicioVige.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskInicioVige.Location = new System.Drawing.Point(570, 87);
-            this.mskInicioVige.Mask = "00/00/0000";
-            this.mskInicioVige.Name = "mskInicioVige";
-            this.mskInicioVige.PromptChar = ' ';
-            this.mskInicioVige.Size = new System.Drawing.Size(100, 26);
-            this.mskInicioVige.TabIndex = 9;
-            this.mskInicioVige.ValidatingType = typeof(System.DateTime);
-            // 
-            // cboxTipo
-            // 
-            this.cboxTipo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboxTipo.FormattingEnabled = true;
-            this.cboxTipo.Location = new System.Drawing.Point(514, 37);
-            this.cboxTipo.Name = "cboxTipo";
-            this.cboxTipo.Size = new System.Drawing.Size(156, 28);
-            this.cboxTipo.TabIndex = 8;
-            // 
-            // txtNomeAss
-            // 
-            this.txtNomeAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNomeAss.Location = new System.Drawing.Point(47, 38);
-            this.txtNomeAss.Name = "txtNomeAss";
-            this.txtNomeAss.Size = new System.Drawing.Size(327, 26);
-            this.txtNomeAss.TabIndex = 7;
-            // 
-            // lblCadAsso
-            // 
-            this.lblCadAsso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCadAsso.AutoSize = true;
-            this.lblCadAsso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblCadAsso.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadAsso.ForeColor = System.Drawing.Color.White;
-            this.lblCadAsso.Location = new System.Drawing.Point(778, 466);
-            this.lblCadAsso.Name = "lblCadAsso";
-            this.lblCadAsso.Padding = new System.Windows.Forms.Padding(10);
-            this.lblCadAsso.Size = new System.Drawing.Size(108, 40);
-            this.lblCadAsso.TabIndex = 6;
-            this.lblCadAsso.Text = "Cadastrar";
-            this.lblCadAsso.Click += new System.EventHandler(this.lblCadAsso_Click);
-            // 
-            // lblLegCorrelata
-            // 
-            this.lblLegCorrelata.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblLegCorrelata.AutoSize = true;
-            this.lblLegCorrelata.Location = new System.Drawing.Point(47, 286);
-            this.lblLegCorrelata.Name = "lblLegCorrelata";
-            this.lblLegCorrelata.Size = new System.Drawing.Size(151, 20);
-            this.lblLegCorrelata.TabIndex = 5;
-            this.lblLegCorrelata.Text = "Legislação correlata";
-            // 
-            // lblDataVig
-            // 
-            this.lblDataVig.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblDataVig.AutoSize = true;
-            this.lblDataVig.Location = new System.Drawing.Point(424, 90);
-            this.lblDataVig.Name = "lblDataVig";
-            this.lblDataVig.Size = new System.Drawing.Size(129, 20);
-            this.lblDataVig.TabIndex = 4;
-            this.lblDataVig.Text = "Inicio da vigência";
-            // 
-            // lblNomeAss
-            // 
-            this.lblNomeAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblNomeAss.AutoSize = true;
-            this.lblNomeAss.Location = new System.Drawing.Point(47, 11);
-            this.lblNomeAss.Name = "lblNomeAss";
-            this.lblNomeAss.Size = new System.Drawing.Size(51, 20);
-            this.lblNomeAss.TabIndex = 3;
-            this.lblNomeAss.Text = "Nome";
-            // 
-            // lblTipoAss
-            // 
-            this.lblTipoAss.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblTipoAss.AutoSize = true;
-            this.lblTipoAss.Location = new System.Drawing.Point(510, 11);
-            this.lblTipoAss.Name = "lblTipoAss";
-            this.lblTipoAss.Size = new System.Drawing.Size(39, 20);
-            this.lblTipoAss.TabIndex = 1;
-            this.lblTipoAss.Text = "Tipo";
-            // 
-            // lblFimPrev
-            // 
-            this.lblFimPrev.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblFimPrev.AutoSize = true;
-            this.lblFimPrev.Location = new System.Drawing.Point(47, 90);
-            this.lblFimPrev.Name = "lblFimPrev";
-            this.lblFimPrev.Size = new System.Drawing.Size(94, 20);
-            this.lblFimPrev.TabIndex = 0;
-            this.lblFimPrev.Text = "Fim previsto";
-            // 
             // panPopPup
             // 
             this.panPopPup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1049,6 +1054,8 @@
             // panActionBar
             // 
             this.panActionBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panActionBar.Controls.Add(this.pictureBox1);
+            this.panActionBar.Controls.Add(this.ptbEditMode);
             this.panActionBar.Controls.Add(this.lblSession);
             this.panActionBar.Controls.Add(this.ptbUser);
             this.panActionBar.Controls.Add(this.lblTitleForm);
@@ -1058,6 +1065,30 @@
             this.panActionBar.Name = "panActionBar";
             this.panActionBar.Size = new System.Drawing.Size(1000, 70);
             this.panActionBar.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Portaria.Properties.Resources.view_list;
+            this.pictureBox1.Location = new System.Drawing.Point(797, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(10);
+            this.pictureBox1.Size = new System.Drawing.Size(44, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // ptbEditMode
+            // 
+            this.ptbEditMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ptbEditMode.Image = global::Portaria.Properties.Resources.ic_mode_edit_white_24dp;
+            this.ptbEditMode.Location = new System.Drawing.Point(742, 11);
+            this.ptbEditMode.Name = "ptbEditMode";
+            this.ptbEditMode.Padding = new System.Windows.Forms.Padding(10);
+            this.ptbEditMode.Size = new System.Drawing.Size(44, 44);
+            this.ptbEditMode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ptbEditMode.TabIndex = 4;
+            this.ptbEditMode.TabStop = false;
             // 
             // lblSession
             // 
@@ -1099,9 +1130,10 @@
             // ptbSideMenu
             // 
             this.ptbSideMenu.Image = global::Portaria.Properties.Resources.menu;
-            this.ptbSideMenu.Location = new System.Drawing.Point(23, 21);
+            this.ptbSideMenu.Location = new System.Drawing.Point(23, 9);
             this.ptbSideMenu.Name = "ptbSideMenu";
-            this.ptbSideMenu.Size = new System.Drawing.Size(24, 24);
+            this.ptbSideMenu.Padding = new System.Windows.Forms.Padding(10);
+            this.ptbSideMenu.Size = new System.Drawing.Size(44, 44);
             this.ptbSideMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.ptbSideMenu.TabIndex = 0;
             this.ptbSideMenu.TabStop = false;
@@ -1204,17 +1236,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbNotify)).EndInit();
             this.gboxTipoUsr.ResumeLayout(false);
             this.gboxTipoUsr.PerformLayout();
+            this.panAssociacao.ResumeLayout(false);
+            this.panAssociacao.PerformLayout();
             this.panVinculaMem.ResumeLayout(false);
             this.panVinculaMem.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).EndInit();
             this.panPortarias.ResumeLayout(false);
             this.panPortarias.PerformLayout();
-            this.panAssociacao.ResumeLayout(false);
-            this.panAssociacao.PerformLayout();
             this.panPopPup.ResumeLayout(false);
             this.panSideBar.ResumeLayout(false);
             this.panActionBar.ResumeLayout(false);
             this.panActionBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbEditMode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbSideMenu)).EndInit();
             this.panTitleBar.ResumeLayout(false);
@@ -1250,7 +1284,7 @@
         private System.Windows.Forms.MaskedTextBox mskDataCria;
         private System.Windows.Forms.Label lblDataCria;
         private System.Windows.Forms.GroupBox gboxTipoUsr;
-        private System.Windows.Forms.RadioButton rdbTipoAlluno;
+        private System.Windows.Forms.RadioButton rdbTipoAluno;
         private System.Windows.Forms.RadioButton rdbTipoServ;
         private System.Windows.Forms.RadioButton rdbTipoExt;
         private System.Windows.Forms.MaskedTextBox mskCPF;
@@ -1315,5 +1349,7 @@
         private System.Windows.Forms.Label lblVincular;
         private System.Windows.Forms.ComboBox cboxPortAsso;
         private System.Windows.Forms.Label lblSelAsso;
+        private System.Windows.Forms.PictureBox ptbEditMode;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

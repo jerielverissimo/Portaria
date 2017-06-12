@@ -69,8 +69,9 @@ namespace Portaria.UI.FORMS
 
         private void frmADM_Load(object sender, EventArgs e)
         {
-            
 
+            DAL.ExternoDAL usrDal = new DAL.ExternoDAL();
+            dgvMembros.DataSource = usrDal.carregaExterno(); 
             mskDataCria.Text = DateTime.Now.ToString();
 
             panTitleBar.BackColor = color.AzulTitleBar;
@@ -137,6 +138,9 @@ namespace Portaria.UI.FORMS
                 lblSenhaADM.Visible = true;
                 ckbADM.Visible = true;
                 txtSenhaADM.Visible = true;
+                lblEsp.Visible = true;
+                cboxEsp.Visible = true;
+                lblAddEsp.Visible = true;
             } else
             {
                 lblSIAPE.Visible = false;
@@ -149,12 +153,15 @@ namespace Portaria.UI.FORMS
 
         private void rdbTipoAlluno_CheckedChanged(object sender, EventArgs e)
         {
-            if (rdbTipoAlluno.Checked)
+            if (rdbTipoAluno.Checked)
             {
                 lblProntUsr.Visible = true;
                 mskProntAlun.Visible = true;
                 ckbADM.Visible = false;
                 txtSenhaADM.Visible = false;
+                lblEsp.Visible = false;
+                cboxEsp.Visible = false;
+                lblAddEsp.Visible = false;
             }
             else
             {
@@ -175,6 +182,9 @@ namespace Portaria.UI.FORMS
                 mskSIAPE.Visible = false;
                 ckbADM.Visible = false;
                 txtSenhaADM.Visible = false;
+                lblEsp.Visible = true;
+                cboxEsp.Visible = true;
+                lblAddEsp.Visible = true;
             }
         }
 
@@ -257,12 +267,29 @@ namespace Portaria.UI.FORMS
         private void lblCadUser_Click(object sender, EventArgs e)
         {
             
-           
-            usrBLL.validaForm(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue));
+            // Valida se os campos do aluno estão preenchidos
+            if (rdbTipoAluno.Checked)
+                usrBLL.validaFORM(txtNomeUsr.Text, mskEmail.Text,
+                    mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue), mskProntAlun.Text);
 
-            if (usrBLL.Valido)
-                usrBLL.salvarUsuario(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue));
+            // Valida se os campos do externo estão preenchidos
+            if (rdbTipoExt.Checked)
+            {
+                usrBLL.validaFORM(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, cboxEsp.SelectedText);
+                usrBLL.salvarUsuario(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, cboxEsp.Text);
+            }
 
+            // Valida se os campos do servidor estão preenchidos
+            if (rdbTipoServ.Checked)
+                usrBLL.validaFORM(txtNomeUsr.Text, mskEmail.Text,
+                    mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue), cboxEsp.Text, mskSIAPE.Text, txtSenhaADM.Text);
+
+
+            // Se estvier válido os campos então ele salva
+           // if (usrBLL.Valido)
+               // usrBLL.salvarUsuario(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue));
+
+            // Exibe notificação com estado do cadastro
             tmBounceEfxNotify.Enabled = true;
             tmBounceEfxNotify.Tag = panADM;
         }
@@ -411,6 +438,7 @@ namespace Portaria.UI.FORMS
         private void tmBounceEfxNotify_Tick(object sender, EventArgs e)
         {
             notify.setMessage(usrBLL.Msg, usrBLL.Valido,lblNotify,ptbNotify,panNotify);
+            notify.elasticAnimation(panNotify, tmBounceEfxNotify);
         }
 
         private void ptbMaxRestore_Click(object sender, EventArgs e)

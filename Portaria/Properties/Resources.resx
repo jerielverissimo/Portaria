@@ -130,6 +130,12 @@
   <data name="check-gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\check-gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="glassdoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\UI\IMG\ICONS\glassdoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ic_mode_edit_white_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\UI\IMG\ICONS\ic_mode_edit_white_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_account_circle_white_24dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\ic_account_circle_white_24dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,9 +154,6 @@
   <data name="window-close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\window-close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="account-convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\UI\IMG\ICONS\account-convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="window-maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\window-maximize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -163,6 +166,9 @@
   <data name="account-switch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\account-switch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_people_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\UI\IMG\ICONS\ic_people_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="account-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\account-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,16 +178,16 @@
   <data name="account-network" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\account-network.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="glassdoor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\UI\IMG\ICONS\glassdoor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="account-convert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\UI\IMG\ICONS\account-convert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_people_white_36dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\UI\IMG\ICONS\ic_people_white_36dp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="alert" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\UI\IMG\ICONS\alert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="view-list" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\UI\IMG\ICONS\view-list.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
