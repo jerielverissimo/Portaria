@@ -9,15 +9,21 @@ namespace Portaria.BLL
 {
     class EspecialidadesBLL 
     {
+        DAL.EspecialidadeDAL espDAL = new DAL.EspecialidadeDAL();
+
+
         private bool validado;
         private string msg;
 
         public bool Validado { get => validado; set => validado = value; }
         public string Msg { get => msg; set => msg = value; }
 
-        public void validaForm(TextBox txt)
+        public string validaForm(String str)
         {
-            if (txt.Text == "")
+
+            Model.Especialidade espMODEL = new Model.Especialidade();
+
+            if (str == "")
             {
                 Validado = false;
 
@@ -25,9 +31,15 @@ namespace Portaria.BLL
             } else
             {
                 Validado = true;
-
+                
                 msg = "Especialidade cadastrada com sucesso!";
             }
+            return str;
+        }
+
+        public void salvarEspecialidade(string str)
+        {
+            if (validado) espDAL.Salvar(str);
         }
     }
 }

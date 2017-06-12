@@ -77,6 +77,12 @@
     <Compile Include="UI\FORMS\frmMembros.Designer.cs">
       <DependentUpon>frmMembros.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FORMS\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FORMS\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FORMS\frmVisitantes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FORMS\frmMembros.resx">
       <DependentUpon>frmMembros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FORMS\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FORMS\frmVisitantes.resx">
       <DependentUpon>frmVisitantes.cs</DependentUpon>
@@ -186,6 +195,7 @@
     <None Include="UI\IMG\ICONS\check-gray.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BD\Aluno.xml" />
     <Content Include="BD\Usuarios.xml" />
     <Content Include="BD\Especialidades.xml" />
     <None Include="UI\IMG\ICONS\alert.png" />

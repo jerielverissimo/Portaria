@@ -17,8 +17,9 @@ namespace Portaria.UI.FORMS
         // OBJ
 
         UI.PALETT.Colors color = new PALETT.Colors();
-        DAL.UsuariosDAL usrDAL = new DAL.UsuariosDAL();
+        
         Model.Usuario usrModel = new Model.Usuario();
+        BLL.UsuariosBLL usrBLL = new BLL.UsuariosBLL();
         Notification notify = new Notification();
 
 
@@ -68,8 +69,7 @@ namespace Portaria.UI.FORMS
 
         private void frmADM_Load(object sender, EventArgs e)
         {
-
-            dgvMembros.DataSource = usrDAL.carregaUsuarios();
+            
 
             mskDataCria.Text = DateTime.Now.ToString();
 
@@ -257,17 +257,14 @@ namespace Portaria.UI.FORMS
         private void lblCadUser_Click(object sender, EventArgs e)
         {
             
+           
+            usrBLL.validaForm(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue));
+
+            if (usrBLL.Valido)
+                usrBLL.salvarUsuario(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue));
+
             tmBounceEfxNotify.Enabled = true;
             tmBounceEfxNotify.Tag = panADM;
-           /* usrModel.Nome = txtNomeUsr.Text;
-            usrModel.Email = mskEmail.Text;
-            usrModel.Telefone = mskTelUsr.Text;
-            usrModel.Data_criacao = mskDataCria.Text;
-            usrModel.Cod_esp = Convert.ToInt32(cboxEsp.SelectedValue);
-
-            dgvMembros.DataSource = null;
-            usrDAL.Salvar(usrModel.Nome, usrModel.Email, usrModel.Telefone, usrModel.Data_criacao, usrModel.Cod_esp);
-            dgvMembros.DataSource = usrDAL.carregaUsuarios();*/
         }
 
         private void frmADM_SizeChanged(object sender, EventArgs e)
@@ -400,12 +397,20 @@ namespace Portaria.UI.FORMS
             lblCadUser.BackColor = color.AzulBackground;
         }
 
+        private void cboxEsp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void lblAddMembros_Click(object sender, EventArgs e)
+        {
+            frmUsuarios frm = new frmUsuarios();
+            frm.ShowDialog();
+        }
+
         private void tmBounceEfxNotify_Tick(object sender, EventArgs e)
         {
-
-            notify.setMessage("Usuário cadastrado com sucesso!", true, lblNotify, ptbNotify, panNotify);
-            notify.elasticAnimation(panNotify, tmBounceEfxNotify);
-
+            notify.setMessage(usrBLL.Msg, usrBLL.Valido,lblNotify,ptbNotify,panNotify);
         }
 
         private void ptbMaxRestore_Click(object sender, EventArgs e)

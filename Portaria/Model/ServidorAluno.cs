@@ -8,7 +8,7 @@ namespace Portaria.Model
 {
     class ServidorAluno : Usuario
     {
-        private string senha, tipo, prontuario, siape;
+        private string senha, tipo, prontuario,  siape;
         private int id_usuario;
 
         public string Senha

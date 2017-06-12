@@ -14,6 +14,8 @@ namespace Portaria.UI.FORMS
     {
 
         Notification notify = new Notification();
+        BLL.EspecialidadesBLL espBLL = new BLL.EspecialidadesBLL();
+        Model.Especialidade espMODEL = new Model.Especialidade();
 
 
         public frmEspecialidades()
@@ -39,13 +41,11 @@ namespace Portaria.UI.FORMS
 
         private void lblCadastrar_Click(object sender, EventArgs e)
         {
-            // Model.Especialidade espMODEL = new Model.Especialidade();
-            // DAL.EspecialidadeDAL espDAL = new DAL.EspecialidadeDAL();
 
-            //espMODEL.Nome = txtNome.Text;
-            //espDAL.Salvar(espMODEL.Nome);
-            //txtNome.Text = null;
-
+            espMODEL.Nome = txtNome.Text;
+            espBLL.validaForm(espMODEL.Nome);
+            txtNome.Text = null;
+            espBLL.salvarEspecialidade(espMODEL.Nome);
             tmNotify.Tag = panCenter;
             tmNotify.Enabled = true;
             
@@ -63,9 +63,8 @@ namespace Portaria.UI.FORMS
 
         private void tmNotify_Tick(object sender, EventArgs e)
         {
-            BLL.EspecialidadesBLL espBLL = new BLL.EspecialidadesBLL();
 
-            espBLL.validaForm(txtNome);
+            espBLL.validaForm(espMODEL.Nome);
             notify.setMessage(espBLL.Msg, espBLL.Validado, lblNotify, ptbNotify, panNotify);
             notify.elasticAnimation(panNotify, tmNotify);
         }

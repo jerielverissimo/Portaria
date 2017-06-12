@@ -14,19 +14,19 @@ namespace Portaria.DAL
     class EspecialidadeDAL
     {
 
-        private string xml_path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
 
 
         public DataTable dt = new DataTable(); // cria tabela de dados
         public DataSet ds = new DataSet();
        
+        private string xml_path = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
 
         public List<Especialidade> todasEspecialidades()
         {
             List<Especialidade> especialidades = new List<Especialidade>();
 
-            ds.ReadXml(xml_path + @"\BD\Especialidades.xml");
-            dt = ds.Tables[("especialidade")];
+           // ds.ReadXml(xml_path + @"\BD\Especialidades.xml");
+            //dt = ds.Tables[("especialidade")];
 
             var xDoc = XDocument.Load(xml_path + @"\BD\Especialidades.xml");
 
@@ -71,6 +71,7 @@ namespace Portaria.DAL
                                   new XElement("nome", nome));
                 xDoc.Root.Add(novoElemento);
                 xDoc.Save(xml_path + @"\BD\Especialidades.xml");
+
             } catch (FileNotFoundException ex)
             {
                 System.Windows.Forms.MessageBox.Show(ex.Message);

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Portaria.Model
 {
-    class Usuario
+    class Usuario : Especialidade
     {
         private int id, cod_esp;
         private string nome, email, telefone;
@@ -75,6 +75,11 @@ namespace Portaria.Model
             {
                 data_criacao = value;
             }
+        }
+
+        private void pegaEspecialidade()
+        {
+            cod_esp = this.Cod;
         }
     }
 }

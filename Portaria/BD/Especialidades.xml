@@ -12,4 +12,8 @@
     <cod>3</cod>
     <nome>Segurança</nome>
   </especialidade>
+  <especialidade>
+    <cod>4</cod>
+    <nome>Pedreiro</nome>
+  </especialidade>
 </especialidades>

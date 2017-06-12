@@ -139,8 +139,8 @@
             // panADM
             // 
             this.panADM.BackColor = System.Drawing.Color.White;
-            this.panADM.Controls.Add(this.panUsers);
             this.panADM.Controls.Add(this.panVinculaMem);
+            this.panADM.Controls.Add(this.panUsers);
             this.panADM.Controls.Add(this.panPortarias);
             this.panADM.Controls.Add(this.panAssociacao);
             this.panADM.Controls.Add(this.panPopPup);
@@ -339,6 +339,7 @@
             this.cboxEsp.Name = "cboxEsp";
             this.cboxEsp.Size = new System.Drawing.Size(233, 28);
             this.cboxEsp.TabIndex = 12;
+            this.cboxEsp.SelectedIndexChanged += new System.EventHandler(this.cboxEsp_SelectedIndexChanged);
             this.cboxEsp.Click += new System.EventHandler(this.cboxEsp_Click);
             // 
             // lblEsp
@@ -559,6 +560,7 @@
             this.lblAddMembros.Size = new System.Drawing.Size(36, 38);
             this.lblAddMembros.TabIndex = 4;
             this.lblAddMembros.Text = "+";
+            this.lblAddMembros.Click += new System.EventHandler(this.lblAddMembros_Click);
             // 
             // dgvMembros
             // 
@@ -1174,7 +1176,7 @@
             // 
             // tmSlideEfxMenu
             // 
-            this.tmSlideEfxMenu.Interval = 1;
+            this.tmSlideEfxMenu.Interval = 10;
             this.tmSlideEfxMenu.Tick += new System.EventHandler(this.tmSlideEfxMenu_Tick);
             // 
             // tmBounceEfxNotify
