@@ -24,4 +24,12 @@
     <data_criacao>  12/06/2017</data_criacao>
     <esp>Engenheiro</esp>
   </especialidade>
+  <especialidade>
+    <id>3</id>
+    <nome></nome>
+    <email></email>
+    <telefone>  (  )     -</telefone>
+    <data_criacao>  13/06/2017</data_criacao>
+    <esp></esp>
+  </especialidade>
 </Externos>

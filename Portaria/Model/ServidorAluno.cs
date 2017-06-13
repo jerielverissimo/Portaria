@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portaria.Model
+namespace Portaria.MODEL
 {
     class ServidorAluno : Usuario
     {
-        private string senha, tipo, prontuario,  siape;
+        private string senha, tipo, prontuario,  siape, curso;
         private int id_usuario;
 
         public string Senha
@@ -75,5 +75,7 @@ namespace Portaria.Model
                 id_usuario = value;
             }
         }
+
+        public string Curso { get => curso; set => curso = value; }
     }
 }

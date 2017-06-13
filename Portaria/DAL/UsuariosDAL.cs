@@ -35,10 +35,16 @@ namespace Portaria.DAL
                 dt = new DataTable("usuario");
                 dt.Columns.Add("id");
                 dt.Columns.Add("nome");
+                dt.Columns.Add("cpf");
                 dt.Columns.Add("email");
                 dt.Columns.Add("tel");
                 dt.Columns.Add("data_criacao");
+                dt.Columns.Add("prontuario");
                 dt.Columns.Add("cod_esp");
+                dt.Columns.Add("esp");
+                dt.Columns.Add("curso");
+                dt.Columns.Add("siape");
+                dt.Columns.Add("senha");
             }
             return dt;
         }

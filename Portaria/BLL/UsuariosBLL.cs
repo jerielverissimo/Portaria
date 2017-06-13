@@ -9,24 +9,45 @@ namespace Portaria.BLL
     class UsuariosBLL
     {
 
-        Model.Usuario usrModel = new Model.Usuario();
+        #region OBJ
+
+
+        MODEL.Usuario usrModel = new MODEL.Usuario();
+        MODEL.UsuarioGeneralizado usrGenMODEL = new MODEL.UsuarioGeneralizado();
+        MODEL.Externo extMODEL = new MODEL.Externo();
+        MODEL.ServidorAluno srvAln = new MODEL.ServidorAluno();
         DAL.UsuariosDAL usrDAL = new DAL.UsuariosDAL();
         DAL.ExternoDAL extDAL = new DAL.ExternoDAL();
-        Model.Externo extMODEL = new Model.Externo();
+        DAL.AlunoDAL alnDAL = new DAL.AlunoDAL();
+        DAL.UsuarioGeneralizadoDAL usrGenDAL = new DAL.UsuarioGeneralizadoDAL();
 
+        #endregion
+
+
+
+        #region VAR
 
         private bool valido;
         private string msg;
-        
+
+        #endregion
+
+
+        #region PROPRITIES
 
         public bool Valido { get => valido; set => valido = value; }
         public string Msg { get => msg; set => msg = value; }
 
-        public void validaFORM(string nome, string email, string tel, string data, string esp)
+        #endregion
+
+
+        // Valida Externo
+
+        public void ValidaFORM(string nome, string cpf, string email, string tel, string data, string tipo, int cod, string esp)
         {
 
           
-            if (nome == "" || email == "" || tel == "" || data == "") Valido = false;
+            if (nome == "" || email == "" || tel == "" || data == "" || esp == "") Valido = false;
             else Valido = true;
      
             if (valido)
@@ -39,11 +60,13 @@ namespace Portaria.BLL
             }
         }
 
-        public void validaFORM(string nome, string email, string tel, string data, int cod, string prontuario)
+        // Valida Aluno
+
+        public void ValidaFORM(string nome, string email, string tel, string data, string tipo, string prontuario, string curso)
         {
 
 
-            if (nome == "" || email == "" || tel == "" || data == "" || cod.Equals(null) || prontuario == "") Valido = false;
+            if (nome == "" || email == "" || tel == "" || data == "" || prontuario == "" || curso == "") Valido = false;
             else Valido = true;
 
             if (valido)
@@ -56,7 +79,9 @@ namespace Portaria.BLL
             }
         }
 
-        public void validaFORM(string nome, string email, string tel, string data, int cod, string esp, string siap, string senha)
+        // Valida Servidor
+
+        public void ValidaFORM(string nome, string email, string tel, string data, string tipo, int cod, string esp, string siap, string senha, string adm)
         {
 
 
@@ -73,34 +98,44 @@ namespace Portaria.BLL
             }
         }
 
-        public void salvarUsuario(string nome, string email, string tel, string data, string esp)
+
+        // Salva Externo
+
+        public void SalvarUsuario(string nome, string cpf, string email, string tel, string data, string tipo, int cod, string esp)
         {
-            extMODEL.Nome = nome;
-            extMODEL.Email = email;
-            extMODEL.Telefone = tel;
-            extMODEL.Data_criacao = data;
-            //extMODEL.Cod = Convert.ToInt32(cod);
-            //extMODEL.Cod_esp = Convert.ToInt32(cod_esp);
-            extMODEL.Esp = esp;
+            usrGenMODEL.Nome = nome;
+            usrGenMODEL.Cpf = cpf;
+            usrGenMODEL.Email = email;
+            usrGenMODEL.Telefone = tel;
+            usrGenMODEL.Data_criacao = data;
+            usrGenMODEL.Tipo = tipo;
+            usrGenMODEL.Cod_esp = cod;
+            usrGenMODEL.Esp = esp;
            
-            extDAL.salvar(extMODEL.Nome, extMODEL.Email, extMODEL.Telefone, extMODEL.Data_criacao, extMODEL.Esp);
+            usrGenDAL.Salvar(usrGenMODEL.Nome, usrGenMODEL.Cpf, usrGenMODEL.Email, usrGenMODEL.Telefone,
+                             usrGenMODEL.Data_criacao, usrGenMODEL.Tipo, usrGenMODEL.Cod_esp, usrGenMODEL.Esp);
             
         }
 
-        public void salvarUsuario(string nome, string email, string tel, string data, int cod, string prontuario)
+        // Salva Aluno
+
+        public void SalvarUsuario(string nome, string email, string tel, string data, string prontuario, string curso)
         {
-            usrModel.Nome = nome;
-            usrModel.Email = email;
-            usrModel.Telefone = tel;
-            usrModel.Data_criacao = data;
-            usrModel.Cod_esp = Convert.ToInt32(cod);
+            usrGenMODEL.Nome = nome;
+            usrGenMODEL.Email = email;
+            usrGenMODEL.Telefone = tel;
+            usrGenMODEL.Data_criacao = data;
+            usrGenMODEL.Prontuario = prontuario;
+            usrGenMODEL.Curso = curso;
 
 
-            usrDAL.Salvar(usrModel.Nome, usrModel.Email, usrModel.Telefone, usrModel.Data_criacao, usrModel.Cod_esp);
+            usrGenDAL.Salvar(usrModel.Nome, usrModel.Email, usrModel.Telefone, usrModel.Data_criacao, usrGenMODEL.Prontuario, usrGenMODEL.Curso);
 
         }
 
-        public void salvarUsuario(string nome, string email, string tel, string data, int cod, string esp, string siap, string senha)
+        // Salva Servidor
+
+        public void SalvarUsuario(string nome, string email, string tel, string data, int cod, string esp, string siap, string senha, string adm)
         {
             usrModel.Nome = nome;
             usrModel.Email = email;

@@ -31,17 +31,17 @@
             this.panTitleBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panCenter = new System.Windows.Forms.Panel();
+            this.gpbFiltro = new System.Windows.Forms.GroupBox();
+            this.rdbAluno = new System.Windows.Forms.RadioButton();
+            this.rdbServidor = new System.Windows.Forms.RadioButton();
+            this.rdbExteron = new System.Windows.Forms.RadioButton();
             this.lblCancelar = new System.Windows.Forms.Label();
             this.lblAdd = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.gpbFiltro = new System.Windows.Forms.GroupBox();
-            this.rdbExteron = new System.Windows.Forms.RadioButton();
-            this.rdbServidor = new System.Windows.Forms.RadioButton();
-            this.rdbAluno = new System.Windows.Forms.RadioButton();
             this.panTitleBar.SuspendLayout();
             this.panCenter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.gpbFiltro.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // panTitleBar
@@ -77,6 +77,53 @@
             this.panCenter.Name = "panCenter";
             this.panCenter.Size = new System.Drawing.Size(975, 515);
             this.panCenter.TabIndex = 1;
+            // 
+            // gpbFiltro
+            // 
+            this.gpbFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gpbFiltro.Controls.Add(this.rdbAluno);
+            this.gpbFiltro.Controls.Add(this.rdbServidor);
+            this.gpbFiltro.Controls.Add(this.rdbExteron);
+            this.gpbFiltro.Location = new System.Drawing.Point(66, 415);
+            this.gpbFiltro.Name = "gpbFiltro";
+            this.gpbFiltro.Size = new System.Drawing.Size(417, 77);
+            this.gpbFiltro.TabIndex = 3;
+            this.gpbFiltro.TabStop = false;
+            // 
+            // rdbAluno
+            // 
+            this.rdbAluno.AutoSize = true;
+            this.rdbAluno.Location = new System.Drawing.Point(288, 33);
+            this.rdbAluno.Name = "rdbAluno";
+            this.rdbAluno.Size = new System.Drawing.Size(72, 26);
+            this.rdbAluno.TabIndex = 2;
+            this.rdbAluno.TabStop = true;
+            this.rdbAluno.Text = "Aluno";
+            this.rdbAluno.UseVisualStyleBackColor = true;
+            // 
+            // rdbServidor
+            // 
+            this.rdbServidor.AutoSize = true;
+            this.rdbServidor.Location = new System.Drawing.Point(166, 33);
+            this.rdbServidor.Name = "rdbServidor";
+            this.rdbServidor.Size = new System.Drawing.Size(92, 26);
+            this.rdbServidor.TabIndex = 1;
+            this.rdbServidor.TabStop = true;
+            this.rdbServidor.Text = "Servidor";
+            this.rdbServidor.UseVisualStyleBackColor = true;
+            // 
+            // rdbExteron
+            // 
+            this.rdbExteron.AutoSize = true;
+            this.rdbExteron.Checked = true;
+            this.rdbExteron.Location = new System.Drawing.Point(49, 33);
+            this.rdbExteron.Name = "rdbExteron";
+            this.rdbExteron.Size = new System.Drawing.Size(87, 26);
+            this.rdbExteron.TabIndex = 0;
+            this.rdbExteron.TabStop = true;
+            this.rdbExteron.Text = "Externo";
+            this.rdbExteron.UseVisualStyleBackColor = true;
+            this.rdbExteron.CheckedChanged += new System.EventHandler(this.rdbExteron_CheckedChanged);
             // 
             // lblCancelar
             // 
@@ -122,53 +169,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(838, 370);
             this.dgvUsuarios.TabIndex = 0;
             // 
-            // gpbFiltro
-            // 
-            this.gpbFiltro.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gpbFiltro.Controls.Add(this.rdbAluno);
-            this.gpbFiltro.Controls.Add(this.rdbServidor);
-            this.gpbFiltro.Controls.Add(this.rdbExteron);
-            this.gpbFiltro.Location = new System.Drawing.Point(66, 415);
-            this.gpbFiltro.Name = "gpbFiltro";
-            this.gpbFiltro.Size = new System.Drawing.Size(417, 77);
-            this.gpbFiltro.TabIndex = 3;
-            this.gpbFiltro.TabStop = false;
-            // 
-            // rdbExteron
-            // 
-            this.rdbExteron.AutoSize = true;
-            this.rdbExteron.Checked = true;
-            this.rdbExteron.Location = new System.Drawing.Point(49, 33);
-            this.rdbExteron.Name = "rdbExteron";
-            this.rdbExteron.Size = new System.Drawing.Size(87, 26);
-            this.rdbExteron.TabIndex = 0;
-            this.rdbExteron.TabStop = true;
-            this.rdbExteron.Text = "Externo";
-            this.rdbExteron.UseVisualStyleBackColor = true;
-            this.rdbExteron.CheckedChanged += new System.EventHandler(this.rdbExteron_CheckedChanged);
-            // 
-            // rdbServidor
-            // 
-            this.rdbServidor.AutoSize = true;
-            this.rdbServidor.Location = new System.Drawing.Point(166, 33);
-            this.rdbServidor.Name = "rdbServidor";
-            this.rdbServidor.Size = new System.Drawing.Size(92, 26);
-            this.rdbServidor.TabIndex = 1;
-            this.rdbServidor.TabStop = true;
-            this.rdbServidor.Text = "Servidor";
-            this.rdbServidor.UseVisualStyleBackColor = true;
-            // 
-            // rdbAluno
-            // 
-            this.rdbAluno.AutoSize = true;
-            this.rdbAluno.Location = new System.Drawing.Point(288, 33);
-            this.rdbAluno.Name = "rdbAluno";
-            this.rdbAluno.Size = new System.Drawing.Size(72, 26);
-            this.rdbAluno.TabIndex = 2;
-            this.rdbAluno.TabStop = true;
-            this.rdbAluno.Text = "Aluno";
-            this.rdbAluno.UseVisualStyleBackColor = true;
-            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -183,14 +183,15 @@
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuarios";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             this.panTitleBar.ResumeLayout(false);
             this.panTitleBar.PerformLayout();
             this.panCenter.ResumeLayout(false);
             this.panCenter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.gpbFiltro.ResumeLayout(false);
             this.gpbFiltro.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }

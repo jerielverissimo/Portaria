@@ -18,7 +18,7 @@ namespace Portaria.UI.FORMS
 
         UI.PALETT.Colors color = new PALETT.Colors();
         
-        Model.Usuario usrModel = new Model.Usuario();
+        MODEL.Usuario usrModel = new MODEL.Usuario();
         BLL.UsuariosBLL usrBLL = new BLL.UsuariosBLL();
         Notification notify = new Notification();
 
@@ -141,6 +141,8 @@ namespace Portaria.UI.FORMS
                 lblEsp.Visible = true;
                 cboxEsp.Visible = true;
                 lblAddEsp.Visible = true;
+                lblCurso.Visible = false;
+                cboxCurso.Visible = false;
             } else
             {
                 lblSIAPE.Visible = false;
@@ -157,6 +159,8 @@ namespace Portaria.UI.FORMS
             {
                 lblProntUsr.Visible = true;
                 mskProntAlun.Visible = true;
+                lblCurso.Visible = true;
+                cboxCurso.Visible = true;
                 ckbADM.Visible = false;
                 txtSenhaADM.Visible = false;
                 lblEsp.Visible = false;
@@ -167,7 +171,8 @@ namespace Portaria.UI.FORMS
             {
                 lblProntUsr.Visible = false;
                 mskProntAlun.Visible = false;
-                
+                lblCurso.Visible = false;
+                cboxCurso.Visible = false;
             }
         }
 
@@ -185,6 +190,8 @@ namespace Portaria.UI.FORMS
                 lblEsp.Visible = true;
                 cboxEsp.Visible = true;
                 lblAddEsp.Visible = true;
+                lblCurso.Visible = false;
+                cboxCurso.Visible = false;
             }
         }
 
@@ -266,28 +273,33 @@ namespace Portaria.UI.FORMS
 
         private void lblCadUser_Click(object sender, EventArgs e)
         {
-            
-            // Valida se os campos do aluno estão preenchidos
-            if (rdbTipoAluno.Checked)
-                usrBLL.validaFORM(txtNomeUsr.Text, mskEmail.Text,
-                    mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue), mskProntAlun.Text);
+            panNotify.BringToFront();
 
-            // Valida se os campos do externo estão preenchidos
+
+            // Valida se os campos do Externo estão preenchidos
             if (rdbTipoExt.Checked)
             {
-                usrBLL.validaFORM(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, cboxEsp.SelectedText);
-                usrBLL.salvarUsuario(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, cboxEsp.Text);
+                usrBLL.ValidaFORM(txtNomeUsr.Text, mskCPF.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, rdbTipoExt.Text, Convert.ToInt32(cboxEsp.SelectedValue), cboxEsp.SelectedText);
+
+                if (usrBLL.Valido)
+                    usrBLL.SalvarUsuario(txtNomeUsr.Text, mskCPF.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, rdbTipoExt.Text, Convert.ToInt32(cboxEsp.SelectedValue), cboxEsp.Text);
             }
 
-            // Valida se os campos do servidor estão preenchidos
+            // Valida se os campos do Aluno estão preenchidos
+            if (rdbTipoAluno.Checked)
+            {
+               // usrBLL.ValidaFORM(txtNomeUsr.Text, mskEmail.Text,
+               //                     mskTelUsr.Text, mskDataCria.Text, mskProntAlun.Text, cboxCurso.Text);
+            }
+                
+
+            // Valida se os campos do Servidor estão preenchidos
             if (rdbTipoServ.Checked)
-                usrBLL.validaFORM(txtNomeUsr.Text, mskEmail.Text,
-                    mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue), cboxEsp.Text, mskSIAPE.Text, txtSenhaADM.Text);
+              //  usrBLL.ValidaFORM(txtNomeUsr.Text, mskEmail.Text,
+              //      mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue), cboxEsp.Text, mskSIAPE.Text, txtSenhaADM.Text, ckbADM.Text);
 
 
-            // Se estvier válido os campos então ele salva
-           // if (usrBLL.Valido)
-               // usrBLL.salvarUsuario(txtNomeUsr.Text, mskEmail.Text, mskTelUsr.Text, mskDataCria.Text, Convert.ToInt32(cboxEsp.SelectedValue));
+        
 
             // Exibe notificação com estado do cadastro
             tmBounceEfxNotify.Enabled = true;
@@ -344,6 +356,8 @@ namespace Portaria.UI.FORMS
         {
             lblTitleForm.Text = "Cadastro de Usuário";
             panUsers.BringToFront();
+            panNotify.BringToFront();
+
         }
 
         private void lblAssociacoes_Click(object sender, EventArgs e)
@@ -397,8 +411,8 @@ namespace Portaria.UI.FORMS
             var especialidades = especialidadeDAL.todasEspecialidades();
 
             cboxEsp.DataSource = especialidades;
-            cboxEsp.DisplayMember = "Nome";
-            cboxEsp.ValueMember = "Cod";
+            cboxEsp.DisplayMember = "Esp";
+            cboxEsp.ValueMember = "cod";
         }
 
         private void lblAddEsp_Click(object sender, EventArgs e)

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portaria.Model
+namespace Portaria.MODEL
 {
     class Externo : Usuario
     {
         private string cpf;
         private int id_usuario;
-        private string esp;
+        //private string esp;
 
         public string Cpf
         {
@@ -38,6 +38,6 @@ namespace Portaria.Model
             }
         }
 
-        public string Esp { get => esp; set => esp = value; }
+       // public string Esp { get => esp; set => esp = value; }
     }
 }

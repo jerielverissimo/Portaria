@@ -4,37 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Portaria.Model
+namespace Portaria.MODEL
 {
     class Especialidade
     {
         private int cod;
-        private string nome;
+        private string esp;
 
-        public int Cod
-        {
-            get
-            {
-                return cod;
-            }
-
-            set
-            {
-                cod = value;
-            }
-        }
-
-        public string Nome
-        {
-            get
-            {
-                return nome;
-            }
-
-            set
-            {
-                nome = value;
-            }
-        }
+       
+        public int Cod { get => cod; set => cod = value; }
+        public string Esp { get => esp; set => esp = value; }
     }
 }

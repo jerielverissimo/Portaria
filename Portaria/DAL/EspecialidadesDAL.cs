@@ -7,7 +7,7 @@ using System.Xml;
 using System.IO;
 using System.Data;
 using System.Xml.Linq;
-using Portaria.Model;
+using Portaria.MODEL;
 
 namespace Portaria.DAL
 {
@@ -23,19 +23,18 @@ namespace Portaria.DAL
 
         public List<Especialidade> todasEspecialidades()
         {
-            List<Especialidade> especialidades = new List<Especialidade>();
-
-           // ds.ReadXml(xml_path + @"\BD\Especialidades.xml");
-            //dt = ds.Tables[("especialidade")];
 
             var xDoc = XDocument.Load(xml_path + @"\DB\Especialidades.xml");
+
+            List<Especialidade> especialidades = new List<Especialidade>();
+          
 
             foreach (XElement xe in xDoc.Descendants("especialidade"))
             {
                 Especialidade especialidade = new Especialidade();
 
                 especialidade.Cod = Convert.ToInt32(xe.Element("cod").Value);
-                especialidade.Nome = xe.Element("nome").Value;
+                especialidade.Esp = xe.Element("nome").Value;
 
                 especialidades.Add(especialidade);
             }

@@ -6,18 +6,6 @@
   </especialidade>
   <especialidade>
     <cod>2</cod>
-    <nome>Motorista</nome>
-  </especialidade>
-  <especialidade>
-    <cod>3</cod>
-    <nome>Segurança</nome>
-  </especialidade>
-  <especialidade>
-    <cod>4</cod>
-    <nome>Pedreiro</nome>
-  </especialidade>
-  <especialidade>
-    <cod>5</cod>
     <nome>Professor</nome>
   </especialidade>
 </especialidades>

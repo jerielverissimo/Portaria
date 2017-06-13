@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Usuarios>
+  <usuario>
+    <id>1</id>
+    <nome>ojsdaof</nome>
+    <cpf> 12.123.123-12</cpf>
+    <email>josadjfjosadjf</email>
+    <tel>  (12) 3123-</tel>
+    <data_criacao>  13/06/2017</data_criacao>
+    <tipo>Externo</tipo>
+    <cod_esp>1</cod_esp>
+    <esp>Engenheiro</esp>
+    <prontuario />
+    <curso />
+    <siape />
+    <adm />
+    <senha />
+  </usuario>
+  <usuario>
+    <id>2</id>
+    <nome>ojsdaof</nome>
+    <cpf> 12.123.123-12</cpf>
+    <email>josadjfjosadjf</email>
+    <tel>  (12) 3123-</tel>
+    <data_criacao>  13/06/2017</data_criacao>
+    <tipo>Externo</tipo>
+    <cod_esp>1</cod_esp>
+    <esp>Engenheiro</esp>
+    <prontuario />
+    <curso />
+    <siape />
+    <adm />
+    <senha />
+  </usuario>
+  <usuario>
+    <id>3</id>
+    <nome>ojsdaof</nome>
+    <cpf> 12.123.123-12</cpf>
+    <email>josadjfjosadjf</email>
+    <tel>  (12) 3123-</tel>
+    <data_criacao>  13/06/2017</data_criacao>
+    <tipo>Externo</tipo>
+    <cod_esp>1</cod_esp>
+    <esp>Engenheiro</esp>
+    <prontuario />
+    <curso />
+    <siape />
+    <adm />
+    <senha />
+  </usuario>
+  <usuario>
+    <id>4</id>
+    <nome>ojsdaof</nome>
+    <cpf> 12.123.123-12</cpf>
+    <email>josadjfjosadjf</email>
+    <tel>  (12) 3123-</tel>
+    <data_criacao>  13/06/2017</data_criacao>
+    <tipo>Externo</tipo>
+    <cod_esp>1</cod_esp>
+    <esp>Engenheiro</esp>
+    <prontuario />
+    <curso />
+    <siape />
+    <adm />
+    <senha />
+  </usuario>
+</Usuarios>

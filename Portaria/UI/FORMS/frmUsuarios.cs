@@ -14,6 +14,7 @@ namespace Portaria.UI.FORMS
     {
 
         DAL.ExternoDAL extDAL = new DAL.ExternoDAL();
+        DAL.UsuarioGeneralizadoDAL usrGen = new DAL.UsuarioGeneralizadoDAL();
 
         public frmUsuarios()
         {
@@ -27,12 +28,12 @@ namespace Portaria.UI.FORMS
 
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            dgvUsuarios.DataSource = extDAL.carregaExterno();
+            dgvUsuarios.DataSource = usrGen.carregaUsuarios();
         }
 
         private void rdbExteron_CheckedChanged(object sender, EventArgs e)
         {
-            dgvUsuarios.DataSource = extDAL.carregaExterno();
+            dgvUsuarios.DataSource = usrGen.carregaUsuarios();
         }
     }
 }

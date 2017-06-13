@@ -118,6 +118,8 @@
             this.ptbWindowClose = new System.Windows.Forms.PictureBox();
             this.tmSlideEfxMenu = new System.Windows.Forms.Timer(this.components);
             this.tmBounceEfxNotify = new System.Windows.Forms.Timer(this.components);
+            this.cboxCurso = new System.Windows.Forms.ComboBox();
+            this.lblCurso = new System.Windows.Forms.Label();
             this.panADM.SuspendLayout();
             this.panUsers.SuspendLayout();
             this.panNotify.SuspendLayout();
@@ -159,6 +161,8 @@
             // 
             // panUsers
             // 
+            this.panUsers.Controls.Add(this.lblCurso);
+            this.panUsers.Controls.Add(this.cboxCurso);
             this.panUsers.Controls.Add(this.panNotify);
             this.panUsers.Controls.Add(this.mskSIAPE);
             this.panUsers.Controls.Add(this.lblSIAPE);
@@ -183,6 +187,7 @@
             this.panUsers.Controls.Add(this.txtNomeUsr);
             this.panUsers.Controls.Add(this.lblNomeUsr);
             this.panUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panUsers.Font = new System.Drawing.Font("Noto Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panUsers.Location = new System.Drawing.Point(75, 105);
             this.panUsers.Name = "panUsers";
             this.panUsers.Size = new System.Drawing.Size(925, 545);
@@ -225,11 +230,11 @@
             // mskSIAPE
             // 
             this.mskSIAPE.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskSIAPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskSIAPE.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskSIAPE.Location = new System.Drawing.Point(690, 87);
             this.mskSIAPE.Name = "mskSIAPE";
             this.mskSIAPE.PromptChar = ' ';
-            this.mskSIAPE.Size = new System.Drawing.Size(188, 26);
+            this.mskSIAPE.Size = new System.Drawing.Size(188, 29);
             this.mskSIAPE.TabIndex = 21;
             this.mskSIAPE.Visible = false;
             // 
@@ -237,10 +242,10 @@
             // 
             this.lblSIAPE.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSIAPE.AutoSize = true;
-            this.lblSIAPE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSIAPE.Location = new System.Drawing.Point(614, 90);
+            this.lblSIAPE.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSIAPE.Location = new System.Drawing.Point(623, 91);
             this.lblSIAPE.Name = "lblSIAPE";
-            this.lblSIAPE.Size = new System.Drawing.Size(57, 20);
+            this.lblSIAPE.Size = new System.Drawing.Size(53, 22);
             this.lblSIAPE.TabIndex = 20;
             this.lblSIAPE.Text = "SIAPE";
             this.lblSIAPE.Visible = false;
@@ -265,10 +270,10 @@
             // txtSenhaADM
             // 
             this.txtSenhaADM.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSenhaADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaADM.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenhaADM.Location = new System.Drawing.Point(690, 137);
             this.txtSenhaADM.Name = "txtSenhaADM";
-            this.txtSenhaADM.Size = new System.Drawing.Size(188, 26);
+            this.txtSenhaADM.Size = new System.Drawing.Size(188, 29);
             this.txtSenhaADM.TabIndex = 18;
             this.txtSenhaADM.Visible = false;
             this.txtSenhaADM.WordWrap = false;
@@ -277,10 +282,10 @@
             // 
             this.lblSenhaADM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblSenhaADM.AutoSize = true;
-            this.lblSenhaADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenhaADM.Location = new System.Drawing.Point(610, 140);
+            this.lblSenhaADM.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSenhaADM.Location = new System.Drawing.Point(624, 141);
             this.lblSenhaADM.Name = "lblSenhaADM";
-            this.lblSenhaADM.Size = new System.Drawing.Size(56, 20);
+            this.lblSenhaADM.Size = new System.Drawing.Size(57, 22);
             this.lblSenhaADM.TabIndex = 17;
             this.lblSenhaADM.Text = "Senha";
             this.lblSenhaADM.Visible = false;
@@ -289,10 +294,10 @@
             // 
             this.ckbADM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ckbADM.AutoSize = true;
-            this.ckbADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbADM.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbADM.Location = new System.Drawing.Point(812, 189);
             this.ckbADM.Name = "ckbADM";
-            this.ckbADM.Size = new System.Drawing.Size(64, 24);
+            this.ckbADM.Size = new System.Drawing.Size(66, 26);
             this.ckbADM.TabIndex = 16;
             this.ckbADM.Text = "ADM";
             this.ckbADM.UseVisualStyleBackColor = true;
@@ -301,22 +306,22 @@
             // mskProntAlun
             // 
             this.mskProntAlun.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskProntAlun.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskProntAlun.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskProntAlun.Location = new System.Drawing.Point(690, 87);
-            this.mskProntAlun.Mask = "000000-00";
+            this.mskProntAlun.Mask = "  000000-A";
             this.mskProntAlun.Name = "mskProntAlun";
             this.mskProntAlun.PromptChar = ' ';
-            this.mskProntAlun.Size = new System.Drawing.Size(188, 26);
+            this.mskProntAlun.Size = new System.Drawing.Size(188, 29);
             this.mskProntAlun.TabIndex = 15;
             // 
             // lblProntUsr
             // 
             this.lblProntUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblProntUsr.AutoSize = true;
-            this.lblProntUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProntUsr.Location = new System.Drawing.Point(574, 90);
+            this.lblProntUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProntUsr.Location = new System.Drawing.Point(583, 91);
             this.lblProntUsr.Name = "lblProntUsr";
-            this.lblProntUsr.Size = new System.Drawing.Size(82, 20);
+            this.lblProntUsr.Size = new System.Drawing.Size(93, 22);
             this.lblProntUsr.TabIndex = 14;
             this.lblProntUsr.Text = "Prontuário";
             // 
@@ -325,12 +330,12 @@
             this.lblAddEsp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAddEsp.AutoSize = true;
             this.lblAddEsp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.lblAddEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddEsp.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddEsp.ForeColor = System.Drawing.Color.White;
             this.lblAddEsp.Location = new System.Drawing.Point(529, 280);
             this.lblAddEsp.Name = "lblAddEsp";
             this.lblAddEsp.Padding = new System.Windows.Forms.Padding(10);
-            this.lblAddEsp.Size = new System.Drawing.Size(39, 40);
+            this.lblAddEsp.Size = new System.Drawing.Size(39, 42);
             this.lblAddEsp.TabIndex = 13;
             this.lblAddEsp.Text = "+";
             this.lblAddEsp.Click += new System.EventHandler(this.lblAddEsp_Click);
@@ -338,11 +343,11 @@
             // cboxEsp
             // 
             this.cboxEsp.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboxEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxEsp.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxEsp.FormattingEnabled = true;
             this.cboxEsp.Location = new System.Drawing.Point(277, 286);
             this.cboxEsp.Name = "cboxEsp";
-            this.cboxEsp.Size = new System.Drawing.Size(233, 28);
+            this.cboxEsp.Size = new System.Drawing.Size(233, 30);
             this.cboxEsp.TabIndex = 12;
             this.cboxEsp.SelectedIndexChanged += new System.EventHandler(this.cboxEsp_SelectedIndexChanged);
             this.cboxEsp.Click += new System.EventHandler(this.cboxEsp_Click);
@@ -351,32 +356,32 @@
             // 
             this.lblEsp.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEsp.AutoSize = true;
-            this.lblEsp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEsp.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEsp.Location = new System.Drawing.Point(337, 241);
             this.lblEsp.Name = "lblEsp";
-            this.lblEsp.Size = new System.Drawing.Size(108, 20);
+            this.lblEsp.Size = new System.Drawing.Size(113, 22);
             this.lblEsp.TabIndex = 11;
             this.lblEsp.Text = "Especialidade";
             // 
             // mskCPF
             // 
             this.mskCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskCPF.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCPF.Location = new System.Drawing.Point(122, 287);
             this.mskCPF.Mask = "000,000,000-00";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.PromptChar = ' ';
-            this.mskCPF.Size = new System.Drawing.Size(135, 26);
+            this.mskCPF.Size = new System.Drawing.Size(135, 29);
             this.mskCPF.TabIndex = 10;
             // 
             // lblCPF
             // 
             this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.Location = new System.Drawing.Point(61, 290);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(40, 20);
+            this.lblCPF.Size = new System.Drawing.Size(38, 22);
             this.lblCPF.TabIndex = 9;
             this.lblCPF.Text = "CPF";
             // 
@@ -386,6 +391,7 @@
             this.gboxTipoUsr.Controls.Add(this.rdbTipoAluno);
             this.gboxTipoUsr.Controls.Add(this.rdbTipoServ);
             this.gboxTipoUsr.Controls.Add(this.rdbTipoExt);
+            this.gboxTipoUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxTipoUsr.Location = new System.Drawing.Point(122, 332);
             this.gboxTipoUsr.Name = "gboxTipoUsr";
             this.gboxTipoUsr.Size = new System.Drawing.Size(391, 68);
@@ -396,10 +402,12 @@
             // rdbTipoAluno
             // 
             this.rdbTipoAluno.AutoSize = true;
+            this.rdbTipoAluno.Checked = true;
             this.rdbTipoAluno.Location = new System.Drawing.Point(265, 32);
             this.rdbTipoAluno.Name = "rdbTipoAluno";
-            this.rdbTipoAluno.Size = new System.Drawing.Size(52, 17);
+            this.rdbTipoAluno.Size = new System.Drawing.Size(72, 26);
             this.rdbTipoAluno.TabIndex = 2;
+            this.rdbTipoAluno.TabStop = true;
             this.rdbTipoAluno.Text = "Aluno";
             this.rdbTipoAluno.UseVisualStyleBackColor = true;
             this.rdbTipoAluno.CheckedChanged += new System.EventHandler(this.rdbTipoAlluno_CheckedChanged);
@@ -407,12 +415,10 @@
             // rdbTipoServ
             // 
             this.rdbTipoServ.AutoSize = true;
-            this.rdbTipoServ.Checked = true;
             this.rdbTipoServ.Location = new System.Drawing.Point(143, 32);
             this.rdbTipoServ.Name = "rdbTipoServ";
-            this.rdbTipoServ.Size = new System.Drawing.Size(64, 17);
+            this.rdbTipoServ.Size = new System.Drawing.Size(92, 26);
             this.rdbTipoServ.TabIndex = 1;
-            this.rdbTipoServ.TabStop = true;
             this.rdbTipoServ.Text = "Servidor";
             this.rdbTipoServ.UseVisualStyleBackColor = true;
             this.rdbTipoServ.CheckedChanged += new System.EventHandler(this.rdbTipoServ_CheckedChanged);
@@ -422,7 +428,7 @@
             this.rdbTipoExt.AutoSize = true;
             this.rdbTipoExt.Location = new System.Drawing.Point(39, 32);
             this.rdbTipoExt.Name = "rdbTipoExt";
-            this.rdbTipoExt.Size = new System.Drawing.Size(61, 17);
+            this.rdbTipoExt.Size = new System.Drawing.Size(87, 26);
             this.rdbTipoExt.TabIndex = 0;
             this.rdbTipoExt.Text = "Externo";
             this.rdbTipoExt.UseVisualStyleBackColor = true;
@@ -431,84 +437,84 @@
             // mskDataCria
             // 
             this.mskDataCria.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskDataCria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskDataCria.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDataCria.Location = new System.Drawing.Point(122, 238);
             this.mskDataCria.Mask = "  00/00/0000";
             this.mskDataCria.Name = "mskDataCria";
             this.mskDataCria.PromptChar = ' ';
-            this.mskDataCria.Size = new System.Drawing.Size(135, 26);
+            this.mskDataCria.Size = new System.Drawing.Size(135, 29);
             this.mskDataCria.TabIndex = 7;
             // 
             // lblDataCria
             // 
             this.lblDataCria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDataCria.AutoSize = true;
-            this.lblDataCria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataCria.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataCria.Location = new System.Drawing.Point(32, 241);
             this.lblDataCria.Name = "lblDataCria";
-            this.lblDataCria.Size = new System.Drawing.Size(63, 20);
+            this.lblDataCria.Size = new System.Drawing.Size(67, 22);
             this.lblDataCria.TabIndex = 6;
             this.lblDataCria.Text = "Criação";
             // 
             // mskTelUsr
             // 
             this.mskTelUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskTelUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskTelUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskTelUsr.Location = new System.Drawing.Point(122, 189);
             this.mskTelUsr.Mask = "  (00) 0000-0000";
             this.mskTelUsr.Name = "mskTelUsr";
             this.mskTelUsr.PromptChar = ' ';
-            this.mskTelUsr.Size = new System.Drawing.Size(135, 26);
+            this.mskTelUsr.Size = new System.Drawing.Size(135, 29);
             this.mskTelUsr.TabIndex = 5;
             // 
             // lblTelUsr
             // 
             this.lblTelUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTelUsr.AutoSize = true;
-            this.lblTelUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelUsr.Location = new System.Drawing.Point(24, 192);
             this.lblTelUsr.Name = "lblTelUsr";
-            this.lblTelUsr.Size = new System.Drawing.Size(71, 20);
+            this.lblTelUsr.Size = new System.Drawing.Size(75, 22);
             this.lblTelUsr.TabIndex = 4;
             this.lblTelUsr.Text = "Telefone";
             // 
             // mskEmail
             // 
             this.mskEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.mskEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mskEmail.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskEmail.Location = new System.Drawing.Point(122, 140);
             this.mskEmail.Name = "mskEmail";
-            this.mskEmail.Size = new System.Drawing.Size(391, 26);
+            this.mskEmail.Size = new System.Drawing.Size(391, 29);
             this.mskEmail.TabIndex = 3;
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.Location = new System.Drawing.Point(48, 143);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 20);
+            this.lblEmail.Size = new System.Drawing.Size(51, 22);
             this.lblEmail.TabIndex = 2;
             this.lblEmail.Text = "Email";
             // 
             // txtNomeUsr
             // 
             this.txtNomeUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNomeUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeUsr.Location = new System.Drawing.Point(122, 91);
             this.txtNomeUsr.Name = "txtNomeUsr";
-            this.txtNomeUsr.Size = new System.Drawing.Size(391, 26);
+            this.txtNomeUsr.Size = new System.Drawing.Size(391, 29);
             this.txtNomeUsr.TabIndex = 1;
             // 
             // lblNomeUsr
             // 
             this.lblNomeUsr.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblNomeUsr.AutoSize = true;
-            this.lblNomeUsr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeUsr.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeUsr.Location = new System.Drawing.Point(43, 94);
             this.lblNomeUsr.Name = "lblNomeUsr";
-            this.lblNomeUsr.Size = new System.Drawing.Size(51, 20);
+            this.lblNomeUsr.Size = new System.Drawing.Size(56, 22);
             this.lblNomeUsr.TabIndex = 0;
             this.lblNomeUsr.Text = "Nome";
             // 
@@ -1130,7 +1136,7 @@
             // ptbSideMenu
             // 
             this.ptbSideMenu.Image = global::Portaria.Properties.Resources.menu;
-            this.ptbSideMenu.Location = new System.Drawing.Point(23, 9);
+            this.ptbSideMenu.Location = new System.Drawing.Point(12, 9);
             this.ptbSideMenu.Name = "ptbSideMenu";
             this.ptbSideMenu.Padding = new System.Windows.Forms.Padding(10);
             this.ptbSideMenu.Size = new System.Drawing.Size(44, 44);
@@ -1215,6 +1221,27 @@
             // 
             this.tmBounceEfxNotify.Interval = 1;
             this.tmBounceEfxNotify.Tick += new System.EventHandler(this.tmBounceEfxNotify_Tick);
+            // 
+            // cboxCurso
+            // 
+            this.cboxCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cboxCurso.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxCurso.FormattingEnabled = true;
+            this.cboxCurso.Location = new System.Drawing.Point(690, 136);
+            this.cboxCurso.Name = "cboxCurso";
+            this.cboxCurso.Size = new System.Drawing.Size(188, 30);
+            this.cboxCurso.TabIndex = 23;
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Font = new System.Drawing.Font("Noto Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurso.Location = new System.Drawing.Point(621, 141);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(55, 22);
+            this.lblCurso.TabIndex = 24;
+            this.lblCurso.Text = "Curso";
             // 
             // frmADM
             // 
@@ -1351,5 +1378,7 @@
         private System.Windows.Forms.Label lblSelAsso;
         private System.Windows.Forms.PictureBox ptbEditMode;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblCurso;
+        private System.Windows.Forms.ComboBox cboxCurso;
     }
 }

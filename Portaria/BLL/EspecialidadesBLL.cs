@@ -21,7 +21,7 @@ namespace Portaria.BLL
         public string validaForm(String str)
         {
 
-            Model.Especialidade espMODEL = new Model.Especialidade();
+            MODEL.Especialidade espMODEL = new MODEL.Especialidade();
 
             if (str == "")
             {

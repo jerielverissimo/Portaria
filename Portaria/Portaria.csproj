@@ -48,13 +48,16 @@
     <Compile Include="BLL\EspecialidadesBLL.cs" />
     <Compile Include="BLL\ExternoBLL.cs" />
     <Compile Include="BLL\UsuariosBLL.cs" />
+    <Compile Include="DAL\AlunoDAL.cs" />
     <Compile Include="DAL\EspecialidadesDAL.cs" />
     <Compile Include="DAL\ExternoDAL.cs" />
+    <Compile Include="DAL\UsuarioGeneralizadoDAL.cs" />
     <Compile Include="DAL\UsuariosDAL.cs" />
     <Compile Include="MODEL\Externo.cs" />
     <Compile Include="MODEL\ServidorAluno.cs" />
     <Compile Include="MODEL\Usuario.cs" />
     <Compile Include="MODEL\Especialidade.cs" />
+    <Compile Include="MODEL\UsuarioGeneralizado.cs" />
     <Compile Include="UI\FORMS\frmADM.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,6 +204,7 @@
     <Content Include="DB\Externos.xml" />
     <Content Include="DB\Usuarios.xml" />
     <Content Include="DB\Especialidades.xml" />
+    <Content Include="DB\UsuariosGeneralizados.xml" />
     <Content Include="UI\IMG\ICONS\ic_mode_edit_white_24dp.png" />
     <Content Include="UI\IMG\ICONS\view-list.png" />
     <None Include="UI\IMG\ICONS\alert.png" />
